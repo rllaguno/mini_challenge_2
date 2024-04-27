@@ -5,29 +5,32 @@ import rclpy.qos
 from std_msgs.msg import Int32, Bool
 import math 
 
-class My_Publisher(Node):
-    def __init__(self):
+class My_Publisher(Node) :
+    def __init__(self) :
         super().__init__('Controller')
-        self.vel = self.create_publisher(Twist, '/cmd_vel', 10)
-        self.flag = self.create_publisher(Int32, '/flag', 10)
+        #create publishers
+        self.vel = self.create_publisher(Twist, '/cmd_vel', 10) #change car velocity
+        self.flag = self.create_publisher(Int32, '/flag', 10) #to "point generator" to send next point
 
-        qos_profile = rclpy.qos.qos_profile_sensor_data
-        self.subPose = self.create_subscription(Pose2D, "/odom", self.timer_callback_odometry, qos_profile)
-        self.subPoint = self.create_subscription(Point, "/Point", self.timer_callback_point, qos_profile)
+        qos_profile = rclpy.qos.qos_profile_sensor_data #eliminate noise
 
-        #self.subBandera = self.create_subscription(Bool, '/bandera', self.timer_callback_bandera, qos_profile)
-        
-        self.timer_period_controller = 0.1
-        self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_controller)
-        #self.timer_PID = self.create_timer(self.timer_period_controller, self.timer_callback_PID)
+        #create subscribers
+        self.subPose = self.create_subscription(Pose2D, "/odom", self.timer_callback_odometry, qos_profile) #receive current position and angle
+        self.subPoint = self.create_subscription(Point, "/Point", self.timer_callback_point, qos_profile) #receive desired point
+
+        #create timers        
+        self.timer_period_controller = 0.1 #callback time
+        self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_controller) #logic goes in this timer
         self.get_logger().info('|Controller node successfully initialized|')
-        
+
+        #create different messsage types        
         self.msg_vel = Twist()
         self.msg_pose = Pose2D()
         self.msg_point = Point()
         self.msg_flag = Int32()
         self.msg_bandera = Bool()
 
+        #create variables
         self.flag_counter = 0
         self.bandera = False
         self.bandera2 = False
@@ -44,7 +47,7 @@ class My_Publisher(Node):
         self.kiAngle = 0#0.0531
         self.kdAngle = 0#0.3597
 
-        #Necesitan un valor inicial ya que al usarse sin declararse antes marca error
+        #Initialize variables, so no error 
         self.integralDistance = 0  
         self.previousErrorDistance = 0
         self.integralAngle = 0
@@ -56,129 +59,66 @@ class My_Publisher(Node):
         self.flag_ang = True
         self.flag_vel = False
 
-    #def timer_callback_bandera(self,msg):
-        #self.msg_bandera = msg.data
     
-    def timer_callback_controller(self):
+    def timer_callback_controller(self) :
         
-
-        '''
-        #self.errorDistance2 = math.hypot((abs(self.msg_pose.x)  - abs(self.msg_point.x)), (abs(self.msg_pose.y)  - abs(self.msg_point.y)))
-        self.errorDistance = math.sqrt(pow(self.msg_point.x - self.msg_pose.x, 2) + pow(self.msg_point.y - self.msg_pose.y, 2))
-        print("Error distance: " + str(self.errorDistance))
-        #print("Error distance2: " + str(self.errorDistance2))
-
-
-        ### PID DISTANCE ###
-        self.proportionalDistance = self.errorDistance
-        self.integralDistance = self.integralDistance + (self.errorDistance * self.timer_period_controller)
-        self.derivativeDistance = (self.errorDistance - self.previousErrorDistance) / self.timer_period_controller
-        self.previousErrorDistance = self.errorDistance
-        self.pidDistance = (self.kpDistance * self.proportionalDistance) + (self.kiDistance * self.integralDistance) + (self.kdDistance * self.derivativeDistance)
-        print("PID distance: " + str(self.pidDistance))
-
-        if (self.pidDistance > 0.2) :
-            self.msg_vel.linear.x = 0.2
-            self.vel.publish(self.msg_vel) 
-        elif (self.pidDistance < -0.2) :
-            self.msg_vel.linear.x = -0.2
-            self.vel.publish(self.msg_vel) 
-        else :
-            self.msg_vel.linear.x = self.pidDistance
-            self.vel.publish(self.msg_vel) 
-        print("Linear vel: " + str(self.msg_vel.linear.x))
-       '''
-
-        '''
-        if (self.pidDistance > 0.2) :
-            self.msg_vel.linear.x = 0.2
-
-        else :
-            self.msg_vel.linear.x = self.pidDistance
-        self.vel.publish(self.msg_vel) 
-        print("Linear vel: " + str(self.msg_vel.linear.x))
-        print("Error: " + str(self.errorDistance))
-        print("X: " + str(self.msg_pose.x))
-        print("Y: " + str(self.msg_pose.y))
-        print("pX: " + str(self.msg_point.x))
-        print("pY: " + str(self.msg_point.y))
-        print("Theta: " + str(self.msg_pose.theta ))
-        '''
-       
-
-        ### PID ANGLE ###
-        '''
-        self.proportionalAngle = self.errorAngle
-        self.integralAngle = self.integralAngle + (self.errorAngle * self.timer_period_controller)
-        self.derivativeAngle = (self.errorAngle - self.previousErrorDAngle) / self.timer_period_controller
-        self.previousErrorDAngle = self.errorAngle
-        self.pidAngle = (self.kpAngle * self.proportionalAngle) + (self.kiAngle * self.integralAngle) + (self.kdAngle * self.derivativeAngle)
-        print("PID angle: " + str(self.pidAngle))
-        '''
-        '''
-        self.pidAngle = self.kpAngle * self.errorAngle
-        print("PID angle: " + str(self.pidAngle))
-        if (self.pidAngle > 0.1):
-            self.msg_vel.angular.z = 0.1
-        elif (self.pidAngle < -0.1):
-            self.msg_vel.angular.z = -0.1
-        else:
-            self.msg_vel.angular.z = self.pidAngle*1
-        self.vel.publish(self.msg_vel)
-        print("Angular vel: " + str(self.msg_vel.angular.z)) 
-
-        ### SEND FLAG ###
-        
+        #check if there ir a desired point yet, yes? start
         if (self.msg_point.x != 0 or self.msg_point.y != 0):
-            self.bandera = True 
-        if ((self.errorAngle < 10 and self.errorDistance < 10) and self.bandera) :
-            self.flag_counter += 1
-            self.msg_flag.data = self.flag_counter
-        '''
-
-        if (self.msg_point.x != 0 or self.msg_point.y != 0):
-            #self.bandera = True 
             self.bandera2 = True 
 
+        #set desired points into new variables and set bandera to True, this to check if we have received new points
         if (self.bandera2):
             if ((self.newX != self.msg_point.x) or (self.newY != self.msg_point.y)):
                 self.newX = self.msg_point.x 
                 self.newY = self.msg_point.y
                 self.bandera = True
 
-        if (self.flag_ang == True):
+
+        #### PID ANGLE ####
+
+        #check to is if it is turn to check the angle, angle starts on True
+        if (self.flag_ang == True) :
             angleTarget = 0
-            if ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)):
+            #check to see in which quadrant the car needs to turn
+            
+            #1st quadrant
+            if ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)) :
                 opuesto = self.msg_point.y - self.msg_pose.y
                 adyacente = self.msg_point.x - self.msg_pose.x
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians)
 
-            elif ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)):
+            #4th quadrant
+            elif ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)) :
                 opuesto = self.msg_point.x - self.msg_pose.x
                 adyacente = self.msg_pose.y - self.msg_point.y 
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 270
 
-            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)):
+            #2nd quadrant
+            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)) :
                 opuesto = self.msg_pose.x - self.msg_point.x
                 adyacente = self.msg_point.y - self.msg_pose.y
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 90
 
-            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)):
+            #3rd quadrant
+            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)) :
                 opuesto = self.msg_pose.y - self.msg_point.y 
                 adyacente = self.msg_pose.x - self.msg_point.x
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 180
 
+            #find the error angle (target angle - current angle)
             self.errorAngle =  angleTarget - self.msg_pose.theta 
             
-            if (self.errorAngle > 180):
+            #to also work with negatives
+            if (self.errorAngle > 180) :
                 self.errorAngle = self.errorAngle - 360
-            elif (self.errorAngle  < -180):
+            elif (self.errorAngle  < -180) :
                 self.errorAngle = self.errorAngle + 360
 
+            #add prints to check if the code is working and the car if moving correctly
             print("Angle target: " + str(angleTarget))
             print("Theta: " + str(self.msg_pose.theta ))
             print("Error angle: " + str(self.errorAngle))
@@ -187,63 +127,88 @@ class My_Publisher(Node):
             print("pX: " + str(self.msg_point.x))
             print("pY: " + str(self.msg_point.y))
             
+            ## p angle controller (p = kp*errorAngle) ##
             self.pidAngle = self.kpAngle * self.errorAngle
             print("PID angle: " + str(self.pidAngle))
-            if (self.pidAngle > 0.1):
+
+            #try implementing a pid later
+            '''
+            ## pid angle controller (pid = kp*proportional + ki*integral + kd*derivative) ##
+            self.proportionalAngle = self.errorAngle
+            self.integralAngle = self.integralAngle + (self.errorAngle * self.timer_period_controller)
+            self.derivativeAngle = (self.errorAngle - self.previousErrorAngle) / self.timer_period_controller
+            self.previousErrorAngle = self.errorAngle
+            self.pidAngle = (self.kpAngle * self.proportionalAngle) + (self.kiAngle * self.integralAngle) + (self.kdAngle * self.derivativeAngle)
+            print("PID angle: " + str(self.pidAngle))
+            '''
+
+            #set a limit in case the pid value surpasses the max velocity on the car
+            if (self.pidAngle > 0.1) :
                 self.msg_vel.angular.z = 0.1
-            elif (self.pidAngle < -0.1):
+            elif (self.pidAngle < -0.1) :
                 self.msg_vel.angular.z = -0.1
             else:
-                self.msg_vel.angular.z = self.pidAngle*1
-            self.msg_vel.linear.x = 0.0
-            self.vel.publish(self.msg_vel)
+                self.msg_vel.angular.z = self.pidAngle
+
+            self.msg_vel.linear.x = 0.0 #since we are not checking the linear velocity, just in case set it to 0 
+            self.vel.publish(self.msg_vel) #publish the values of linear and angular velocities
             print("Angular vel: " + str(self.msg_vel.angular.z)) 
             
-            
-
+            #check to see if the error is small to then start checking the distance
             if ((self.errorAngle < 10 and self.errorAngle > -10) and self.bandera) :
-            #if ((self.msg_pose.x < self.msg_point.x + 0.3  and self.msg_pose.x > self.msg_point.x - 0.3) and (self.msg_pose.y < self.msg_point.y + 0.3  and self.msg_pose.y > self.msg_point.y - 0.3) and self.bandera): #and (self.errorDistance < 0.1 and self.errorDistance > -0.1 )) :
-                #self.flag_counter += 1
-                #self.msg_flag.data = self.flag_counter
-                #self.flag.publish(self.msg_flag)
-                #self.bandera = False
                 self.flag_ang = False 
                 self.flag_vel = True 
-                #self.msg_vel.angular.z = 0
-                #self.vel.publish(self.msg_vel)
 
 
-        if (self.flag_vel == True):
+        #### PID DISTANCE ####
+
+        #check to is if it is turn to check the distance
+        if (self.flag_vel == True) :
+
+            #find the error distance (sqrt( (xTarget^2 - xCurrent^2) + (yTarget^2 - yCurrent^2) ) )
             self.errorDistance = math.sqrt(pow(self.msg_point.x - self.msg_pose.x, 2) + pow(self.msg_point.y - self.msg_pose.y, 2))
+           
+            ## p distance controller (p = kp*errorDistance) ##
             self.pidDistance = self.kpDistance * self.errorDistance
-            #print("PID distance: " + str(self.pidDistance))
+            print("PID distance: " + str(self.pidDistance))
 
-            if (self.pidDistance > 0.2):
-                self.msg_vel.angular.z = 0.0
+            #try implementing a pid later
+            '''
+            ## pid distance controller (pid = kp*proportional + ki*integral + kd*derivative) ##
+            self.proportionalDistance = self.errorDistance
+            self.integralDistance = self.integralDistance + (self.errorDistance * self.timer_period_controller)
+            self.derivativeDistance = (self.errorDistance - self.previousErrorDistance) / self.timer_period_controller
+            self.previousErrorDistance = self.errorDistance
+            self.pidDistance = (self.kpDistance * self.proportionalDistance) + (self.kiDistance * self.integralDistance) + (self.kdDistance * self.derivativeDistance)
+            print("PID distance: " + str(self.pidDistance))
+            '''
+
+            #set a limit in case the pid value surpasses the max velocity on the car
+            if (self.pidDistance > 0.2) :
                 self.msg_vel.linear.x = 0.2
-
             else :
-                self.msg_vel.angular.z = 0.0
                 self.msg_vel.linear.x = self.pidDistance
-            self.vel.publish(self.msg_vel) 
 
-            if ((self.msg_pose.x < self.msg_point.x + 0.3  and self.msg_pose.x > self.msg_point.x - 0.3) and (self.msg_pose.y < self.msg_point.y + 0.3  and self.msg_pose.y > self.msg_point.y - 0.3) and self.bandera): #and (self.errorDistance < 0.1 and self.errorDistance > -0.1 )) :
-                self.flag_counter += 1
+            self.msg_vel.angular.z = 0.0 #since we are not checking the angular velocity, just in case set it to 0 
+            self.vel.publish(self.msg_vel) #publish the values of linear and angular velocities
+
+            #check to see if the error is small to then start checking the angle (we are checking the x and y individually, not distance in general)
+            if ((self.msg_pose.x < self.msg_point.x + 0.3 and self.msg_pose.x > self.msg_point.x - 0.3) and (self.msg_pose.y < self.msg_point.y + 0.3  and self.msg_pose.y > self.msg_point.y - 0.3) and self.bandera) :
+                self.flag_counter += 1 
                 self.msg_flag.data = self.flag_counter
-                self.flag.publish(self.msg_flag)
+                self.flag.publish(self.msg_flag) #publish the flag counter to "point generator" for it to send the next target point 
                 self.bandera = False
                 self.flag_ang = True 
                 self.flag_vel = False 
-                
-                #self.msg_vel.linear.x = 0
-                #self.vel.publish(self.msg_vel)
-  
-    def timer_callback_odometry(self, msg):
+
+    #save received variables of "odometry"    
+    def timer_callback_odometry(self, msg) :
         self.msg_pose.x = msg.x
         self.msg_pose.y = msg.y
         self.msg_pose.theta = msg.theta
     
-    def timer_callback_point(self, msg):
+    #save received variables of "point generator" 
+    def timer_callback_point(self, msg) :
         self.msg_point.x = msg.x
         self.msg_point.y = msg.y
         self.msg_point.z = msg.z
