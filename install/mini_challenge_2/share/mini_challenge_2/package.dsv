@@ -1,0 +1,3 @@
+source;share/mini_challenge_2/hook/pythonpath.ps1
+source;share/mini_challenge_2/hook/pythonpath.dsv
+source;share/mini_challenge_2/hook/pythonpath.sh
