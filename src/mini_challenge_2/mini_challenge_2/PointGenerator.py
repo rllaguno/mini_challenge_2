@@ -44,8 +44,8 @@ class My_Publisher(Node):
                 self.msg_point.y = 1.0
                 #self.bandera.publish(True)
             elif self.flag == 3:
-                self.msg_point.x = -1.0
-                self.msg_point.y = -1.0
+                self.msg_point.x = 0.0
+                self.msg_point.y = 0.0
                 #self.bandera.publish(True)
         # Hexagon = 2
         elif self.figure == 2:

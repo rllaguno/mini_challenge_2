@@ -24,6 +24,7 @@ class My_Publisher(Node):
         self.right_velocity = 0.0
         self.msg_pose = Pose2D()
         self.msg_pose.theta = 0.0
+        self.thetaTemp2 = 0.0
         self.msg_pose.x = 0.0
         self.msg_pose.y = 0.0
 
@@ -31,7 +32,7 @@ class My_Publisher(Node):
     def timer_callback_odometry(self):
         #self.velocity_linear = ((self.left_velocity + self.right_velocity) / 2) * self.timer_period_controller
 
-        self.velocity_linear =  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller)
+        #self.velocity_linear =  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller)
 
 
         #self.velocity_angular = ((self.right_velocity - self.left_velocity) / self.l) * self.timer_period_controller
@@ -49,16 +50,12 @@ class My_Publisher(Node):
         self.odom.publish(self.msg_pose)
 
         '''
-        # Update orientation
-        delta_theta = ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18)) * -5.7269)
-        self.msg_pose.theta += delta_theta
+        self.thetaTemp2 = self.thetaTemp2 + ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-0.1)
+        self.msg_pose.theta = self.msg_pose.theta + ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-5.7269)
 
-        # Convert delta_theta to radians if necessary
-        delta_theta_rad = np.radians(delta_theta)
+        self.msg_pose.y = self.msg_pose.y +  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller) * np.sin(self.thetaTemp2)
 
-        # Update position
-        self.msg_pose.y += self.velocity_linear * np.sin(delta_theta_rad)
-        self.msg_pose.x += self.velocity_linear * np.cos(delta_theta_rad)
+        self.msg_pose.x = self.msg_pose.x +  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller) * np.cos(self.thetaTemp2)
 
         self.odom.publish(self.msg_pose)
 
