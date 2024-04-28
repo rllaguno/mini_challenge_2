@@ -8,16 +8,22 @@ import numpy as np
 class My_Publisher(Node):
     def __init__(self):
         super().__init__('Odometry')
-        self.odom = self.create_publisher(Pose2D, '/odom', 10)
         
-        qos_profile = rclpy.qos.qos_profile_sensor_data
-        self.subL = self.create_subscription(Float32, "/VelocityEncL", self.timer_callback_l, qos_profile)
-        self.subR = self.create_subscription(Float32, "/VelocityEncR", self.timer_callback_r, qos_profile)
+        #create publishers
+        self.odom = self.create_publisher(Pose2D, '/odom', 10) #publish current position and angle
         
-        self.timer_period_controller = 0.1
-        self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_odometry)
+        qos_profile = rclpy.qos.qos_profile_sensor_data #eliminate noise
+
+        #create subscribers
+        self.subL = self.create_subscription(Float32, "/VelocityEncL", self.timer_callback_l, qos_profile) #receive angular velocity of left wheel
+        self.subR = self.create_subscription(Float32, "/VelocityEncR", self.timer_callback_r, qos_profile) #receive angular velocity of right wheel
+        
+        #create timers
+        self.timer_period_controller = 0.1 #callback time
+        self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_odometry) #logic goes in this timer
         self.get_logger().info('|Odometry node successfully initialized|')
 
+        #create and initialize variables
         self.r = 0.05
         self.l = 0.19
         self.left_velocity = 0.0
@@ -30,38 +36,25 @@ class My_Publisher(Node):
 
 
     def timer_callback_odometry(self):
-        #self.velocity_linear = ((self.left_velocity + self.right_velocity) / 2) * self.timer_period_controller
-
-        #self.velocity_linear =  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller)
-
-
-        #self.velocity_angular = ((self.right_velocity - self.left_velocity) / self.l) * self.timer_period_controller
-        #self.msg_pose.theta = self.msg_pose.theta + (self.r * self.velocity_angular * 5.7269)
         
-        '''
-        self.msg_pose.theta = self.msg_pose.theta + ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-5.7269)
+        #calculate velocities
+        self.velocity_angular = self.r * ( (self.right_velocity - self.left_velocity) / self.l ) #angular velocity (r * ( (wr-wl) / l) )
+        self.velocity_linear = self.r * ( (self.left_velocity + self.right_velocity) / 2 ) #linear velocity (r * ( (wr+wl) / 2) )
 
-        self.thetaTemp = ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-5.7269)
-        
-        self.msg_pose.y = self.msg_pose.y +  self.velocity_linear * np.sin(self.thetaTemp)  
-        self.msg_pose.x = self.msg_pose.x +  self.velocity_linear * np.cos(self.thetaTemp)
-        
+        #calculate position
+        self.thetaTemp2 = self.thetaTemp2 + (self.velocity_angular * self.timer_period_controller) #theta in radians
+        self.msg_pose.theta = self.thetaTemp2 * -5.7269 #theta in degrees
+        self.msg_pose.x = self.msg_pose.x + (self.velocity_linear * self.timer_period_controller) * np.cos(self.thetaTemp2) #distance in x
+        self.msg_pose.y = self.msg_pose.y + ( self.velocity_linear * self.timer_period_controller ) * np.sin(self.thetaTemp2) #distance in y
 
+        #publish 2D pose to /odom topic
         self.odom.publish(self.msg_pose)
 
-        '''
-        self.thetaTemp2 = self.thetaTemp2 + ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-0.1)
-        self.msg_pose.theta = self.msg_pose.theta + ((0.05 * ((self.left_velocity - self.right_velocity) / 0.18))*-5.7269)
-
-        self.msg_pose.y = self.msg_pose.y +  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller) * np.sin(self.thetaTemp2)
-
-        self.msg_pose.x = self.msg_pose.x +  ((0.05 *(( self.left_velocity + self.right_velocity) / 2)) * self.timer_period_controller) * np.cos(self.thetaTemp2)
-
-        self.odom.publish(self.msg_pose)
-
+    #save received variables of left encoder
     def timer_callback_l(self,msg):
         self.left_velocity = msg.data
 
+    #save received variables of right encoder
     def timer_callback_r(self,msg):
         self.right_velocity = msg.data
         
