@@ -8,6 +8,7 @@ import math
 class My_Publisher(Node) :
     def __init__(self) :
         super().__init__('Controller')
+        
         #create publishers
         self.vel = self.create_publisher(Twist, '/cmd_vel', 10) #change car velocity
         self.flag = self.create_publisher(Int32, '/flag', 10) #to "point generator" to send next point
@@ -30,24 +31,13 @@ class My_Publisher(Node) :
         self.msg_flag = Int32()
         self.msg_bandera = Bool()
 
-        #create variables
+        #create and initialize variables
         self.flag_counter = 0
         self.bandera = False
         self.bandera2 = False
         self.newX = 500
         self.newY = 500
 
-        ### Distance ###
-        self.kpDistance = 0.4#5.2536
-        self.kiDistance =  0#0.1922
-        self.kdDistance = 0#4.9357
-
-        ### Angle ###
-        self.kpAngle = 0.02#0.4535
-        self.kiAngle = 0#0.0531
-        self.kdAngle = 0#0.3597
-
-        #Initialize variables, so no error 
         self.integralDistance = 0  
         self.previousErrorDistance = 0
         self.integralAngle = 0
@@ -58,6 +48,16 @@ class My_Publisher(Node) :
 
         self.flag_ang = True
         self.flag_vel = False
+
+        ### Distance ###
+        self.kpDistance = 0.4 #5.2536
+        self.kiDistance =  0 #0.1922
+        self.kdDistance = 0 #4.9357
+
+        ### Angle ###
+        self.kpAngle = 0.02 #0.4535
+        self.kiAngle = 0 #0.0531
+        self.kdAngle = 0 #0.3597
 
     
     def timer_callback_controller(self) :
