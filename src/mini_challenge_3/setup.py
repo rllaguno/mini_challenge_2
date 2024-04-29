@@ -25,7 +25,8 @@ setup(
             'Controller = mini_challenge_3.Controller:main',
             'PointGenerator = mini_challenge_3.PointGenerator:main',
             'Odometry = mini_challenge_3.Odometry:main',
-            'Vision =  mini_challenge_3.Vision:main'
+            'Vision =  mini_challenge_3.Vision:main',
+            'SemaphoreDetection = mini_challenge_3.SemaphoreDetection:main',
         ],
     },
 )
