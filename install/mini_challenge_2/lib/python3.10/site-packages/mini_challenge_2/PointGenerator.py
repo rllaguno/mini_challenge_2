@@ -10,7 +10,6 @@ class My_Publisher(Node):
         super().__init__('PointGenerator')
         self.declare_parameter('numfigure', 10)
         self.point = self.create_publisher(Point, '/Point', 10)
-        #self.bandera = self.create_publisher(Bool, '/bandera', 10)
         
         self.timer_period_point_generator = 0.18
         self.timer_point_generator = self.create_timer(self.timer_period_point_generator, self.timer_callback_point)
@@ -22,9 +21,7 @@ class My_Publisher(Node):
         self.msg_point = Point()
         self.flag = 0
         self.figure = 10
-        self.msg_point.z = 1.0
-        #self.bandera = False
-        
+        self.msg_point.z = 1.0        
 
     def timer_callback_point(self):
         self.figure = self.get_parameter('numfigure').get_parameter_value().integer_value
@@ -34,77 +31,80 @@ class My_Publisher(Node):
             if self.flag == 0:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
             elif self.flag == 1:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 1.0
-                #self.bandera.publish(True)
+
             elif self.flag == 2:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 1.0
-                #self.bandera.publish(True)
+
             elif self.flag == 3:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
+
         # Hexagon = 2
         elif self.figure == 2:
             if self.flag == 0:
                 self.msg_point.x = 0.2
                 self.msg_point.y = 0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 1:
                 self.msg_point.x = 0.8
                 self.msg_point.y = 0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 2:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
             elif self.flag == 3:
                 self.msg_point.x = 0.8
                 self.msg_point.y = -0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 4:
                 self.msg_point.x = 0.2
                 self.msg_point.y = -0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 5:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
+
         # Rhombus = 3
         elif self.figure == 3:
             if self.flag == 0:
                 self.msg_point.x = 0.5
                 self.msg_point.y = 0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 1:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
             elif self.flag == 2:
                 self.msg_point.x = 0.5
                 self.msg_point.y = -0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 3:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
+
         # Triangle = 4
         elif self.figure == 4:
             if self.flag == 0:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.5
-                #self.bandera.publish(True)
+
             elif self.flag == 1:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 1.0
-                #self.bandera.publish(True)
+
             elif self.flag == 2:
                 self.msg_point.x = 0.0
                 self.msg_point.y = 0.0
-                #self.bandera.publish(True)
+
         else:
             self.msg_point.x = 0.0
             self.msg_point.y = 0.0
