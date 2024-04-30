@@ -1,0 +1,27 @@
+[2.901s] Invoking command in '/home/mcr2/mini_challenges_eq5/src/mini_challenge_3': PYTHONPATH=/home/mcr2/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/mcr2/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/mcr2/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed
+[3.501s] running egg_info
+[3.502s] writing ../../build/mini_challenge_3/mini_challenge_3.egg-info/PKG-INFO
+[3.502s] writing dependency_links to ../../build/mini_challenge_3/mini_challenge_3.egg-info/dependency_links.txt
+[3.503s] writing entry points to ../../build/mini_challenge_3/mini_challenge_3.egg-info/entry_points.txt
+[3.503s] writing requirements to ../../build/mini_challenge_3/mini_challenge_3.egg-info/requires.txt
+[3.503s] writing top-level names to ../../build/mini_challenge_3/mini_challenge_3.egg-info/top_level.txt
+[3.507s] reading manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'
+[3.508s] adding license file 'LICENSE'
+[3.511s] writing manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'
+[3.514s] running build
+[3.514s] running build_py
+[3.514s] running install
+[3.515s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.515s]   warnings.warn(
+[3.515s] running install_lib
+[3.516s] running install_data
+[3.517s] running install_egg_info
+[3.538s] removing '/home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3-0.0.0-py3.10.egg-info' (and everything under it)
+[3.538s] Copying ../../build/mini_challenge_3/mini_challenge_3.egg-info to /home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3-0.0.0-py3.10.egg-info
+[3.545s] running install_scripts
+[3.585s] Installing Controller script to /home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+[3.585s] Installing Odometry script to /home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+[3.586s] Installing PointGenerator script to /home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+[3.586s] Installing Vision script to /home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+[3.586s] writing list of installed files to '/home/mcr2/mini_challenges_eq5/build/mini_challenge_3/install.log'
+[3.617s] Invoked command in '/home/mcr2/mini_challenges_eq5/src/mini_challenge_3' returned '0': PYTHONPATH=/home/mcr2/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/mcr2/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/mcr2/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/mcr2/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed

@@ -18,6 +18,7 @@ class My_Publisher(Node) :
         #create subscribers
         self.subPose = self.create_subscription(Pose2D, "/odom", self.timer_callback_odometry, qos_profile) #receive current position and angle
         self.subPoint = self.create_subscription(Point, "/Point", self.timer_callback_point, qos_profile) #receive desired point
+        self.amount = self.create_subscription(Int32, "/Amount", self.timer_callback_amount, 10)
 
         #create timers        
         self.timer_period_controller = 0.1 #callback time
@@ -59,6 +60,8 @@ class My_Publisher(Node) :
         self.kiAngle = 0 #0.0531
         self.kdAngle = 0 #0.3597
 
+        self.amount = 0
+
     
     def timer_callback_controller(self) :
         
@@ -76,41 +79,38 @@ class My_Publisher(Node) :
 
         #### PID ANGLE ####
 
-        #check to is if it is turn to check the angle, angle starts on True
-        if (self.flag_ang == True) :
             angleTarget = 0
             #check to see in which quadrant the car needs to turn
-            
             #1st quadrant
-            if ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)) :
+            if ((self.msg_point.x >= self.msg_pose.x) and (self.msg_point.y >= self.msg_pose.y)) :
                 opuesto = self.msg_point.y - self.msg_pose.y
                 adyacente = self.msg_point.x - self.msg_pose.x
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians)
 
             #4th quadrant
-            elif ((self.msg_point.x > self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)) :
+            elif ((self.msg_point.x >= self.msg_pose.x) and (self.msg_point.y <= self.msg_pose.y)) :
                 opuesto = self.msg_point.x - self.msg_pose.x
                 adyacente = self.msg_pose.y - self.msg_point.y 
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 270
 
             #2nd quadrant
-            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y > self.msg_pose.y)) :
+            elif ((self.msg_point.x <= self.msg_pose.x) and (self.msg_point.y >= self.msg_pose.y)) :
                 opuesto = self.msg_pose.x - self.msg_point.x
                 adyacente = self.msg_point.y - self.msg_pose.y
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 90
 
             #3rd quadrant
-            elif ((self.msg_point.x < self.msg_pose.x) and (self.msg_point.y < self.msg_pose.y)) :
+            elif ((self.msg_point.x <= self.msg_pose.x) and (self.msg_point.y <= self.msg_pose.y)) :
                 opuesto = self.msg_pose.y - self.msg_point.y 
                 adyacente = self.msg_pose.x - self.msg_point.x
                 angleRadians = math.atan(opuesto/adyacente)
                 angleTarget = math.degrees(angleRadians) + 180
 
             #find the error angle (target angle - current angle)
-            self.errorAngle =  angleTarget - self.msg_pose.theta 
+            self.errorAngle = angleTarget - self.msg_pose.theta 
             
             #to also work with negatives
             if (self.errorAngle > 180) :
@@ -129,7 +129,6 @@ class My_Publisher(Node) :
             
             ## p angle controller (p = kp*errorAngle) ##
             self.pidAngle = self.kpAngle * self.errorAngle
-            print("PID angle: " + str(self.pidAngle))
 
             #try implementing a pid later
             '''
@@ -147,30 +146,24 @@ class My_Publisher(Node) :
                 self.msg_vel.angular.z = 0.1
             elif (self.pidAngle < -0.1) :
                 self.msg_vel.angular.z = -0.1
+            elif (self.flag_counter > self.amount):
+                self.msg_vel.angular.z = 0.0
+                self.msg_vel.linear.x = 0
             else:
                 self.msg_vel.angular.z = self.pidAngle
 
-            self.msg_vel.linear.x = 0.0 #since we are not checking the linear velocity, just in case set it to 0 
+            #self.msg_vel.linear.x = 0.0 #since we are not checking the linear velocity, just in case set it to 0 
             self.vel.publish(self.msg_vel) #publish the values of linear and angular velocities
             print("Angular vel: " + str(self.msg_vel.angular.z)) 
             
-            #check to see if the error is small to then start checking the distance
-            if ((self.errorAngle < 10 and self.errorAngle > -10) and self.bandera) :
-                self.flag_ang = False 
-                self.flag_vel = True 
 
-
-        #### PID DISTANCE ####
-
-        #check to is if it is turn to check the distance
-        if (self.flag_vel == True) :
+            #### PID DISTANCE ####
 
             #find the error distance (sqrt( (xTarget^2 - xCurrent^2) + (yTarget^2 - yCurrent^2) ) )
             self.errorDistance = math.sqrt(pow(self.msg_point.x - self.msg_pose.x, 2) + pow(self.msg_point.y - self.msg_pose.y, 2))
-           
+            
             ## p distance controller (p = kp*errorDistance) ##
             self.pidDistance = self.kpDistance * self.errorDistance
-            print("PID distance: " + str(self.pidDistance))
 
             #try implementing a pid later
             '''
@@ -184,23 +177,32 @@ class My_Publisher(Node) :
             '''
 
             #set a limit in case the pid value surpasses the max velocity on the car
-            if (self.pidDistance > 0.2) :
-                self.msg_vel.linear.x = 0.2
+            if (self.pidDistance > 0.13) :
+                self.msg_vel.linear.x = 0.13
+                if (self.flag_counter > self.amount):
+                    self.msg_vel.angular.z = 0.0
+                    self.msg_vel.linear.x = 0
             else :
                 self.msg_vel.linear.x = self.pidDistance
+                if (self.flag_counter > self.amount):
+                    self.msg_vel.angular.z = 0.0
+                    self.msg_vel.linear.x = 0
 
-            self.msg_vel.angular.z = 0.0 #since we are not checking the angular velocity, just in case set it to 0 
             self.vel.publish(self.msg_vel) #publish the values of linear and angular velocities
 
             #check to see if the error is small to then start checking the angle (we are checking the x and y individually, not distance in general)
-            if ((self.msg_pose.x < self.msg_point.x + 0.3 and self.msg_pose.x > self.msg_point.x - 0.3) and (self.msg_pose.y < self.msg_point.y + 0.3  and self.msg_pose.y > self.msg_point.y - 0.3) and self.bandera) :
+            if ((self.msg_pose.x < self.msg_point.x + 0.2 and self.msg_pose.x > self.msg_point.x - 0.2) and (self.msg_pose.y < self.msg_point.y + 0.2  and self.msg_pose.y > self.msg_point.y - 0.2) and self.bandera) :
                 self.flag_counter += 1 
                 self.msg_flag.data = self.flag_counter
                 self.flag.publish(self.msg_flag) #publish the flag counter to "point generator" for it to send the next target point 
                 self.bandera = False
-                self.flag_ang = True 
-                self.flag_vel = False 
 
+                if (self.flag_counter > self.amount):
+                    self.msg_vel.angular.z = 0
+                    self.msg_vel.linear.x = 0
+                    self.bandera2 = False
+                    self.vel.publish(self.msg_vel) 
+        
     #save received variables of "odometry"    
     def timer_callback_odometry(self, msg) :
         self.msg_pose.x = msg.x
@@ -212,6 +214,10 @@ class My_Publisher(Node) :
         self.msg_point.x = msg.x
         self.msg_point.y = msg.y
         self.msg_point.z = msg.z
+
+    def timer_callback_amount(self, msg) :
+        self.amount = msg.data
+        
         
 def main(args=None):
     rclpy.init(args=args)
