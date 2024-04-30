@@ -15,6 +15,7 @@ mini_challenge_3/Odometry.py
 mini_challenge_3/PointGenerator.py
 mini_challenge_3/Vision.py
 mini_challenge_3/__init__.py
+mini_challenge_3/semaphore_detection.py
 resource/mini_challenge_3
 test/test_copyright.py
 test/test_flake8.py

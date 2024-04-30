@@ -1,0 +1,31 @@
+running egg_info
+writing ../../build/mini_challenge_3/mini_challenge_3.egg-info/PKG-INFO
+writing dependency_links to ../../build/mini_challenge_3/mini_challenge_3.egg-info/dependency_links.txt
+writing entry points to ../../build/mini_challenge_3/mini_challenge_3.egg-info/entry_points.txt
+writing requirements to ../../build/mini_challenge_3/mini_challenge_3.egg-info/requires.txt
+writing top-level names to ../../build/mini_challenge_3/mini_challenge_3.egg-info/top_level.txt
+reading manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'
+running build
+running build_py
+copying mini_challenge_3/Controller.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build/lib/mini_challenge_3
+copying mini_challenge_3/semaphore_detection.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build/lib/mini_challenge_3
+running install
+running install_lib
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build/lib/mini_challenge_3/Controller.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build/lib/mini_challenge_3/semaphore_detection.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3/Controller.py to Controller.cpython-310.pyc
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3/semaphore_detection.py to semaphore_detection.cpython-310.pyc
+running install_data
+copying package.xml -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3
+running install_egg_info
+removing '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/mini_challenge_3/mini_challenge_3.egg-info to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages/mini_challenge_3-0.0.0-py3.10.egg-info
+running install_scripts
+Installing Controller script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+Installing Odometry script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+Installing PointGenerator script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+Installing SemaphoreDetection script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+Installing Vision script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3
+writing list of installed files to '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/install.log'

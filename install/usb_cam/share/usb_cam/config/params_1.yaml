@@ -1,0 +1,23 @@
+/**:
+    ros__parameters:
+      video_device: "/dev/video0"
+      framerate: 30.0
+      io_method: "mmap"
+      frame_id: "camera"
+      pixel_format: "mjpeg2rgb"  # see usb_cam/supported_formats for list of supported formats
+      av_device_format: "YUV422P"
+      image_width: 1920
+      image_height: 1080
+      camera_name: "webcam_aukey"
+      camera_info_url: "package://usb_cam/config/camera_info.yaml"
+      brightness: 0  # Adjust brightness (default is -1, higher value makes it brighter)
+      contrast: 10    # Adjust contrast (default is -1, higher value increases contrast)
+      saturation: 10  # Adjust saturation (default is -1, higher value increases saturation)
+      sharpness: -1   # Sharpness (default is -1, you can adjust if needed)
+      gain: -1        # Gain (default is -1, you can adjust if needed)
+      auto_white_balance: true  # Disable auto white balance
+      white_balance: 2000        # Adjust white balance (default is 4000, experiment with values)
+      autoexposure: true        # Disable auto exposure
+      exposure: 100               # Adjust exposure (default is 100, experiment with values)
+      autofocus: true           # Disable autofocus
+      focus: -1                  # Focus value (default is -1, you can adjust if needed)
