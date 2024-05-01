@@ -1,6 +1,0 @@
-[console_scripts]
-Controller = mini_challenge_3.Controller:main
-Odometry = mini_challenge_3.Odometry:main
-PointGenerator = mini_challenge_3.PointGenerator:main
-Vision = mini_challenge_3.Vision:main
-
