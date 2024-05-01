@@ -1,0 +1,19 @@
+image_width: 1920
+image_height: 1080
+camera_name: webcam_aukey
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [971.83679928, 0.0, 951.17501713, 0.0, 968.01723079, 538.42840072, 0.0, 0.0, 1.0]
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.1842261, -0.23966364, 0.00136221, -0.00163411, 0.08350397]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [988.30554199, 0.0, 945.00026728, 0.0, 981.84893799, 540.44584089, 0.0, 0.0, 1.0]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [988.305542, 0.0, 945.000267, 13.0, 0.0, 981.848938, 540.445841, 16.0, 0.0, 0.0, 1.0, 1893.0]
