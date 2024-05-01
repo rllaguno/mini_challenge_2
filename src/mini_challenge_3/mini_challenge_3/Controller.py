@@ -4,6 +4,12 @@ from geometry_msgs.msg import Twist, Pose2D, Point
 import rclpy.qos
 from std_msgs.msg import Int32, Bool
 import math 
+from enum import Enum
+
+# class Color(Enum):
+#     RED = 0
+#     YELLOW = 0.5
+#     GREEN = 1
 
 class My_Publisher(Node) :
     def __init__(self) :
@@ -18,6 +24,7 @@ class My_Publisher(Node) :
         #create subscribers
         self.subPose = self.create_subscription(Pose2D, "/odom", self.timer_callback_odometry, qos_profile) #receive current position and angle
         self.subPoint = self.create_subscription(Point, "/Point", self.timer_callback_point, qos_profile) #receive desired point
+        # self.colorId = self.create_subscription(String, "/color_id", self.timer_callback_color, qos_profile) #receive color of the circle
 
         #create timers        
         self.timer_period_controller = 0.1 #callback time
@@ -212,6 +219,14 @@ class My_Publisher(Node) :
         self.msg_point.x = msg.x
         self.msg_point.y = msg.y
         self.msg_point.z = msg.z
+    
+    # def timer_callback_color(self, msg) :
+    #     if (msg.data == "RED") :
+    #         self.color = Color.RED
+    #     elif (msg.data == "YELLOW") :
+    #         self.color = Color.YELLOW
+    #     elif (msg.data == "GREEN") :
+    #         self.color = Color.GREEN
         
 def main(args=None):
     rclpy.init(args=args)
