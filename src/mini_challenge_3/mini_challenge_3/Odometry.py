@@ -38,12 +38,12 @@ class My_Publisher(Node):
     def timer_callback_odometry(self):
         
         #calculate velocities
-        self.velocity_angular = self.r * ( (self.right_velocity - self.left_velocity) / self.l ) #angular velocity (r * ( (wr-wl) / l) )
+        self.velocity_angular = self.r * ( (self.left_velocity - self.right_velocity) / self.l ) #angular velocity (r * ( (wr-wl) / l) )
         self.velocity_linear = self.r * ( (self.left_velocity + self.right_velocity) / 2 ) #linear velocity (r * ( (wr+wl) / 2) )
 
         #calculate position
-        self.thetaTemp2 = self.thetaTemp2 + (self.velocity_angular * self.timer_period_controller) #theta in radians
-        self.msg_pose.theta = self.thetaTemp2 * -5.7269 #theta in degrees
+        self.thetaTemp2 = self.thetaTemp2 + (self.velocity_angular * self.timer_period_controller) *-1.18 #theta in radians
+        self.msg_pose.theta = self.thetaTemp2 * 57.269 #theta in degrees
         self.msg_pose.x = self.msg_pose.x + (self.velocity_linear * self.timer_period_controller) * np.cos(self.thetaTemp2) #distance in x
         self.msg_pose.y = self.msg_pose.y + ( self.velocity_linear * self.timer_period_controller ) * np.sin(self.thetaTemp2) #distance in y
 

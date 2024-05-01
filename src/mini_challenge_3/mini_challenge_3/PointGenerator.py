@@ -10,6 +10,7 @@ class My_Publisher(Node):
         super().__init__('PointGenerator')
         self.declare_parameter('numfigure', 10)
         self.point = self.create_publisher(Point, '/Point', 10)
+        self.amount = self.create_publisher(Int32, '/Amount', 10)
         
         self.timer_period_point_generator = 0.18
         self.timer_point_generator = self.create_timer(self.timer_period_point_generator, self.timer_callback_point)
@@ -19,15 +20,21 @@ class My_Publisher(Node):
         self.get_logger().info('|Point Generator node successfully initialized|')
 
         self.msg_point = Point()
+        self.msg_amount = Int32()
         self.flag = 0
         self.figure = 10
-        self.msg_point.z = 1.0        
+        self.msg_point.z = 1.0     
+
+        self.a = 0   
+
 
     def timer_callback_point(self):
         self.figure = self.get_parameter('numfigure').get_parameter_value().integer_value
-
+        
         # Square = 1
         if self.figure == 1:
+            self.a = 3
+            self.msg_amount.data = self.a
             if self.flag == 0:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.0
@@ -47,6 +54,8 @@ class My_Publisher(Node):
 
         # Hexagon = 2
         elif self.figure == 2:
+            self.a = 5
+            self.msg_amount.data = self.a
             if self.flag == 0:
                 self.msg_point.x = 0.2
                 self.msg_point.y = 0.5
@@ -74,6 +83,8 @@ class My_Publisher(Node):
 
         # Rhombus = 3
         elif self.figure == 3:
+            self.a = 3
+            self.msg_amount.data = self.a
             if self.flag == 0:
                 self.msg_point.x = 0.5
                 self.msg_point.y = 0.5
@@ -93,6 +104,8 @@ class My_Publisher(Node):
 
         # Triangle = 4
         elif self.figure == 4:
+            self.a = 2
+            self.msg_amount.data = self.a
             if self.flag == 0:
                 self.msg_point.x = 1.0
                 self.msg_point.y = 0.5
@@ -110,6 +123,7 @@ class My_Publisher(Node):
             self.msg_point.y = 0.0
 
         # Publish Point
+        self.amount.publish(self.msg_amount) 
         self.point.publish(self.msg_point)
     
     def timer_callback_flag(self, msg):
