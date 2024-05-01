@@ -1,10 +1,10 @@
-
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist, Pose2D, Point
 import rclpy.qos
 from std_msgs.msg import Int32, Bool, Float32
 import math 
+from enum import Enum
 
 class My_Publisher(Node) :
     def __init__(self) :
@@ -21,6 +21,7 @@ class My_Publisher(Node) :
         self.subPoint = self.create_subscription(Point, "/Point", self.timer_callback_point, qos_profile) #receive desired point
         self.amount = self.create_subscription(Int32, "/Amount", self.timer_callback_amount, 10)
         self.color = self.create_subscription(Float32, "/color_id", self.timer_callback_color, 10)
+        # self.colorId = self.create_subscription(String, "/color_id", self.timer_callback_color, qos_profile) #receive color of the circle
 
         #create timers        
         self.timer_period_controller = 0.1 #callback time
@@ -216,7 +217,6 @@ class My_Publisher(Node) :
 
     def timer_callback_color(self, msg) :
         self.color = msg.data
-        
         
 def main(args=None):
     rclpy.init(args=args)
