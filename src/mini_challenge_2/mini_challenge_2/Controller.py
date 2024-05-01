@@ -146,9 +146,6 @@ class My_Publisher(Node) :
                 self.msg_vel.angular.z = 0.1
             elif (self.pidAngle < -0.1) :
                 self.msg_vel.angular.z = -0.1
-            elif (self.flag_counter > self.amount):
-                self.msg_vel.angular.z = 0.0
-                self.msg_vel.linear.x = 0
             else:
                 self.msg_vel.angular.z = self.pidAngle
 
@@ -179,14 +176,8 @@ class My_Publisher(Node) :
             #set a limit in case the pid value surpasses the max velocity on the car
             if (self.pidDistance > 0.13) :
                 self.msg_vel.linear.x = 0.13
-                if (self.flag_counter > self.amount):
-                    self.msg_vel.angular.z = 0.0
-                    self.msg_vel.linear.x = 0
             else :
                 self.msg_vel.linear.x = self.pidDistance
-                if (self.flag_counter > self.amount):
-                    self.msg_vel.angular.z = 0.0
-                    self.msg_vel.linear.x = 0
 
             self.vel.publish(self.msg_vel) #publish the values of linear and angular velocities
 
@@ -196,12 +187,12 @@ class My_Publisher(Node) :
                 self.msg_flag.data = self.flag_counter
                 self.flag.publish(self.msg_flag) #publish the flag counter to "point generator" for it to send the next target point 
                 self.bandera = False
-
-                if (self.flag_counter > self.amount):
-                    self.msg_vel.angular.z = 0
-                    self.msg_vel.linear.x = 0
-                    self.bandera2 = False
-                    self.vel.publish(self.msg_vel) 
+                
+            if (self.flag_counter > self.amount):
+                self.msg_vel.angular.z = 0.0
+                self.msg_vel.linear.x = 0.0
+                self.vel.publish(self.msg_vel)  # Publish zero velocities to stop the car
+                return  # Exit the method early to prevent further processing
         
     #save received variables of "odometry"    
     def timer_callback_odometry(self, msg) :
