@@ -1,0 +1,46 @@
+running egg_info
+creating ../../build/mini_challenge_4/mini_challenge_4.egg-info
+writing ../../build/mini_challenge_4/mini_challenge_4.egg-info/PKG-INFO
+writing dependency_links to ../../build/mini_challenge_4/mini_challenge_4.egg-info/dependency_links.txt
+writing entry points to ../../build/mini_challenge_4/mini_challenge_4.egg-info/entry_points.txt
+writing requirements to ../../build/mini_challenge_4/mini_challenge_4.egg-info/requires.txt
+writing top-level names to ../../build/mini_challenge_4/mini_challenge_4.egg-info/top_level.txt
+writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+reading manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build
+creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib
+creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+copying mini_challenge_4/Odometry.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+copying mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+copying mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+copying mini_challenge_4/__init__.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+running install
+running install_lib
+creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Odometry.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/__init__.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Odometry.py to Odometry.cpython-310.pyc
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Vision.py to Vision.cpython-310.pyc
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Controller.py to Controller.cpython-310.pyc
+byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index
+creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index
+creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index/packages
+copying resource/mini_challenge_4 -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index/packages
+copying package.xml -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4
+creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/launch
+copying launch/mini4_launch.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/launch
+running install_egg_info
+Copying ../../build/mini_challenge_4/mini_challenge_4.egg-info to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4-0.0.0-py3.10.egg-info
+running install_scripts
+Installing Controller script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+Installing Odometry script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+Installing Vision script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+writing list of installed files to '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log'

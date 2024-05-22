@@ -1,0 +1,298 @@
+[3.263s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.263s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7dbd28d3ae90>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7dbd28d3a920>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7dbd28d3a920>>, mixin_verb=('build',))
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[6.227s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[6.227s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rllaguno/mini_challenges_eq5'
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[6.228s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[6.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[6.229s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[6.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[6.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[6.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[6.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[6.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[6.282s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[6.282s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[6.282s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[6.283s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[6.284s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[6.285s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['ignore', 'ignore_ament_install']
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ignore'
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ignore_ament_install'
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['colcon_pkg']
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'colcon_pkg'
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['colcon_meta']
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'colcon_meta'
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['ros']
+[6.286s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ros'
+[6.316s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_2' with type 'ros.ament_python' and name 'mini_challenge_2'
+[6.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['ignore', 'ignore_ament_install']
+[6.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ignore'
+[6.316s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ignore_ament_install'
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['colcon_pkg']
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'colcon_pkg'
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['colcon_meta']
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'colcon_meta'
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['ros']
+[6.317s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ros'
+[6.335s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_3' with type 'ros.ament_python' and name 'mini_challenge_3'
+[6.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['ignore', 'ignore_ament_install']
+[6.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ignore'
+[6.335s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ignore_ament_install'
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['colcon_pkg']
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'colcon_pkg'
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['colcon_meta']
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'colcon_meta'
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['ros']
+[6.336s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ros'
+[6.337s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_4' with type 'ros.ament_python' and name 'mini_challenge_4'
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['ignore', 'ignore_ament_install']
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ignore'
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ignore_ament_install'
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['colcon_pkg']
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'colcon_pkg'
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['colcon_meta']
+[6.338s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'colcon_meta'
+[6.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['ros']
+[6.339s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ros'
+[6.372s] DEBUG:colcon.colcon_core.package_identification:Package 'src/usb_cam' with type 'ros.ament_cmake' and name 'usb_cam'
+[6.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[6.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[6.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[6.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[6.372s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[6.632s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[6.632s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[6.657s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 342 installed packages in /opt/ros/humble
+[6.662s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_args' from command line to 'None'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_target' from command line to 'None'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_clean_cache' from command line to 'False'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_clean_first' from command line to 'False'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_force_configure' from command line to 'False'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'ament_cmake_args' from command line to 'None'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'catkin_cmake_args' from command line to 'None'
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.742s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2', 'merge_install': False, 'path': '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_2', 'symlink_install': False, 'test_result_base': None}
+[6.742s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_target' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_clean_cache' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_clean_first' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_force_configure' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'ament_cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'catkin_cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.743s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_3' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_3', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3', 'merge_install': False, 'path': '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_3', 'symlink_install': False, 'test_result_base': None}
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_target' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_clean_cache' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_clean_first' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_force_configure' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'ament_cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'catkin_cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.743s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_4' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4', 'merge_install': False, 'path': '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4', 'symlink_install': False, 'test_result_base': None}
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_args' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_target' from command line to 'None'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_clean_cache' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_clean_first' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_force_configure' from command line to 'False'
+[6.743s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'ament_cmake_args' from command line to 'None'
+[6.744s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'catkin_cmake_args' from command line to 'None'
+[6.744s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[6.744s] DEBUG:colcon.colcon_core.verb:Building package 'usb_cam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rllaguno/mini_challenges_eq5/build/usb_cam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rllaguno/mini_challenges_eq5/install/usb_cam', 'merge_install': False, 'path': '/home/rllaguno/mini_challenges_eq5/src/usb_cam', 'symlink_install': False, 'test_result_base': None}
+[6.744s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[6.745s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[6.745s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_2' with build type 'ament_python'
+[6.745s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_2', 'ament_prefix_path')
+[6.756s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[6.757s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.ps1'
+[6.761s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.dsv'
+[6.767s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.sh'
+[6.768s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.768s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.771s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_3' with build type 'ament_python'
+[6.771s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_3', 'ament_prefix_path')
+[6.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.ps1'
+[6.772s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.dsv'
+[6.772s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.sh'
+[6.773s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.773s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.775s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4' with build type 'ament_python'
+[6.776s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_4', 'ament_prefix_path')
+[6.776s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.ps1'
+[6.776s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.dsv'
+[6.833s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.sh'
+[6.834s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.834s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.836s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rllaguno/mini_challenges_eq5/src/usb_cam' with build type 'ament_cmake'
+[6.836s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rllaguno/mini_challenges_eq5/src/usb_cam'
+[6.836s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.837s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.142s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_2'
+[7.142s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.142s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.396s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_3'
+[7.396s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.397s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.636s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4'
+[7.637s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[7.637s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[7.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rllaguno/mini_challenges_eq5/build/usb_cam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rllaguno/mini_challenges_eq5/build/usb_cam -- -j16 -l16
+[11.051s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rllaguno/mini_challenges_eq5/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rllaguno/mini_challenges_eq5/build/usb_cam -- -j16 -l16
+[11.117s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rllaguno/mini_challenges_eq5/build/usb_cam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rllaguno/mini_challenges_eq5/build/usb_cam
+[11.349s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb_cam)
+[11.351s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rllaguno/mini_challenges_eq5/build/usb_cam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rllaguno/mini_challenges_eq5/build/usb_cam
+[11.469s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam' for CMake module files
+[11.471s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam' for CMake config files
+[11.471s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'cmake_prefix_path')
+[11.472s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.ps1'
+[11.473s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.dsv'
+[11.473s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.sh'
+[11.475s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib'
+[11.475s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'ld_library_path_lib')
+[11.475s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.ps1'
+[11.476s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.dsv'
+[11.477s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.sh'
+[11.478s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/bin'
+[11.478s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib/pkgconfig/usb_cam.pc'
+[11.478s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib/python3.10/site-packages'
+[11.479s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/bin'
+[11.479s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.ps1'
+[11.492s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.dsv'
+[11.522s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.sh'
+[11.539s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.bash'
+[11.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.zsh'
+[11.576s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/colcon-core/packages/usb_cam)
+[11.648s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb_cam)
+[11.649s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam' for CMake module files
+[11.649s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam' for CMake config files
+[11.649s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'cmake_prefix_path')
+[11.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.ps1'
+[11.650s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.dsv'
+[11.650s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.sh'
+[11.651s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib'
+[11.651s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'ld_library_path_lib')
+[11.651s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.ps1'
+[11.651s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.dsv'
+[11.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.sh'
+[11.652s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/bin'
+[11.652s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib/pkgconfig/usb_cam.pc'
+[11.652s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/lib/python3.10/site-packages'
+[11.652s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/usb_cam/bin'
+[11.652s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.ps1'
+[11.653s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.dsv'
+[11.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.sh'
+[11.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.bash'
+[11.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.zsh'
+[11.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rllaguno/mini_challenges_eq5/install/usb_cam/share/colcon-core/packages/usb_cam)
+[12.233s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_2': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
+[12.234s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_3': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed install_data
+[12.239s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data
+[12.506s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3' for CMake module files
+[12.507s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_3' returned '0': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed install_data
+[12.507s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3' for CMake config files
+[12.508s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib'
+[12.508s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/bin'
+[12.508s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/pkgconfig/mini_challenge_3.pc'
+[12.508s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages'
+[12.508s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_3', 'pythonpath')
+[12.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.ps1'
+[12.509s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.dsv'
+[12.509s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.sh'
+[12.510s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/bin'
+[12.510s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_challenge_3)
+[12.510s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.ps1'
+[12.510s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.dsv'
+[12.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.sh'
+[12.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.bash'
+[12.511s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.zsh'
+[12.511s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3/share/colcon-core/packages/mini_challenge_3)
+[12.554s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2' for CMake module files
+[12.554s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_2' returned '0': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
+[12.555s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2' for CMake config files
+[12.555s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/lib'
+[12.556s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/bin'
+[12.556s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/lib/pkgconfig/mini_challenge_2.pc'
+[12.556s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages'
+[12.556s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_2', 'pythonpath')
+[12.556s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.ps1'
+[12.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.dsv'
+[12.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.sh'
+[12.558s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/bin'
+[12.558s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_challenge_2)
+[12.558s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.ps1'
+[12.559s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.dsv'
+[12.559s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.sh'
+[12.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.bash'
+[12.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.zsh'
+[12.561s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2/share/colcon-core/packages/mini_challenge_2)
+[12.572s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4' for CMake module files
+[12.573s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4' returned '0': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data
+[12.574s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4' for CMake config files
+[12.574s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib'
+[12.574s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/bin'
+[12.575s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/pkgconfig/mini_challenge_4.pc'
+[12.575s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages'
+[12.575s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_4', 'pythonpath')
+[12.575s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/pythonpath.ps1'
+[12.575s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/pythonpath.dsv'
+[12.576s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/pythonpath.sh'
+[12.576s] Level 1:colcon.colcon_core.environment:checking '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/bin'
+[12.576s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_challenge_4)
+[12.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/package.ps1'
+[12.577s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/package.dsv'
+[12.577s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/package.sh'
+[12.577s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/package.bash'
+[12.578s] INFO:colcon.colcon_core.shell:Creating package script '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/package.zsh'
+[12.578s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/colcon-core/packages/mini_challenge_4)
+[12.578s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.579s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.579s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.579s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.627s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.627s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.627s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.649s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.650s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rllaguno/mini_challenges_eq5/install/local_setup.ps1'
+[12.693s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rllaguno/mini_challenges_eq5/install/_local_setup_util_ps1.py'
+[12.735s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rllaguno/mini_challenges_eq5/install/setup.ps1'
+[12.736s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rllaguno/mini_challenges_eq5/install/local_setup.sh'
+[12.745s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rllaguno/mini_challenges_eq5/install/_local_setup_util_sh.py'
+[12.745s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rllaguno/mini_challenges_eq5/install/setup.sh'
+[12.747s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rllaguno/mini_challenges_eq5/install/local_setup.bash'
+[12.765s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rllaguno/mini_challenges_eq5/install/setup.bash'
+[12.766s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rllaguno/mini_challenges_eq5/install/local_setup.zsh'
+[12.787s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rllaguno/mini_challenges_eq5/install/setup.zsh'

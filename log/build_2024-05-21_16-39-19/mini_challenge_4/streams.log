@@ -1,0 +1,48 @@
+[8.964s] Invoking command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data
+[9.309s] running egg_info
+[9.310s] creating ../../build/mini_challenge_4/mini_challenge_4.egg-info
+[9.310s] writing ../../build/mini_challenge_4/mini_challenge_4.egg-info/PKG-INFO
+[9.311s] writing dependency_links to ../../build/mini_challenge_4/mini_challenge_4.egg-info/dependency_links.txt
+[9.311s] writing entry points to ../../build/mini_challenge_4/mini_challenge_4.egg-info/entry_points.txt
+[9.311s] writing requirements to ../../build/mini_challenge_4/mini_challenge_4.egg-info/requires.txt
+[9.311s] writing top-level names to ../../build/mini_challenge_4/mini_challenge_4.egg-info/top_level.txt
+[9.311s] writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+[9.314s] reading manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+[9.315s] adding license file 'LICENSE'
+[9.317s] writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+[9.317s] running build
+[9.318s] running build_py
+[9.318s] creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build
+[9.318s] creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib
+[9.318s] creating /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[9.318s] copying mini_challenge_4/Odometry.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[9.340s] copying mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[9.351s] copying mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[9.372s] copying mini_challenge_4/__init__.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[9.372s] running install
+[9.373s] running install_lib
+[9.374s] creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[9.375s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Odometry.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[9.375s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[9.375s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[9.375s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/__init__.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[9.376s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Odometry.py to Odometry.cpython-310.pyc
+[9.376s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Vision.py to Vision.cpython-310.pyc
+[9.377s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Controller.py to Controller.cpython-310.pyc
+[9.377s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/__init__.py to __init__.cpython-310.pyc
+[9.377s] running install_data
+[9.377s] creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index
+[9.377s] creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index
+[9.377s] creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index/packages
+[9.378s] copying resource/mini_challenge_4 -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/ament_index/resource_index/packages
+[9.378s] copying package.xml -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4
+[9.378s] creating /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/launch
+[9.378s] copying launch/mini4_launch.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/launch
+[9.427s] running install_egg_info
+[9.431s] Copying ../../build/mini_challenge_4/mini_challenge_4.egg-info to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4-0.0.0-py3.10.egg-info
+[9.432s] running install_scripts
+[9.458s] Installing Controller script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[9.458s] Installing Odometry script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[9.459s] Installing Vision script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[9.459s] writing list of installed files to '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log'
+[9.512s] Invoked command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4' returned '0': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data
