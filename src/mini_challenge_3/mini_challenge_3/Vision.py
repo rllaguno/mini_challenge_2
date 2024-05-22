@@ -11,7 +11,7 @@ class Vision(Node):
     def __init__(self):
         super().__init__('Vision')
         
-        self.img = np.ndarray((720, 1280, 3))
+        self.img = np.ndarray((30, 40, 3))
         
         # Sets the color range of Red, Yellow, and Green
         self.lower_yellow = np.array([20, 10, 150])
@@ -36,7 +36,7 @@ class Vision(Node):
         self.sub = self.create_subscription(Image, '/image_raw', self.camera_callback, 10)
         self.image_pub = self.create_publisher(Image, '/img_processing/color', 10)
         self.color_pub = self.create_publisher(Float32, '/color_id', 10)
-        dt = 0.1
+        dt = 0.5
         self.timer = self.create_timer(dt, self.timer_callback)
         self.get_logger().info('Vision Node started')
 
@@ -59,7 +59,7 @@ class Vision(Node):
         canny = cv2.Canny(blur, 75, 250)
         return canny
     
-    def filter (self, hsvFrame, lower, upper):
+    def filter(self, hsvFrame, lower, upper):
         #hace solo una vez el lower y upper del filtro
     
         mask = cv2.inRange(hsvFrame, lower, upper)
