@@ -5,7 +5,7 @@ import rclpy.qos
 from std_msgs.msg import Float32
 import numpy as np
 
-class My_Publisher(Node):
+class Odometry(Node):
     def __init__(self):
         super().__init__('Odometry')
         
@@ -60,9 +60,9 @@ class My_Publisher(Node):
         
 def main(args=None):
     rclpy.init(args=args)
-    m_p = My_Publisher()
-    rclpy.spin(m_p)
-    m_p.destroy_node()
+    o = Odometry()
+    rclpy.spin(o)
+    o.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

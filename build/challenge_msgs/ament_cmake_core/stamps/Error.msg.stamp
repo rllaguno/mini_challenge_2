@@ -1,0 +1,2 @@
+float32 center_error
+float32 points_error

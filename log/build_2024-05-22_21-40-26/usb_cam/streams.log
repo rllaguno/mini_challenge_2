@@ -1,0 +1,8 @@
+[0.523s] Invoking command in '/home/rllaguno/mini_challenges_eq5/build/usb_cam': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_3:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_2:/opt/ros/humble /usr/bin/cmake --build /home/rllaguno/mini_challenges_eq5/build/usb_cam -- -j16 -l16
+[0.583s] [ 28%] Built target usb_cam
+[0.583s] [ 28%] Built target usb_cam_node_exe
+[0.583s] [ 42%] Built target gtest_main
+[0.594s] [ 57%] Built target gtest
+[0.611s] [ 71%] Built target usb_cam_node
+[0.618s] [ 85%] Built target test_usb_cam_utils
+[0.619s] [100%] Built target test_pixel_formats
