@@ -1,0 +1,11 @@
+source;share/challenge_msgs/hook/cmake_prefix_path.ps1
+source;share/challenge_msgs/hook/cmake_prefix_path.dsv
+source;share/challenge_msgs/hook/cmake_prefix_path.sh
+source;share/challenge_msgs/hook/ld_library_path_lib.ps1
+source;share/challenge_msgs/hook/ld_library_path_lib.dsv
+source;share/challenge_msgs/hook/ld_library_path_lib.sh
+source;share/challenge_msgs/local_setup.bash
+source;share/challenge_msgs/local_setup.dsv
+source;share/challenge_msgs/local_setup.ps1
+source;share/challenge_msgs/local_setup.sh
+source;share/challenge_msgs/local_setup.zsh

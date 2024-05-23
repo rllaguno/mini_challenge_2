@@ -1,0 +1,9 @@
+[31mCMake Error at CMakeLists.txt:10 (find_package):
+  find_package called with invalid argument "REQUIERED"
+
+[0m
+[31mCMake Error at CMakeLists.txt:15 (rosidl_generate_interfaces):
+  Unknown CMake command "rosidl_generate_interfaces".
+
+[0m
+gmake: *** [Makefile:226: cmake_check_build_system] Error 1

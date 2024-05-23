@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from challenge_msgs/msg/Error.msg
+// generated code does not contain a copyright notice
+
+
+module challenge_msgs {
+  module msg {
+    struct Error {
+      float center_error;
+
+      float points_error;
+    };
+  };
+};

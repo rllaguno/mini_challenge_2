@@ -1,0 +1,30 @@
+[0.621s] Invoking command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data
+[0.844s] running egg_info
+[0.844s] writing ../../build/mini_challenge_4/mini_challenge_4.egg-info/PKG-INFO
+[0.845s] writing dependency_links to ../../build/mini_challenge_4/mini_challenge_4.egg-info/dependency_links.txt
+[0.845s] writing entry points to ../../build/mini_challenge_4/mini_challenge_4.egg-info/entry_points.txt
+[0.845s] writing requirements to ../../build/mini_challenge_4/mini_challenge_4.egg-info/requires.txt
+[0.845s] writing top-level names to ../../build/mini_challenge_4/mini_challenge_4.egg-info/top_level.txt
+[0.846s] reading manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+[0.847s] adding license file 'LICENSE'
+[0.847s] writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'
+[0.848s] running build
+[0.848s] running build_py
+[0.848s] copying mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[0.848s] copying mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4
+[0.848s] running install
+[0.848s] running install_lib
+[0.849s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Vision.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[0.849s] copying /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Controller.py -> /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4
+[0.850s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Vision.py to Vision.cpython-310.pyc
+[0.851s] byte-compiling /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4/Controller.py to Controller.cpython-310.pyc
+[0.851s] running install_data
+[0.852s] running install_egg_info
+[0.853s] removing '/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4-0.0.0-py3.10.egg-info' (and everything under it)
+[0.853s] Copying ../../build/mini_challenge_4/mini_challenge_4.egg-info to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages/mini_challenge_4-0.0.0-py3.10.egg-info
+[0.854s] running install_scripts
+[0.870s] Installing Controller script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[0.870s] Installing Odometry script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[0.870s] Installing Vision script to /home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4
+[0.870s] writing list of installed files to '/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log'
+[0.896s] Invoked command in '/home/rllaguno/mini_challenges_eq5/src/mini_challenge_4' returned '0': PYTHONPATH=/home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/rllaguno/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_4 build --build-base /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/build install --record /home/rllaguno/mini_challenges_eq5/build/mini_challenge_4/install.log --single-version-externally-managed install_data

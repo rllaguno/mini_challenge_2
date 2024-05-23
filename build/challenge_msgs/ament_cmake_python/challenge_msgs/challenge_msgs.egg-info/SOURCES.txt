@@ -1,0 +1,8 @@
+setup.py
+challenge_msgs/__init__.py
+challenge_msgs.egg-info/PKG-INFO
+challenge_msgs.egg-info/SOURCES.txt
+challenge_msgs.egg-info/dependency_links.txt
+challenge_msgs.egg-info/top_level.txt
+challenge_msgs/msg/__init__.py
+challenge_msgs/msg/_error.py
