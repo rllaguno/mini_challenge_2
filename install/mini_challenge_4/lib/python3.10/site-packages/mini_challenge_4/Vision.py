@@ -29,7 +29,7 @@ class Vision(Node):
         self.points_error_pub = self.create_publisher(Int32, '/points_error', 10)
         self.frame_pub = self.create_publisher(Image, '/cv_image', 10)
 
-        dt = 0.2
+        dt = 0.1
         self.timer = self.create_timer(dt, self.timer_callback)
         self.get_logger().info('Vision Node started')
 
@@ -50,13 +50,13 @@ class Vision(Node):
                 #frame = cv.resize(frame, (800, 600), interpolation=cv.INTER_LINEAR)
 
                 # Apply median blur
-                #frame = cv.medianBlur(self.img, 35)
+                frame = cv.medianBlur(self.img, 5)
 
                 # Convert to grayscale
                 frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
                 # Apply threshold
-                _, frame = cv.threshold(frame, 100, 255, cv.THRESH_BINARY_INV)
+                _, frame = cv.threshold(frame, 90, 255, cv.THRESH_BINARY_INV)
 
                 # Create a blank mask with the same height and width as the frame
                 blank = np.zeros(frame.shape[:2], dtype='uint8')

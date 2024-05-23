@@ -30,21 +30,26 @@ class My_Publisher(Node) :
         self.previouserror = 0
         self.integral = 0
 
-        self.kp = 0.01 #0.4535
+        self.kp = 0.004 #0.4535
         self.ki = 0 #0.0531
         self.kd = 0 #0.3597
 
 
     
     def timer_callback_controller(self) :
-        
+
+        self.msg_vel.linear.x = 0.06
         # check first error with bottom point with center and then error between points
         if (self.errorCenter < 5 and self.errorCenter > -5):
             self.error = self.errorPoints
-            '''if (self.errorPoints < 5 and self.errorPoints > -5):
-                self.error = 0'''
+            if (self.errorPoints < 5 and self.errorPoints > -5):
+                self.error = 0
+            else:
+                self.msg_vel.linear.x = 0.03
+                self.vel.publish(self.msg_vel)
         else:
             self.error = self.errorCenter
+            self.msg_vel.linear.x = 0.03
 
         #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
         self.proportional = self.error
@@ -52,17 +57,14 @@ class My_Publisher(Node) :
         self.derivative = (self.error - self.previouserror) / self.timer_period_controller
         self.previouserror = self.error
         self.pid = (self.kp * self.proportional) + (self.ki * self.integral) + (self.kd * self.derivative)
-        print("PID: " + str(self.pid))
-
 
         #set a limit in case the pid value surpasses the max velocity on the car
-        if (self.pid > 0.1) :
-            self.msg_vel.angular.z = 0.1
-        elif (self.pid < -0.1) :
-            self.msg_vel.angular.z = -0.1
+        if (self.pid > 0.035) :
+            self.msg_vel.angular.z = 0.035
+        elif (self.pid < -0.035) :
+            self.msg_vel.angular.z = -0.035
         else: 
             self.msg_vel.angular.z = self.pid
-        self.msg_vel.linear.x = 0.1
 
         self.vel.publish(self.msg_vel)
 
