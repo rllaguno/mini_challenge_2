@@ -24,8 +24,8 @@ setup(
         'console_scripts': [
             'Vision = final_challenge.Vision:main',
             'Controller = final_challenge.Controller:main',
-            'Odometry = final_challenge.Odometry:main'
-            'Signal = final_challenge.Signal:main'
+            'Odometry = final_challenge.Odometry:main',
+            'Signal = final_challenge.Signal:main',
         ],
     },
 )
