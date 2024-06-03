@@ -2,8 +2,10 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Int32
+from std_msgs.msg import Float32
+from signal_msg.msg import Signal
 
-class My_Publisher(Node) :
+class Controller(Node) :
     def __init__(self) :
         super().__init__('Controller')
         
@@ -13,7 +15,8 @@ class My_Publisher(Node) :
         #create subscribers
         self.subErrorCenter = self.create_subscription(Int32, "/center_error", self.timer_callback_errorCenter, 10) #receive current error between bottom point and screen center
         self.subErrorPoint = self.create_subscription(Int32, "/point_error", self.timer_callback_errorPoint, 10) #receive current error between points
-
+        self.subLight = self.create_subscription(Float32, "/light", self.timer_callback_light, 10) #receive current error between points
+        self.subSignal = self.create_subscription(Float32, "/signal", self.timer_callback_signal, 10) #receive current error between points
 
         #create timers        
         self.timer_period_controller = 0.1 #callback time
@@ -34,22 +37,24 @@ class My_Publisher(Node) :
         self.ki = 0 #0.0531
         self.kd = 0 #0.3597
 
+        self.light_multiplier = 1.0
+        self.signal_num = 0
 
-    
+
     def timer_callback_controller(self) :
 
-        self.msg_vel.linear.x = 0.06
+        self.msg_vel.linear.x = 0.06 * self.light_multiplier
         # check first error with bottom point with center and then error between points
         if (self.errorCenter < 20 and self.errorCenter > -20):
             self.error = self.errorPoints
             if (self.errorPoints < 20 and self.errorPoints > -20):
                 self.error = 0
             else:
-                self.msg_vel.linear.x = 0.03
+                self.msg_vel.linear.x = 0.03 * self.light_multiplier
                 self.vel.publish(self.msg_vel)
         else:
             self.error = self.errorCenter
-            self.msg_vel.linear.x = 0.03
+            self.msg_vel.linear.x = 0.03 * self.light_multiplier
 
         #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
         self.proportional = self.error
@@ -76,10 +81,15 @@ class My_Publisher(Node) :
     def timer_callback_errorPoint(self, msg) :
         self.errorPoints = msg.data * -1
 
+    def timer_callback_light(self, msg) :
+        self.light_multiplier = msg.data
+
+    def timer_callback_signal(self, msg) :
+        self.signal_num = msg.num
         
 def main(args=None):
     rclpy.init(args=args)
-    m_p = My_Publisher()
+    m_p = Controller()
     rclpy.spin(m_p)
     m_p.destroy_node()
     rclpy.shutdown()
