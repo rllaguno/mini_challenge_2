@@ -25,7 +25,7 @@ setup(
             'Vision = final_challenge.Vision:main',
             'Controller = final_challenge.Controller:main',
             'Odometry = final_challenge.Odometry:main',
-            'Signal = final_challenge.Signal:main',
+            'ML = final_challenge.ML:main'
         ],
     },
 )

@@ -5,26 +5,26 @@ from launch import LaunchDescription
 def generate_launch_description():
 
     vision_node = Node(
-        package='final_launch',
+        package='final_challenge',
         executable='Vision',
         output='screen',
     )
 
     controller_node = Node(
-        package='final_launch',
+        package='final_challenge',
         executable='Controller',
         output='screen',
     )
 
     odometry_node = Node(
-        package='final_launch',
+        package='final_challenge',
         executable='Odometry',
         output='screen',
     )
 
     signal_node = Node(
-        package='final_launch',
-        executable='Signal',
+        package='final_challenge',
+        executable='ML',
         output='screen',
     )
 
