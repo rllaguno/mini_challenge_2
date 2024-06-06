@@ -74,11 +74,13 @@ class ML(Node):
                 print('Confidence: ', confidence)
                 print('Distance: ', self.inference_result.bottom - self.inference_result.top)
 
-                if(confidence < 0.5 or (self.inference_result.bottom - self.inference_result.top) < 30):
+                if(confidence < 0.1 or (self.inference_result.bottom - self.inference_result.top) < 10):
                     self.counter[self.c] = 0
                     self.signal_msg.data = 0
                     self.signal_pub.publish(self.signal_msg)
                     continue
+
+                #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
 
                 if(self.inference_result.class_name == "stop"):
                     self.signal_msg.data = 1

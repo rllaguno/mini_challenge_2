@@ -17,6 +17,8 @@ class Vision(Node):
         self.bridge = CvBridge()
         self.ce_msg = Int32()
         self.pe_msg = Int32()
+        self.standby_msg = Int32()
+        self.standby_counter = 0
 
         qos_profile = rclpy.qos.qos_profile_sensor_data #eliminate noise
 
@@ -25,6 +27,7 @@ class Vision(Node):
         self.sub = self.create_subscription(Image, '/video_source/raw', self.camera_callback, qos_profile)
         self.center_error_pub = self.create_publisher(Int32, '/center_error', 10)
         self.points_error_pub = self.create_publisher(Int32, '/points_error', 10)
+        self.standby_pub = self.create_publisher(Int32, '/standby', 10)
         self.frame_pub = self.create_publisher(Image, '/cv_image', 10)
 
         dt = 0.1
@@ -77,6 +80,14 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
+                    if largest_contour.shape[0] < 15:
+                        self.standby_counter = self.standby_counter + 1
+                        if self.standby_counter >= 5:
+                            self.standby_msg.data = 1
+                            self.standby_pub.publish(self.standby_msg)
+                            print('Standby = 1')
+                        return
+
                     # Si el contour es de 2 dimensiones y tiene 2 columnas
                     if largest_contour.ndim == 2 and largest_contour.shape[1] == 2:
                         # Obtener valor del punto mas bajo
@@ -107,6 +118,10 @@ class Vision(Node):
                         self.pe_msg.data = position_diff_between_points
                         self.center_error_pub.publish(self.ce_msg)
                         self.points_error_pub.publish(self.pe_msg)
+                        self.standby_counter = 0
+                        self.standby_msg.data = 0
+                        self.standby_pub.publish(self.standby_msg)
+                        print('standby = 0')
 
                         self.frame_pub.publish(self.bridge.cv2_to_imgmsg(frame))
                         

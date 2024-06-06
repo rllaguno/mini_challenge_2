@@ -18,11 +18,13 @@ class Controller(Node) :
         self.subErrorPoint = self.create_subscription(Int32, "/point_error", self.timer_callback_errorPoint, 10) #receive current error between points
         self.subLight = self.create_subscription(Float32, "/light", self.timer_callback_light, 10) #receive current error between points
         self.subSignal = self.create_subscription(Int32, "/signal", self.timer_callback_signal, 1) #receive current error between points
+        self.subStandby = self.create_subscription(Int32, "/standby", self.timer_callback_standby, 10) #receive current error between points
+
 
         #create timers        
         self.timer_period_controller = 0.1 #callback time
         self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_controller) #logic goes in this timer
-        self.get_logger().info('|Controller node successfully initialized|')
+        self.get_logger().info('|Controller node successfully initialized yayyy|')
 
         #create different messsage types 
         self.msg_vel = Twist() 
@@ -44,9 +46,6 @@ class Controller(Node) :
         self.counter = 0
         self.multWorkers = 1.0
 
-        self.msg_vel.linear.x = 0.06
-        self.vel.publish(self.msg_vel)
-
         self.banderaLeft = False
         self.banderaWorkers = False
         self.banderaRotonda = False
@@ -54,162 +53,142 @@ class Controller(Node) :
         self.banderaStraight = False
         self.secondsOld  = 0
 
+        self.banderaSignal = False
+        self.bandera = False
+        self.standby_num = 0
+
 
     def timer_callback_controller(self) :
         print(self.signal_num)
-
         
-
-
-        #left
-        if (self.signal_num == 3 and (not self.banderaLeft)):
-            print("inside left")
-            self.secondsOld  = time.time()
-            self.msg_vel.linear.x = 0.03
-            self.msg_vel.angular.z = 0.05
-            self.vel.publish(self.msg_vel)
-            self.banderaLeft = True 
-            print(self.banderaLeft)
-
-        if ((self.banderaLeft) and ((time.time() - self.secondsOld) >= 5)):
-            self.banderaLeft = False 
         
-
-        #rotonda
-        if (self.signal_num == 5 and (not self.banderaRotonda)):
-            print("inside left")
-            self.secondsOld  = time.time()
-            self.msg_vel.linear.x = 0.04
-            self.msg_vel.angular.z = -0.04
-            self.vel.publish(self.msg_vel)
-            self.banderaRotonda = True 
-            print(self.banderaRotonda)
-
-        if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 5)):
-            self.banderaRotonda = False 
-        
-
-        #stop 
-        if (self.signal_num == 1 and (not self.banderaStop)):
-            print("inside stop")
-            self.secondsOld  = time.time()
+        if (self.standby_num == 1 and (not self.banderaSignal)):
             self.msg_vel.linear.x = 0.0
-            self.vel.publish(self.msg_vel)
-            self.banderaStop = True 
-            print(self.banderaStop)
-
-        if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 5)):
-            self.msg_vel.linear.x = 0.06
-            self.vel.publish(self.msg_vel)
-
-        if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 10)):
-            self.banderaStop = False 
-
-        #workers
-        if (self.signal_num == 4 and (not self.banderaWorkers)):
-            print("inside straight")
-            self.secondsOld  = time.time()
-            self.msg_vel.linear.x = 0.03
             self.msg_vel.angular.z = 0.0
             self.vel.publish(self.msg_vel)
-            self.banderaWorkers = True 
-            print(self.banderaWorkers)
+            self.banderaSignal = True
 
-        if ((self.banderaWorkers) and ((time.time() - self.secondsOld) >= 5)):
-            self.banderaWorkers = False 
+        if (self.banderaSignal):
+            #left
+            if (self.signal_num == 3 and (not self.banderaLeft) and (not self.bandera)):
+                print("inside left")
+                self.secondsOld  = time.time()
+                self.msg_vel.linear.x = 0.06
+                self.msg_vel.angular.z = 0.04
+                self.vel.publish(self.msg_vel)
+                self.banderaLeft = True 
+                print(self.banderaLeft)
 
-
-        #straight
-        if (self.signal_num == 4 and (not self.banderaStraight)):
-            print("inside straight")
-            self.secondsOld  = time.time()
-            self.msg_vel.linear.x = 0.06
-            self.msg_vel.angular.z = 0.0
-            self.vel.publish(self.msg_vel)
-            self.banderaStraight = True 
-            print(self.banderaStraight)
-
-        if ((self.banderaStraight) and ((time.time() - self.secondsOld) >= 5)):
-            self.banderaStraight = False 
-        
- 
-
-    '''
-        #workers 
-        if (self.signal_num == 2):
-            print("inside workers")
-            while (self.counter < 1200):
-                self.counter += 1
-                self.msg_vel.linear.x = 0.02
+            if ((self.banderaLeft) and ((time.time() - self.secondsOld) >= 6.5)):
+                self.msg_vel.linear.x = 0.0
                 self.msg_vel.angular.z = 0.0
                 self.vel.publish(self.msg_vel)
+                self.banderaLeft = False 
+                self.banderaSignal = False
 
-            self.counter = 0
-            
+            #rotonda
+            if (self.signal_num == 5 and (not self.banderaRotonda)):
+                print("inside left")
+                self.secondsOld  = time.time()
+                self.msg_vel.linear.x = 0.06
+                self.msg_vel.angular.z = -0.04
+                self.vel.publish(self.msg_vel)
+                self.banderaRotonda = True 
+                print(self.banderaRotonda)
+
+            if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 6.5)): 
+                self.msg_vel.linear.x = 0.0
+                self.msg_vel.angular.z = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaRotonda = False 
+                self.banderaSignal = False
+                self.bandera = True
         
-        #left 
-        if (self.signal_num == 3):
-            print("inside left")
-            while (self.counter < 500):
-                self.counter += 1
-                self.msg_vel.linear.x = 0.03
-                self.msg_vel.angular.z = 0.02
+            #stop 
+            if (self.signal_num == 1 and (not self.banderaStop) and self.bandera):
+                print("inside stop")
+                self.secondsOld  = time.time()
+                self.msg_vel.linear.x = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaStop = True 
+                print(self.banderaStop)
+
+            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 5)):
+                self.msg_vel.linear.x = 0.06
                 self.vel.publish(self.msg_vel)
 
-            self.counter = 0
+            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 12)):
+                self.msg_vel.linear.x = 0.0
+                self.msg_vel.angular.z = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaStop = False 
+                self.banderaSignal = False
 
-        #straight 
-        if (self.signal_num == 4):
-            print("inside straight")
-            while (self.counter < 1000):
-                self.counter += 1
+            #straight
+            if (self.signal_num == 4 and (not self.banderaStraight)):
+                print("inside straight")
+                self.secondsOld  = time.time()
                 self.msg_vel.linear.x = 0.06
                 self.msg_vel.angular.z = 0.0
                 self.vel.publish(self.msg_vel)
+                self.banderaStraight = True 
+                print(self.banderaStraight)
 
-            self.counter = 0
-
-        #rotonda 
-        if (self.signal_num == 5):
-            print("inside rotonda")
-            while (self.counter < 800):
-                self.counter += 1
+            if ((self.banderaStraight) and ((time.time() - self.secondsOld) >= 7)):
+                self.msg_vel.linear.x = 0.0
+                self.msg_vel.angular.z = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaStraight = False
+                self.banderaSignal = False
+        
+        else :
+            #workers
+            if (self.signal_num == 2 and (not self.banderaWorkers)):
+                print("inside straight")
+                self.secondsOld  = time.time()
                 self.msg_vel.linear.x = 0.03
-                self.msg_vel.angular.z = -0.02
+                self.msg_vel.angular.z = 0.0
                 self.vel.publish(self.msg_vel)
+                self.banderaWorkers = True 
+                print(self.banderaWorkers)
 
-            self.counter = 0
+            if ((self.banderaWorkers) and ((time.time() - self.secondsOld) >= 10)):
+                self.msg_vel.linear.x = 0.0
+                self.msg_vel.angular.z = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaWorkers = False  
+        
 
-        self.msg_vel.linear.x = 0.06 * self.light_multiplier  
-        # check first error with bottom point with center and then error between points
-        if (self.errorCenter < 20 and self.errorCenter > -20):
-            self.error = self.errorPoints
-            if (self.errorPoints < 20 and self.errorPoints > -20):
-                self.error = 0
+            self.msg_vel.linear.x = 0.06 * self.light_multiplier  
+            # check first error with bottom point with center and then error between points
+            if (self.errorCenter < 20 and self.errorCenter > -20):
+                self.error = self.errorPoints
+                if (self.errorPoints < 20 and self.errorPoints > -20):
+                    self.error = 0
+                else:
+                    self.msg_vel.linear.x = 0.03 * self.light_multiplier
+                    self.vel.publish(self.msg_vel)
             else:
+                self.error = self.errorCenter
                 self.msg_vel.linear.x = 0.03 * self.light_multiplier
-                self.vel.publish(self.msg_vel)
-        else:
-            self.error = self.errorCenter
-            self.msg_vel.linear.x = 0.03 * self.light_multiplier
 
-        #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
-        self.proportional = self.error
-        self.integral = self.integral + (self.error * self.timer_period_controller)
-        self.derivative = (self.error - self.previouserror) / self.timer_period_controller
-        self.previouserror = self.error
-        self.pid = (self.kp * self.proportional) + (self.ki * self.integral) + (self.kd * self.derivative)
+            #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
+            self.proportional = self.error
+            self.integral = self.integral + (self.error * self.timer_period_controller)
+            self.derivative = (self.error - self.previouserror) / self.timer_period_controller
+            self.previouserror = self.error
+            self.pid = (self.kp * self.proportional) + (self.ki * self.integral) + (self.kd * self.derivative)
 
-        #set a limit in case the pid value surpasses the max velocity on the car
-        if (self.pid > 0.035) :
-            self.msg_vel.angular.z = 0.035
-        elif (self.pid < -0.035) :
-            self.msg_vel.angular.z = -0.035
-        else: 
-            self.msg_vel.angular.z = self.pid
-        print(self.pid)
-        self.vel.publish(self.msg_vel)
-    ''' 
+            #set a limit in case the pid value surpasses the max velocity on the car
+            if (self.pid > 0.035) :
+                self.msg_vel.angular.z = 0.035
+            elif (self.pid < -0.035) :
+                self.msg_vel.angular.z = -0.035
+            else: 
+                self.msg_vel.angular.z = self.pid
+            print(self.pid)
+            self.vel.publish(self.msg_vel)
+    
     # save variables from topic into local
     def timer_callback_errorCenter(self, msg) :
         self.errorCenter = msg.data * -1 
@@ -222,6 +201,9 @@ class Controller(Node) :
 
     def timer_callback_signal(self, msg) :
         self.signal_num = msg.data
+
+    def timer_callback_standby(self, msg) :
+        self.standby_num = msg.data
         
 def main(args=None):
     rclpy.init(args=args)
