@@ -80,7 +80,7 @@ class ML(Node):
                     self.signal_pub.publish(self.signal_msg)
                     continue
 
-                #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
+            
 
                 if(self.inference_result.class_name == "stop"):
                     self.signal_msg.data = 1
