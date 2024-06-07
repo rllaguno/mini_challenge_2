@@ -80,8 +80,6 @@ class ML(Node):
                     self.signal_pub.publish(self.signal_msg)
                     continue
 
-            
-
                 if(self.inference_result.class_name == "stop"):
                     self.signal_msg.data = 1
                     #self.signal_msg.name = 'stop sign'
