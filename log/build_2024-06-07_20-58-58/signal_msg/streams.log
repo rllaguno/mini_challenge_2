@@ -1,0 +1,205 @@
+[0.188s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/signal_msg -- -j4 -l4
+[2.903s] [35m[1mScanning dependencies of target signal_msg__cpp[0m
+[2.903s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.904s] [35m[1mScanning dependencies of target ament_cmake_python_copy_signal_msg[0m
+[2.904s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.905s] [  6%] Built target ament_cmake_python_copy_signal_msg
+[2.905s] [35m[1mScanning dependencies of target ament_cmake_python_build_signal_msg_egg[0m
+[3.674s] [  6%] Built target signal_msg__cpp
+[3.839s] running egg_info
+[3.847s] creating signal_msg.egg-info
+[3.857s] [35m[1mScanning dependencies of target signal_msg__rosidl_generator_c[0m
+[3.858s] writing signal_msg.egg-info/PKG-INFO
+[3.859s] writing dependency_links to signal_msg.egg-info/dependency_links.txt
+[3.862s] writing top-level names to signal_msg.egg-info/top_level.txt
+[3.864s] writing manifest file 'signal_msg.egg-info/SOURCES.txt'
+[3.870s] [  9%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[3.882s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.027s] [ 16%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_generator_c.dir/rosidl_generator_c/signal_msg/msg/detail/signal__functions.c.o[0m
+[4.160s] reading manifest file 'signal_msg.egg-info/SOURCES.txt'
+[4.163s] writing manifest file 'signal_msg.egg-info/SOURCES.txt'
+[4.542s] [ 16%] Built target ament_cmake_python_build_signal_msg_egg
+[4.716s] [ 19%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.995s] [ 22%] [32m[1mLinking C shared library libsignal_msg__rosidl_generator_c.so[0m
+[5.596s] [ 22%] Built target signal_msg__rosidl_generator_c
+[5.778s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[7.168s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_cpp[0m
+[7.308s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_cpp[0m
+[7.394s] [ 29%] [32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/signal_msg/msg/signal__type_support.cpp.o[0m
+[7.560s] [ 32%] [32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/signal_msg/msg/detail/dds_fastrtps/signal__type_support.cpp.o[0m
+[7.954s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_cpp[0m
+[8.188s] [ 35%] [32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/signal_msg/msg/detail/signal__type_support.cpp.o[0m
+[9.482s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_c[0m
+[9.746s] [ 38%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/signal_msg/msg/detail/signal__type_support.c.o[0m
+[10.297s] [ 41%] [32m[1mLinking C shared library libsignal_msg__rosidl_typesupport_introspection_c.so[0m
+[10.943s] [ 41%] Built target signal_msg__rosidl_typesupport_introspection_c
+[11.343s] [ 45%] [32m[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_cpp.so[0m
+[12.100s] [ 45%] Built target signal_msg__rosidl_typesupport_cpp
+[12.506s] [ 48%] [32m[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_introspection_cpp.so[0m
+[12.685s] [ 51%] [32m[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_fastrtps_cpp.so[0m
+[13.034s] [ 51%] Built target signal_msg__rosidl_typesupport_introspection_cpp
+[13.366s] [ 51%] Built target signal_msg__rosidl_typesupport_fastrtps_cpp
+[13.502s] [ 54%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[16.084s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_c[0m
+[16.235s] [ 58%] [32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/signal_msg/msg/signal__type_support.cpp.o[0m
+[16.535s] [ 61%] [32m[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_c.so[0m
+[16.878s] [ 61%] Built target signal_msg__rosidl_typesupport_c
+[17.043s] [ 64%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[18.534s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_c[0m
+[18.605s] [ 67%] [32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/signal_msg/msg/detail/signal__type_support_c.cpp.o[0m
+[20.054s] [ 70%] [32m[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_fastrtps_c.so[0m
+[20.357s] [ 70%] Built target signal_msg__rosidl_typesupport_fastrtps_c
+[20.427s] [35m[1mScanning dependencies of target signal_msg[0m
+[20.512s] [ 70%] Built target signal_msg
+[20.557s] [35m[1mScanning dependencies of target signal_msg__py[0m
+[20.625s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[22.841s] [ 74%] Built target signal_msg__py
+[22.894s] [35m[1mScanning dependencies of target signal_msg__rosidl_generator_py[0m
+[23.169s] [ 77%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_generator_py.dir/rosidl_generator_py/signal_msg/msg/_signal_s.c.o[0m
+[23.780s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/signal_msg/libsignal_msg__rosidl_generator_py.so[0m
+[23.973s] [ 80%] Built target signal_msg__rosidl_generator_py
+[24.031s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_c__pyext[0m
+[24.139s] [ 83%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[24.558s] [ 87%] [32m[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[24.735s] [ 87%] Built target signal_msg__rosidl_typesupport_introspection_c__pyext
+[24.782s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_c__pyext[0m
+[24.874s] [ 90%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_c.c.o[0m
+[25.250s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[25.435s] [ 93%] Built target signal_msg__rosidl_typesupport_c__pyext
+[25.523s] [35m[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_c__pyext[0m
+[25.654s] [ 96%] [32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[26.034s] [100%] [32m[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[26.208s] [100%] Built target signal_msg__rosidl_typesupport_fastrtps_c__pyext
+[26.258s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg' returned '0': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/signal_msg -- -j4 -l4
+[26.948s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --install /home/puzzlebot/github/mini_challenges_eq5/build/signal_msg
+[26.989s] -- Install configuration: ""
+[26.993s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/rosidl_interfaces/signal_msg
+[27.001s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.004s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.005s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_generator_c__visibility_control.h
+[27.005s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/signal.h
+[27.012s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.013s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__functions.c
+[27.015s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__struct.h
+[27.016s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.h
+[27.018s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__functions.h
+[27.020s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/library_path.sh
+[27.023s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/library_path.dsv
+[27.025s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_c.so
+[27.028s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_c.so" to ""
+[27.029s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.030s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.031s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[27.033s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.034s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_fastrtps_c.h
+[27.036s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_c.so
+[27.038s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_c.so" to ""
+[27.039s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.040s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.041s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.042s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__builder.hpp
+[27.062s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__traits.hpp
+[27.063s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__struct.hpp
+[27.063s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/signal.hpp
+[27.091s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.094s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.094s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[27.095s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.098s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/dds_fastrtps
+[27.099s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_fastrtps_cpp.hpp
+[27.100s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_cpp.so
+[27.101s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[27.102s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.103s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.103s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[27.104s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.104s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_introspection_c.h
+[27.105s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.c
+[27.105s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_c.so
+[27.106s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_c.so" to ""
+[27.107s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_c.so
+[27.113s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_c.so" to ""
+[27.121s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg
+[27.122s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg
+[27.122s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail
+[27.123s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_introspection_cpp.hpp
+[27.123s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.cpp
+[27.124s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_cpp.so
+[27.124s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_cpp.so" to ""
+[27.125s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_cpp.so
+[27.125s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_cpp.so" to ""
+[27.126s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/pythonpath.sh
+[27.127s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/pythonpath.dsv
+[27.129s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info
+[27.130s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/top_level.txt
+[27.137s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/PKG-INFO
+[27.138s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/SOURCES.txt
+[27.138s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/dependency_links.txt
+[27.139s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg
+[27.139s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[27.140s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_c.c
+[27.140s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[27.141s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/__init__.py
+[27.141s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[27.142s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_introspection_c.c
+[27.142s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg
+[27.143s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/__init__.py
+[27.143s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal.py
+[27.144s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal_s.c
+[27.144s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/libsignal_msg__rosidl_generator_py.so
+[27.145s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[27.338s] Listing '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg'...
+[27.339s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/__init__.py'...
+[27.339s] Listing '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg'...
+[27.340s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/__init__.py'...
+[27.340s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal.py'...
+[27.360s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[27.362s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.363s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[27.365s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.366s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[27.368s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[27.368s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_py.so
+[27.370s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_py.so" to ""
+[27.370s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/msg/Signal.idl
+[27.371s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/msg/Signal.msg
+[27.411s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/package_run_dependencies/signal_msg
+[27.412s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/parent_prefix_path/signal_msg
+[27.415s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/ament_prefix_path.sh
+[27.418s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/ament_prefix_path.dsv
+[27.418s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/path.sh
+[27.419s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/path.dsv
+[27.420s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.bash
+[27.422s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.sh
+[27.423s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.zsh
+[27.424s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.dsv
+[27.426s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/package.dsv
+[27.428s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/packages/signal_msg
+[27.430s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cExport.cmake
+[27.431s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cExport-noconfig.cmake
+[27.432s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[27.433s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[27.435s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cppExport.cmake
+[27.436s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[27.438s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[27.439s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cExport.cmake
+[27.440s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[27.441s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cExport.cmake
+[27.443s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cExport-noconfig.cmake
+[27.444s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cppExport.cmake
+[27.446s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[27.447s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cppExport.cmake
+[27.448s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[27.450s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_pyExport.cmake
+[27.451s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_pyExport-noconfig.cmake
+[27.453s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake-extras.cmake
+[27.455s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[27.456s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[27.458s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[27.459s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_targets-extras.cmake
+[27.461s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[27.462s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[27.463s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msgConfig.cmake
+[27.465s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msgConfig-version.cmake
+[27.465s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/package.xml
+[27.482s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg' returned '0': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --install /home/puzzlebot/github/mini_challenges_eq5/build/signal_msg

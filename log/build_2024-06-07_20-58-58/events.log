@@ -1,0 +1,934 @@
+[0.000000] (-) TimerEvent: {}
+[0.000570] (mini_challenge_2) JobQueued: {'identifier': 'mini_challenge_2', 'dependencies': OrderedDict()}
+[0.000785] (mini_challenge_3) JobQueued: {'identifier': 'mini_challenge_3', 'dependencies': OrderedDict()}
+[0.000941] (mini_challenge_4) JobQueued: {'identifier': 'mini_challenge_4', 'dependencies': OrderedDict()}
+[0.001096] (signal_msg) JobQueued: {'identifier': 'signal_msg', 'dependencies': OrderedDict()}
+[0.001235] (yolo_msg) JobQueued: {'identifier': 'yolo_msg', 'dependencies': OrderedDict()}
+[0.001525] (final_challenge) JobQueued: {'identifier': 'final_challenge', 'dependencies': OrderedDict([('signal_msg', '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg'), ('yolo_msg', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg')])}
+[0.003162] (signal_msg) JobStarted: {'identifier': 'signal_msg'}
+[0.044825] (yolo_msg) JobStarted: {'identifier': 'yolo_msg'}
+[0.078627] (mini_challenge_2) JobStarted: {'identifier': 'mini_challenge_2'}
+[0.098909] (-) TimerEvent: {}
+[0.129109] (mini_challenge_3) JobStarted: {'identifier': 'mini_challenge_3'}
+[0.181760] (signal_msg) JobProgress: {'identifier': 'signal_msg', 'progress': 'cmake'}
+[0.185506] (signal_msg) JobProgress: {'identifier': 'signal_msg', 'progress': 'build'}
+[0.188429] (signal_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg', '--', '-j4', '-l4'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('GTK_CSD', '0'), ('USER', 'puzzlebot'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '4967'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/puzzlebot'), ('OLDPWD', '/home/puzzlebot/github/mini_challenges_eq5/src'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.4'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'puzzlebot'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('JETSON_SERIAL_NUMBER', '1424420020635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Batuu'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('PATH', '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_GB'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'lxde-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('XDG_DATA_HOME', '/home/puzzlebot/.local/share'), ('XDG_CONFIG_HOME', '/home/puzzlebot/.config'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/puzzlebot/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('SSH_AUTH_SOCK', '/tmp/ssh-ZWLhJhUQWYYA/agent.4777'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/puzzlebot'), ('AMENT_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('_LXSESSION_PID', '4777'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('PYTHONPATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '4.6.4'), ('CMAKE_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[0.203033] (-) TimerEvent: {}
+[0.225025] (yolo_msg) JobProgress: {'identifier': 'yolo_msg', 'progress': 'cmake'}
+[0.228889] (yolo_msg) JobProgress: {'identifier': 'yolo_msg', 'progress': 'build'}
+[0.235515] (yolo_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg', '--', '-j4', '-l4'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('GTK_CSD', '0'), ('USER', 'puzzlebot'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '4967'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/puzzlebot'), ('OLDPWD', '/home/puzzlebot/github/mini_challenges_eq5/src'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.4'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'puzzlebot'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('JETSON_SERIAL_NUMBER', '1424420020635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Batuu'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('PATH', '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_GB'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'lxde-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('XDG_DATA_HOME', '/home/puzzlebot/.local/share'), ('XDG_CONFIG_HOME', '/home/puzzlebot/.config'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/puzzlebot/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('SSH_AUTH_SOCK', '/tmp/ssh-ZWLhJhUQWYYA/agent.4777'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/puzzlebot'), ('AMENT_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('_LXSESSION_PID', '4777'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('PYTHONPATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '4.6.4'), ('CMAKE_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[0.304188] (-) TimerEvent: {}
+[0.405381] (-) TimerEvent: {}
+[0.506103] (-) TimerEvent: {}
+[0.606851] (-) TimerEvent: {}
+[0.708252] (-) TimerEvent: {}
+[0.809382] (-) TimerEvent: {}
+[0.920952] (-) TimerEvent: {}
+[1.021728] (-) TimerEvent: {}
+[1.125491] (-) TimerEvent: {}
+[1.228857] (-) TimerEvent: {}
+[1.329752] (-) TimerEvent: {}
+[1.440612] (-) TimerEvent: {}
+[1.541388] (-) TimerEvent: {}
+[1.642487] (-) TimerEvent: {}
+[1.743230] (-) TimerEvent: {}
+[1.843990] (-) TimerEvent: {}
+[1.945728] (-) TimerEvent: {}
+[2.046520] (-) TimerEvent: {}
+[2.147567] (-) TimerEvent: {}
+[2.248301] (-) TimerEvent: {}
+[2.349419] (-) TimerEvent: {}
+[2.451770] (-) TimerEvent: {}
+[2.552514] (-) TimerEvent: {}
+[2.653232] (-) TimerEvent: {}
+[2.753991] (-) TimerEvent: {}
+[2.855681] (-) TimerEvent: {}
+[2.905705] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__cpp\x1b[0m\n'}
+[2.906602] (signal_msg) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.907067] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_copy_signal_msg\x1b[0m\n'}
+[2.907468] (signal_msg) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.907846] (signal_msg) StdoutLine: {'line': b'[  6%] Built target ament_cmake_python_copy_signal_msg\n'}
+[2.908404] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_build_signal_msg_egg\x1b[0m\n'}
+[2.935768] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__cpp\x1b[0m\n'}
+[2.936537] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_copy_yolo_msg\x1b[0m\n'}
+[2.937054] (yolo_msg) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.937490] (yolo_msg) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.937925] (yolo_msg) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_yolo_msg\n'}
+[2.938346] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ament_cmake_python_build_yolo_msg_egg\x1b[0m\n'}
+[2.956066] (-) TimerEvent: {}
+[3.057624] (-) TimerEvent: {}
+[3.158951] (-) TimerEvent: {}
+[3.259691] (-) TimerEvent: {}
+[3.360530] (-) TimerEvent: {}
+[3.461310] (-) TimerEvent: {}
+[3.562054] (-) TimerEvent: {}
+[3.662806] (-) TimerEvent: {}
+[3.676583] (signal_msg) StdoutLine: {'line': b'[  6%] Built target signal_msg__cpp\n'}
+[3.763300] (-) TimerEvent: {}
+[3.841899] (signal_msg) StdoutLine: {'line': b'running egg_info\n'}
+[3.850561] (signal_msg) StdoutLine: {'line': b'creating signal_msg.egg-info\n'}
+[3.859771] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_generator_c\x1b[0m\n'}
+[3.860869] (signal_msg) StdoutLine: {'line': b'writing signal_msg.egg-info/PKG-INFO\n'}
+[3.862606] (signal_msg) StdoutLine: {'line': b'writing dependency_links to signal_msg.egg-info/dependency_links.txt\n'}
+[3.864449] (signal_msg) StdoutLine: {'line': b'writing top-level names to signal_msg.egg-info/top_level.txt\n'}
+[3.865476] (-) TimerEvent: {}
+[3.867522] (signal_msg) StdoutLine: {'line': b"writing manifest file 'signal_msg.egg-info/SOURCES.txt'\n"}
+[3.872796] (signal_msg) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.884729] (signal_msg) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.965646] (-) TimerEvent: {}
+[4.005071] (yolo_msg) StdoutLine: {'line': b'running egg_info\n'}
+[4.010499] (yolo_msg) StdoutLine: {'line': b'creating yolo_msg.egg-info\n'}
+[4.017855] (yolo_msg) StdoutLine: {'line': b'writing yolo_msg.egg-info/PKG-INFO\n'}
+[4.020554] (yolo_msg) StdoutLine: {'line': b'writing dependency_links to yolo_msg.egg-info/dependency_links.txt\n'}
+[4.022491] (yolo_msg) StdoutLine: {'line': b'writing top-level names to yolo_msg.egg-info/top_level.txt\n'}
+[4.025515] (yolo_msg) StdoutLine: {'line': b"writing manifest file 'yolo_msg.egg-info/SOURCES.txt'\n"}
+[4.029718] (signal_msg) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_generator_c.dir/rosidl_generator_c/signal_msg/msg/detail/signal__functions.c.o\x1b[0m\n'}
+[4.065818] (-) TimerEvent: {}
+[4.163086] (signal_msg) StdoutLine: {'line': b"reading manifest file 'signal_msg.egg-info/SOURCES.txt'\n"}
+[4.166026] (signal_msg) StdoutLine: {'line': b"writing manifest file 'signal_msg.egg-info/SOURCES.txt'\n"}
+[4.166646] (-) TimerEvent: {}
+[4.267266] (-) TimerEvent: {}
+[4.368811] (-) TimerEvent: {}
+[4.470655] (-) TimerEvent: {}
+[4.518491] (yolo_msg) StdoutLine: {'line': b'[  5%] Built target yolo_msg__cpp\n'}
+[4.545275] (signal_msg) StdoutLine: {'line': b'[ 16%] Built target ament_cmake_python_build_signal_msg_egg\n'}
+[4.570376] (yolo_msg) StdoutLine: {'line': b"reading manifest file 'yolo_msg.egg-info/SOURCES.txt'\n"}
+[4.571262] (-) TimerEvent: {}
+[4.575014] (yolo_msg) StdoutLine: {'line': b"writing manifest file 'yolo_msg.egg-info/SOURCES.txt'\n"}
+[4.585153] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_generator_c\x1b[0m\n'}
+[4.671452] (-) TimerEvent: {}
+[4.705203] (yolo_msg) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.718556] (yolo_msg) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.719477] (signal_msg) StdoutLine: {'line': b'[ 19%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.772609] (-) TimerEvent: {}
+[4.783875] (yolo_msg) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_c.dir/rosidl_generator_c/yolo_msg/msg/detail/inference_result__functions.c.o\x1b[0m\n'}
+[4.872773] (-) TimerEvent: {}
+[4.929717] (yolo_msg) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_build_yolo_msg_egg\n'}
+[4.972940] (-) TimerEvent: {}
+[4.997844] (signal_msg) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libsignal_msg__rosidl_generator_c.so\x1b[0m\n'}
+[5.053701] (yolo_msg) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_c.dir/rosidl_generator_c/yolo_msg/msg/detail/yolov8_inference__functions.c.o\x1b[0m\n'}
+[5.073097] (-) TimerEvent: {}
+[5.174114] (-) TimerEvent: {}
+[5.275227] (-) TimerEvent: {}
+[5.376009] (-) TimerEvent: {}
+[5.477472] (-) TimerEvent: {}
+[5.567213] (yolo_msg) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.577654] (-) TimerEvent: {}
+[5.599252] (signal_msg) StdoutLine: {'line': b'[ 22%] Built target signal_msg__rosidl_generator_c\n'}
+[5.664790] (yolo_msg) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libyolo_msg__rosidl_generator_c.so\x1b[0m\n'}
+[5.677826] (-) TimerEvent: {}
+[5.781650] (signal_msg) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.782333] (-) TimerEvent: {}
+[5.884846] (-) TimerEvent: {}
+[5.985656] (-) TimerEvent: {}
+[6.086471] (-) TimerEvent: {}
+[6.183847] (yolo_msg) StdoutLine: {'line': b'[ 20%] Built target yolo_msg__rosidl_generator_c\n'}
+[6.186627] (-) TimerEvent: {}
+[6.287651] (-) TimerEvent: {}
+[6.378115] (yolo_msg) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.387959] (-) TimerEvent: {}
+[6.489083] (-) TimerEvent: {}
+[6.589970] (-) TimerEvent: {}
+[6.691357] (-) TimerEvent: {}
+[6.792085] (-) TimerEvent: {}
+[6.897007] (-) TimerEvent: {}
+[7.000626] (-) TimerEvent: {}
+[7.101611] (-) TimerEvent: {}
+[7.170952] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_cpp\x1b[0m\n'}
+[7.204780] (-) TimerEvent: {}
+[7.305661] (-) TimerEvent: {}
+[7.311005] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[7.397092] (signal_msg) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/signal_msg/msg/signal__type_support.cpp.o\x1b[0m\n'}
+[7.405776] (-) TimerEvent: {}
+[7.506499] (-) TimerEvent: {}
+[7.563169] (signal_msg) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/signal_msg/msg/detail/dds_fastrtps/signal__type_support.cpp.o\x1b[0m\n'}
+[7.606672] (-) TimerEvent: {}
+[7.707965] (-) TimerEvent: {}
+[7.808854] (-) TimerEvent: {}
+[7.910532] (-) TimerEvent: {}
+[7.957456] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[8.010701] (-) TimerEvent: {}
+[8.111588] (-) TimerEvent: {}
+[8.191145] (signal_msg) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/signal_msg/msg/detail/signal__type_support.cpp.o\x1b[0m\n'}
+[8.211779] (-) TimerEvent: {}
+[8.313629] (-) TimerEvent: {}
+[8.414422] (-) TimerEvent: {}
+[8.471921] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[8.514590] (-) TimerEvent: {}
+[8.615342] (-) TimerEvent: {}
+[8.622895] (yolo_msg) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msg/msg/detail/inference_result__type_support.cpp.o\x1b[0m\n'}
+[8.646146] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_cpp\x1b[0m\n'}
+[8.715526] (-) TimerEvent: {}
+[8.821232] (-) TimerEvent: {}
+[8.870836] (yolo_msg) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msg/msg/inference_result__type_support.cpp.o\x1b[0m\n'}
+[8.921356] (-) TimerEvent: {}
+[9.022789] (-) TimerEvent: {}
+[9.124087] (-) TimerEvent: {}
+[9.236643] (-) TimerEvent: {}
+[9.338277] (-) TimerEvent: {}
+[9.439461] (-) TimerEvent: {}
+[9.485091] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[9.539638] (-) TimerEvent: {}
+[9.640608] (-) TimerEvent: {}
+[9.741378] (-) TimerEvent: {}
+[9.749303] (signal_msg) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/signal_msg/msg/detail/signal__type_support.c.o\x1b[0m\n'}
+[9.844620] (-) TimerEvent: {}
+[9.948621] (-) TimerEvent: {}
+[10.049396] (-) TimerEvent: {}
+[10.188616] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[10.189325] (-) TimerEvent: {}
+[10.290045] (-) TimerEvent: {}
+[10.300298] (signal_msg) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking C shared library libsignal_msg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[10.390207] (-) TimerEvent: {}
+[10.478085] (yolo_msg) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msg/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o\x1b[0m\n'}
+[10.490392] (-) TimerEvent: {}
+[10.591519] (-) TimerEvent: {}
+[10.692901] (-) TimerEvent: {}
+[10.794275] (-) TimerEvent: {}
+[10.895103] (-) TimerEvent: {}
+[10.945968] (signal_msg) StdoutLine: {'line': b'[ 41%] Built target signal_msg__rosidl_typesupport_introspection_c\n'}
+[10.995299] (-) TimerEvent: {}
+[11.096300] (-) TimerEvent: {}
+[11.197616] (-) TimerEvent: {}
+[11.298385] (-) TimerEvent: {}
+[11.345962] (signal_msg) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[11.398602] (-) TimerEvent: {}
+[11.415781] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[11.498791] (-) TimerEvent: {}
+[11.599901] (-) TimerEvent: {}
+[11.650479] (yolo_msg) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msg/msg/detail/inference_result__type_support_c.cpp.o\x1b[0m\n'}
+[11.700072] (-) TimerEvent: {}
+[11.801605] (-) TimerEvent: {}
+[11.902429] (-) TimerEvent: {}
+[12.005011] (-) TimerEvent: {}
+[12.103456] (signal_msg) StdoutLine: {'line': b'[ 45%] Built target signal_msg__rosidl_typesupport_cpp\n'}
+[12.105703] (-) TimerEvent: {}
+[12.206532] (-) TimerEvent: {}
+[12.307449] (-) TimerEvent: {}
+[12.408938] (-) TimerEvent: {}
+[12.509609] (signal_msg) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[12.510361] (-) TimerEvent: {}
+[12.612671] (-) TimerEvent: {}
+[12.637830] (yolo_msg) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msg/msg/yolov8_inference__type_support.cpp.o\x1b[0m\n'}
+[12.688406] (signal_msg) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[12.712837] (-) TimerEvent: {}
+[12.767734] (yolo_msg) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msg/msg/detail/yolov8_inference__type_support.cpp.o\x1b[0m\n'}
+[12.813062] (-) TimerEvent: {}
+[12.914674] (-) TimerEvent: {}
+[13.016427] (-) TimerEvent: {}
+[13.036777] (signal_msg) StdoutLine: {'line': b'[ 51%] Built target signal_msg__rosidl_typesupport_introspection_cpp\n'}
+[13.116643] (-) TimerEvent: {}
+[13.217457] (-) TimerEvent: {}
+[13.318219] (-) TimerEvent: {}
+[13.369165] (signal_msg) StdoutLine: {'line': b'[ 51%] Built target signal_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[13.418389] (-) TimerEvent: {}
+[13.505314] (signal_msg) StdoutLine: {'line': b'[ 54%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[13.518808] (-) TimerEvent: {}
+[13.620358] (-) TimerEvent: {}
+[13.721623] (-) TimerEvent: {}
+[13.822525] (-) TimerEvent: {}
+[13.923346] (-) TimerEvent: {}
+[14.025116] (-) TimerEvent: {}
+[14.035552] (mini_challenge_3) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mini_challenge_3', 'build', '--build-base', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/build', 'install', '--record', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'GTK_CSD': '0', 'USER': 'puzzlebot', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '4967', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/puzzlebot', 'OLDPWD': '/home/puzzlebot/github/mini_challenges_eq5/src', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.4', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'puzzlebot', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', 'JETSON_SERIAL_NUMBER': '1424420020635', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Batuu', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'ROS_LOCALHOST_ONLY': '0', 'SAL_USE_VCLPLUGIN': 'gtk', 'PATH': '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_GB', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'lxde-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'LXDE', 'XDG_DATA_HOME': '/home/puzzlebot/.local/share', 'XDG_CONFIG_HOME': '/home/puzzlebot/.config', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/puzzlebot/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'SSH_AUTH_SOCK': '/tmp/ssh-ZWLhJhUQWYYA/agent.4777', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/puzzlebot', 'AMENT_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', '_LXSESSION_PID': '4777', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'PYTHONPATH': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '4.6.4', 'CMAKE_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[14.123952] (mini_challenge_2) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mini_challenge_2', 'build', '--build-base', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build', 'install', '--record', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'GTK_CSD': '0', 'USER': 'puzzlebot', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '4967', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/puzzlebot', 'OLDPWD': '/home/puzzlebot/github/mini_challenges_eq5/src', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.4', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'puzzlebot', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', 'JETSON_SERIAL_NUMBER': '1424420020635', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Batuu', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'ROS_LOCALHOST_ONLY': '0', 'SAL_USE_VCLPLUGIN': 'gtk', 'PATH': '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_GB', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'lxde-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'LXDE', 'XDG_DATA_HOME': '/home/puzzlebot/.local/share', 'XDG_CONFIG_HOME': '/home/puzzlebot/.config', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/puzzlebot/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'SSH_AUTH_SOCK': '/tmp/ssh-ZWLhJhUQWYYA/agent.4777', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/puzzlebot', 'AMENT_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', '_LXSESSION_PID': '4777', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'PYTHONPATH': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '4.6.4', 'CMAKE_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[14.127680] (-) TimerEvent: {}
+[14.233821] (-) TimerEvent: {}
+[14.334766] (-) TimerEvent: {}
+[14.435524] (-) TimerEvent: {}
+[14.537332] (-) TimerEvent: {}
+[14.556456] (yolo_msg) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[14.637516] (-) TimerEvent: {}
+[14.738287] (-) TimerEvent: {}
+[14.827217] (yolo_msg) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msg/msg/detail/yolov8_inference__type_support_c.cpp.o\x1b[0m\n'}
+[14.838450] (-) TimerEvent: {}
+[14.839431] (yolo_msg) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msg/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o\x1b[0m\n'}
+[14.862796] (yolo_msg) StdoutLine: {'line': b'[ 46%] Built target yolo_msg__rosidl_typesupport_cpp\n'}
+[14.938630] (-) TimerEvent: {}
+[15.039481] (-) TimerEvent: {}
+[15.140303] (-) TimerEvent: {}
+[15.241432] (-) TimerEvent: {}
+[15.342251] (-) TimerEvent: {}
+[15.443509] (-) TimerEvent: {}
+[15.544273] (-) TimerEvent: {}
+[15.645500] (-) TimerEvent: {}
+[15.746642] (-) TimerEvent: {}
+[15.847409] (-) TimerEvent: {}
+[15.869180] (yolo_msg) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[15.947577] (-) TimerEvent: {}
+[16.048955] (-) TimerEvent: {}
+[16.086705] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_c\x1b[0m\n'}
+[16.149148] (-) TimerEvent: {}
+[16.238697] (signal_msg) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/signal_msg/msg/signal__type_support.cpp.o\x1b[0m\n'}
+[16.249316] (-) TimerEvent: {}
+[16.350429] (-) TimerEvent: {}
+[16.451222] (-) TimerEvent: {}
+[16.498266] (yolo_msg) StdoutLine: {'line': b'[ 48%] Built target yolo_msg__rosidl_typesupport_introspection_cpp\n'}
+[16.537781] (signal_msg) StdoutLine: {'line': b'[ 61%] \x1b[32m\x1b[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_c.so\x1b[0m\n'}
+[16.551402] (-) TimerEvent: {}
+[16.652144] (-) TimerEvent: {}
+[16.749535] (mini_challenge_2) StdoutLine: {'line': b'running egg_info\n'}
+[16.752319] (-) TimerEvent: {}
+[16.757028] (mini_challenge_2) StdoutLine: {'line': b'writing ../../build/mini_challenge_2/mini_challenge_2.egg-info/PKG-INFO\n'}
+[16.761706] (mini_challenge_2) StdoutLine: {'line': b'writing dependency_links to ../../build/mini_challenge_2/mini_challenge_2.egg-info/dependency_links.txt\n'}
+[16.763918] (mini_challenge_2) StdoutLine: {'line': b'writing entry points to ../../build/mini_challenge_2/mini_challenge_2.egg-info/entry_points.txt\n'}
+[16.764648] (mini_challenge_2) StdoutLine: {'line': b'writing requirements to ../../build/mini_challenge_2/mini_challenge_2.egg-info/requires.txt\n'}
+[16.765220] (mini_challenge_2) StdoutLine: {'line': b'writing top-level names to ../../build/mini_challenge_2/mini_challenge_2.egg-info/top_level.txt\n'}
+[16.852615] (-) TimerEvent: {}
+[16.881288] (signal_msg) StdoutLine: {'line': b'[ 61%] Built target signal_msg__rosidl_typesupport_c\n'}
+[16.922557] (mini_challenge_3) StdoutLine: {'line': b'running egg_info\n'}
+[16.927604] (mini_challenge_3) StdoutLine: {'line': b'writing ../../build/mini_challenge_3/mini_challenge_3.egg-info/PKG-INFO\n'}
+[16.942947] (mini_challenge_3) StdoutLine: {'line': b'writing dependency_links to ../../build/mini_challenge_3/mini_challenge_3.egg-info/dependency_links.txt\n'}
+[16.944709] (mini_challenge_3) StdoutLine: {'line': b'writing entry points to ../../build/mini_challenge_3/mini_challenge_3.egg-info/entry_points.txt\n'}
+[16.945401] (mini_challenge_3) StdoutLine: {'line': b'writing requirements to ../../build/mini_challenge_3/mini_challenge_3.egg-info/requires.txt\n'}
+[16.945995] (mini_challenge_3) StdoutLine: {'line': b'writing top-level names to ../../build/mini_challenge_3/mini_challenge_3.egg-info/top_level.txt\n'}
+[16.952766] (-) TimerEvent: {}
+[17.046024] (signal_msg) StdoutLine: {'line': b'[ 64%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[17.052937] (-) TimerEvent: {}
+[17.066517] (mini_challenge_2) StdoutLine: {'line': b"reading manifest file '../../build/mini_challenge_2/mini_challenge_2.egg-info/SOURCES.txt'\n"}
+[17.074318] (mini_challenge_2) StdoutLine: {'line': b"writing manifest file '../../build/mini_challenge_2/mini_challenge_2.egg-info/SOURCES.txt'\n"}
+[17.075656] (mini_challenge_2) StdoutLine: {'line': b'running build\n'}
+[17.076689] (mini_challenge_2) StdoutLine: {'line': b'running build_py\n'}
+[17.100951] (mini_challenge_2) StdoutLine: {'line': b'running install\n'}
+[17.108527] (mini_challenge_2) StdoutLine: {'line': b'running install_lib\n'}
+[17.122924] (mini_challenge_2) StdoutLine: {'line': b'running install_data\n'}
+[17.125464] (mini_challenge_2) StdoutLine: {'line': b'running install_egg_info\n'}
+[17.145735] (mini_challenge_2) StdoutLine: {'line': b"removing '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[17.147700] (mini_challenge_2) StdoutLine: {'line': b'Copying ../../build/mini_challenge_2/mini_challenge_2.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2-0.0.0-py3.8.egg-info\n'}
+[17.152458] (mini_challenge_2) StdoutLine: {'line': b'running install_scripts\n'}
+[17.153109] (-) TimerEvent: {}
+[17.211372] (mini_challenge_3) StdoutLine: {'line': b"reading manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'\n"}
+[17.237324] (mini_challenge_3) StdoutLine: {'line': b"writing manifest file '../../build/mini_challenge_3/mini_challenge_3.egg-info/SOURCES.txt'\n"}
+[17.238419] (mini_challenge_3) StdoutLine: {'line': b'running build\n'}
+[17.239007] (mini_challenge_3) StdoutLine: {'line': b'running build_py\n'}
+[17.243649] (mini_challenge_3) StdoutLine: {'line': b'running install\n'}
+[17.247634] (mini_challenge_3) StdoutLine: {'line': b'running install_lib\n'}
+[17.253293] (-) TimerEvent: {}
+[17.273097] (mini_challenge_3) StdoutLine: {'line': b'running install_data\n'}
+[17.275971] (mini_challenge_3) StdoutLine: {'line': b'running install_egg_info\n'}
+[17.278232] (mini_challenge_2) StdoutLine: {'line': b'Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2\n'}
+[17.282051] (mini_challenge_2) StdoutLine: {'line': b'Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2\n'}
+[17.285215] (mini_challenge_3) StdoutLine: {'line': b"removing '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages/mini_challenge_3-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[17.286374] (mini_challenge_3) StdoutLine: {'line': b'Copying ../../build/mini_challenge_3/mini_challenge_3.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages/mini_challenge_3-0.0.0-py3.8.egg-info\n'}
+[17.287120] (mini_challenge_2) StdoutLine: {'line': b'Installing PointGenerator script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2\n'}
+[17.287739] (mini_challenge_2) StdoutLine: {'line': b"writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log'\n"}
+[17.303805] (mini_challenge_3) StdoutLine: {'line': b'running install_scripts\n'}
+[17.352637] (yolo_msg) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[17.353679] (-) TimerEvent: {}
+[17.425754] (mini_challenge_3) StdoutLine: {'line': b'Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3\n'}
+[17.430274] (mini_challenge_3) StdoutLine: {'line': b'Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3\n'}
+[17.431111] (mini_challenge_3) StdoutLine: {'line': b'Installing PointGenerator script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3\n'}
+[17.432749] (mini_challenge_3) StdoutLine: {'line': b'Installing Vision script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/mini_challenge_3\n'}
+[17.435684] (mini_challenge_3) StdoutLine: {'line': b"writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/install.log'\n"}
+[17.453851] (-) TimerEvent: {}
+[17.515875] (mini_challenge_2) CommandEnded: {'returncode': 0}
+[17.554101] (-) TimerEvent: {}
+[17.654866] (-) TimerEvent: {}
+[17.670871] (mini_challenge_2) JobEnded: {'identifier': 'mini_challenge_2', 'rc': 0}
+[17.677002] (mini_challenge_4) JobStarted: {'identifier': 'mini_challenge_4'}
+[17.755034] (-) TimerEvent: {}
+[17.762194] (yolo_msg) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[17.811909] (yolo_msg) StdoutLine: {'line': b'[ 53%] Built target yolo_msg__rosidl_typesupport_fastrtps_c\n'}
+[17.855206] (-) TimerEvent: {}
+[17.951086] (mini_challenge_3) CommandEnded: {'returncode': 0}
+[17.956185] (-) TimerEvent: {}
+[18.006520] (mini_challenge_3) JobEnded: {'identifier': 'mini_challenge_3', 'rc': 0}
+[18.056582] (-) TimerEvent: {}
+[18.106111] (yolo_msg) StdoutLine: {'line': b'[ 53%] Built target yolo_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[18.156424] (yolo_msg) StdoutLine: {'line': b'[ 56%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[18.157210] (-) TimerEvent: {}
+[18.260429] (-) TimerEvent: {}
+[18.361858] (-) TimerEvent: {}
+[18.463405] (-) TimerEvent: {}
+[18.536788] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[18.563558] (-) TimerEvent: {}
+[18.607986] (signal_msg) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/signal_msg/msg/detail/signal__type_support_c.cpp.o\x1b[0m\n'}
+[18.663721] (-) TimerEvent: {}
+[18.765098] (-) TimerEvent: {}
+[18.866380] (-) TimerEvent: {}
+[18.967700] (-) TimerEvent: {}
+[19.069129] (-) TimerEvent: {}
+[19.170212] (-) TimerEvent: {}
+[19.271273] (-) TimerEvent: {}
+[19.372906] (-) TimerEvent: {}
+[19.427108] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_c\x1b[0m\n'}
+[19.473084] (-) TimerEvent: {}
+[19.493112] (yolo_msg) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msg/msg/inference_result__type_support.cpp.o\x1b[0m\n'}
+[19.575032] (-) TimerEvent: {}
+[19.628425] (yolo_msg) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msg/msg/yolov8_inference__type_support.cpp.o\x1b[0m\n'}
+[19.675194] (-) TimerEvent: {}
+[19.775036] (yolo_msg) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_c.so\x1b[0m\n'}
+[19.775744] (-) TimerEvent: {}
+[19.878464] (-) TimerEvent: {}
+[19.962328] (yolo_msg) StdoutLine: {'line': b'[ 64%] Built target yolo_msg__rosidl_typesupport_c\n'}
+[19.981022] (-) TimerEvent: {}
+[20.020866] (yolo_msg) StdoutLine: {'line': b'[ 66%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[20.056807] (signal_msg) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libsignal_msg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[20.081741] (-) TimerEvent: {}
+[20.182788] (-) TimerEvent: {}
+[20.284259] (-) TimerEvent: {}
+[20.360543] (signal_msg) StdoutLine: {'line': b'[ 70%] Built target signal_msg__rosidl_typesupport_fastrtps_c\n'}
+[20.384905] (-) TimerEvent: {}
+[20.430071] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg\x1b[0m\n'}
+[20.483748] (signal_msg) StdoutLine: {'line': b'[ 70%] Built target signal_msg\n'}
+[20.515808] (-) TimerEvent: {}
+[20.559900] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__py\x1b[0m\n'}
+[20.621326] (signal_msg) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[20.629283] (-) TimerEvent: {}
+[20.730752] (-) TimerEvent: {}
+[20.831471] (-) TimerEvent: {}
+[20.932606] (-) TimerEvent: {}
+[21.033311] (-) TimerEvent: {}
+[21.134022] (-) TimerEvent: {}
+[21.235143] (-) TimerEvent: {}
+[21.336265] (-) TimerEvent: {}
+[21.437899] (-) TimerEvent: {}
+[21.538940] (-) TimerEvent: {}
+[21.639985] (-) TimerEvent: {}
+[21.725676] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[21.740151] (-) TimerEvent: {}
+[21.840861] (-) TimerEvent: {}
+[21.873726] (yolo_msg) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msg/msg/detail/inference_result__type_support.c.o\x1b[0m\n'}
+[21.941016] (-) TimerEvent: {}
+[22.042091] (-) TimerEvent: {}
+[22.139772] (yolo_msg) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msg/msg/detail/yolov8_inference__type_support.c.o\x1b[0m\n'}
+[22.142294] (-) TimerEvent: {}
+[22.243744] (-) TimerEvent: {}
+[22.312149] (mini_challenge_4) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/mini_challenge_4', 'build', '--build-base', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/build', 'install', '--record', '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_4', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'GTK_CSD': '0', 'USER': 'puzzlebot', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '4967', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/puzzlebot', 'OLDPWD': '/home/puzzlebot/github/mini_challenges_eq5/src', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.4', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'puzzlebot', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', 'JETSON_SERIAL_NUMBER': '1424420020635', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Batuu', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'ROS_LOCALHOST_ONLY': '0', 'SAL_USE_VCLPLUGIN': 'gtk', 'PATH': '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_GB', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'lxde-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'LXDE', 'XDG_DATA_HOME': '/home/puzzlebot/.local/share', 'XDG_CONFIG_HOME': '/home/puzzlebot/.config', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/puzzlebot/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'SSH_AUTH_SOCK': '/tmp/ssh-ZWLhJhUQWYYA/agent.4777', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/puzzlebot', 'AMENT_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', '_LXSESSION_PID': '4777', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'PYTHONPATH': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '4.6.4', 'CMAKE_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[22.344035] (-) TimerEvent: {}
+[22.410967] (yolo_msg) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking C shared library libyolo_msg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[22.444143] (-) TimerEvent: {}
+[22.543291] (yolo_msg) StdoutLine: {'line': b'[ 74%] Built target yolo_msg__rosidl_typesupport_introspection_c\n'}
+[22.544671] (-) TimerEvent: {}
+[22.594098] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg\x1b[0m\n'}
+[22.643742] (yolo_msg) StdoutLine: {'line': b'[ 74%] Built target yolo_msg\n'}
+[22.645664] (-) TimerEvent: {}
+[22.695508] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__py\x1b[0m\n'}
+[22.744365] (yolo_msg) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[22.746360] (-) TimerEvent: {}
+[22.843948] (signal_msg) StdoutLine: {'line': b'[ 74%] Built target signal_msg__py\n'}
+[22.846499] (-) TimerEvent: {}
+[22.897456] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_generator_py\x1b[0m\n'}
+[22.946732] (-) TimerEvent: {}
+[23.047442] (-) TimerEvent: {}
+[23.148133] (-) TimerEvent: {}
+[23.172441] (signal_msg) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_generator_py.dir/rosidl_generator_py/signal_msg/msg/_signal_s.c.o\x1b[0m\n'}
+[23.248296] (-) TimerEvent: {}
+[23.349024] (-) TimerEvent: {}
+[23.450321] (-) TimerEvent: {}
+[23.551441] (-) TimerEvent: {}
+[23.652132] (-) TimerEvent: {}
+[23.753313] (-) TimerEvent: {}
+[23.783385] (signal_msg) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/signal_msg/libsignal_msg__rosidl_generator_py.so\x1b[0m\n'}
+[23.853534] (-) TimerEvent: {}
+[23.945148] (mini_challenge_4) StdoutLine: {'line': b'running egg_info\n'}
+[23.948347] (mini_challenge_4) StdoutLine: {'line': b'writing ../../build/mini_challenge_4/mini_challenge_4.egg-info/PKG-INFO\n'}
+[23.951137] (mini_challenge_4) StdoutLine: {'line': b'writing dependency_links to ../../build/mini_challenge_4/mini_challenge_4.egg-info/dependency_links.txt\n'}
+[23.951862] (mini_challenge_4) StdoutLine: {'line': b'writing entry points to ../../build/mini_challenge_4/mini_challenge_4.egg-info/entry_points.txt\n'}
+[23.952562] (mini_challenge_4) StdoutLine: {'line': b'writing requirements to ../../build/mini_challenge_4/mini_challenge_4.egg-info/requires.txt\n'}
+[23.953304] (mini_challenge_4) StdoutLine: {'line': b'writing top-level names to ../../build/mini_challenge_4/mini_challenge_4.egg-info/top_level.txt\n'}
+[23.955212] (-) TimerEvent: {}
+[23.976090] (signal_msg) StdoutLine: {'line': b'[ 80%] Built target signal_msg__rosidl_generator_py\n'}
+[24.034102] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[24.055428] (-) TimerEvent: {}
+[24.141892] (signal_msg) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[24.149118] (mini_challenge_4) StdoutLine: {'line': b"reading manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'\n"}
+[24.154293] (mini_challenge_4) StdoutLine: {'line': b"writing manifest file '../../build/mini_challenge_4/mini_challenge_4.egg-info/SOURCES.txt'\n"}
+[24.155069] (mini_challenge_4) StdoutLine: {'line': b'running build\n'}
+[24.155495] (-) TimerEvent: {}
+[24.155925] (mini_challenge_4) StdoutLine: {'line': b'running build_py\n'}
+[24.161040] (mini_challenge_4) StdoutLine: {'line': b'running install\n'}
+[24.164769] (mini_challenge_4) StdoutLine: {'line': b'running install_lib\n'}
+[24.170198] (mini_challenge_4) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4\n'}
+[24.170912] (mini_challenge_4) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Vision.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4\n'}
+[24.171814] (mini_challenge_4) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/__init__.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4\n'}
+[24.172399] (mini_challenge_4) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Controller.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4\n'}
+[24.173605] (mini_challenge_4) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/build/lib/mini_challenge_4/Odometry.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4\n'}
+[24.177047] (mini_challenge_4) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4/Vision.py to Vision.cpython-38.pyc\n'}
+[24.188319] (mini_challenge_4) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4/__init__.py to __init__.cpython-38.pyc\n'}
+[24.199448] (mini_challenge_4) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4/Controller.py to Controller.cpython-38.pyc\n'}
+[24.204202] (mini_challenge_4) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4/Odometry.py to Odometry.cpython-38.pyc\n'}
+[24.206567] (mini_challenge_4) StdoutLine: {'line': b'running install_data\n'}
+[24.211505] (mini_challenge_4) StdoutLine: {'line': b'running install_egg_info\n'}
+[24.222341] (mini_challenge_4) StdoutLine: {'line': b'Copying ../../build/mini_challenge_4/mini_challenge_4.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.8/site-packages/mini_challenge_4-0.0.0-py3.8.egg-info\n'}
+[24.227948] (mini_challenge_4) StdoutLine: {'line': b'running install_scripts\n'}
+[24.255678] (-) TimerEvent: {}
+[24.305772] (mini_challenge_4) StdoutLine: {'line': b'Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4\n'}
+[24.308371] (mini_challenge_4) StdoutLine: {'line': b'Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4\n'}
+[24.309320] (mini_challenge_4) StdoutLine: {'line': b'Installing Vision script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/mini_challenge_4\n'}
+[24.313238] (mini_challenge_4) StdoutLine: {'line': b"writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4/install.log'\n"}
+[24.355861] (-) TimerEvent: {}
+[24.420512] (mini_challenge_4) CommandEnded: {'returncode': 0}
+[24.456242] (-) TimerEvent: {}
+[24.458064] (mini_challenge_4) JobEnded: {'identifier': 'mini_challenge_4', 'rc': 0}
+[24.556419] (-) TimerEvent: {}
+[24.561447] (signal_msg) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[24.656682] (-) TimerEvent: {}
+[24.738325] (signal_msg) StdoutLine: {'line': b'[ 87%] Built target signal_msg__rosidl_typesupport_introspection_c__pyext\n'}
+[24.756839] (-) TimerEvent: {}
+[24.785252] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[24.857013] (-) TimerEvent: {}
+[24.876746] (signal_msg) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[24.957177] (-) TimerEvent: {}
+[25.058151] (-) TimerEvent: {}
+[25.152034] (yolo_msg) StdoutLine: {'line': b'[ 76%] Built target yolo_msg__py\n'}
+[25.158355] (-) TimerEvent: {}
+[25.202012] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_generator_py\x1b[0m\n'}
+[25.252756] (signal_msg) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[25.258563] (-) TimerEvent: {}
+[25.304205] (yolo_msg) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_py.dir/rosidl_generator_py/yolo_msg/msg/_inference_result_s.c.o\x1b[0m\n'}
+[25.358743] (-) TimerEvent: {}
+[25.438580] (signal_msg) StdoutLine: {'line': b'[ 93%] Built target signal_msg__rosidl_typesupport_c__pyext\n'}
+[25.458909] (-) TimerEvent: {}
+[25.485754] (signal_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target signal_msg__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[25.559148] (-) TimerEvent: {}
+[25.657336] (signal_msg) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/signal_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/signal_msg/_signal_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[25.659295] (-) TimerEvent: {}
+[25.716321] (yolo_msg) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_py.dir/rosidl_generator_py/yolo_msg/msg/_yolov8_inference_s.c.o\x1b[0m\n'}
+[25.759525] (-) TimerEvent: {}
+[25.860579] (-) TimerEvent: {}
+[25.961359] (-) TimerEvent: {}
+[26.037479] (signal_msg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[26.061594] (-) TimerEvent: {}
+[26.109791] (yolo_msg) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msg/libyolo_msg__rosidl_generator_py.so\x1b[0m\n'}
+[26.161698] (-) TimerEvent: {}
+[26.211048] (signal_msg) StdoutLine: {'line': b'[100%] Built target signal_msg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[26.259314] (signal_msg) CommandEnded: {'returncode': 0}
+[26.262431] (-) TimerEvent: {}
+[26.281185] (yolo_msg) StdoutLine: {'line': b'[ 84%] Built target yolo_msg__rosidl_generator_py\n'}
+[26.333812] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[26.337077] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[26.362602] (-) TimerEvent: {}
+[26.463617] (-) TimerEvent: {}
+[26.564381] (-) TimerEvent: {}
+[26.605529] (yolo_msg) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[26.616782] (yolo_msg) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[26.664610] (-) TimerEvent: {}
+[26.765343] (-) TimerEvent: {}
+[26.866697] (-) TimerEvent: {}
+[26.891529] (signal_msg) JobProgress: {'identifier': 'signal_msg', 'progress': 'install'}
+[26.946582] (signal_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('GTK_CSD', '0'), ('USER', 'puzzlebot'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '4967'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/puzzlebot'), ('OLDPWD', '/home/puzzlebot/github/mini_challenges_eq5/src'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.4'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'puzzlebot'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('JETSON_SERIAL_NUMBER', '1424420020635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Batuu'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('PATH', '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_GB'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'lxde-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('XDG_DATA_HOME', '/home/puzzlebot/.local/share'), ('XDG_CONFIG_HOME', '/home/puzzlebot/.config'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/puzzlebot/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('SSH_AUTH_SOCK', '/tmp/ssh-ZWLhJhUQWYYA/agent.4777'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/puzzlebot'), ('AMENT_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('_LXSESSION_PID', '4777'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('PYTHONPATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '4.6.4'), ('CMAKE_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[26.966924] (-) TimerEvent: {}
+[26.991375] (signal_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[26.996017] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/rosidl_interfaces/signal_msg\n'}
+[27.004089] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.006963] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.008001] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[27.008609] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/signal.h\n'}
+[27.014720] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.016659] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__functions.c\n'}
+[27.018168] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__struct.h\n'}
+[27.019683] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.h\n'}
+[27.021152] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__functions.h\n'}
+[27.022989] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/library_path.sh\n'}
+[27.025943] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/library_path.dsv\n'}
+[27.028431] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_c.so\n'}
+[27.030895] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_c.so" to ""\n'}
+[27.032064] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.033597] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.034601] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[27.036065] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.037108] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_fastrtps_c.h\n'}
+[27.038943] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[27.041341] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[27.042401] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.043212] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.044027] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.044947] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__builder.hpp\n'}
+[27.065072] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__traits.hpp\n'}
+[27.065925] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__struct.hpp\n'}
+[27.066714] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/signal.hpp\n'}
+[27.067296] (-) TimerEvent: {}
+[27.093825] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.096821] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.097563] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[27.098157] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.101346] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/dds_fastrtps\n'}
+[27.102046] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[27.102987] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[27.104035] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[27.104913] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.105524] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.106371] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[27.107030] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.107522] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_introspection_c.h\n'}
+[27.108125] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.c\n'}
+[27.108668] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_c.so\n'}
+[27.109394] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[27.110144] (yolo_msg) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[27.110688] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_c.so\n'}
+[27.113135] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_c.so" to ""\n'}
+[27.116886] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg\n'}
+[27.124776] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg\n'}
+[27.125437] (signal_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail\n'}
+[27.125958] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[27.126507] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/include/signal_msg/signal_msg/msg/detail/signal__type_support.cpp\n'}
+[27.127008] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[27.127636] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[27.128113] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_cpp.so\n'}
+[27.128619] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_typesupport_cpp.so" to ""\n'}
+[27.129301] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/pythonpath.sh\n'}
+[27.130331] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/pythonpath.dsv\n'}
+[27.131006] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info\n'}
+[27.132947] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/top_level.txt\n'}
+[27.133637] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/PKG-INFO\n'}
+[27.141133] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/SOURCES.txt\n'}
+[27.141716] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg-0.0.0-py3.8.egg-info/dependency_links.txt\n'}
+[27.142252] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg\n'}
+[27.142699] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.143120] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_c.c\n'}
+[27.143524] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.143923] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/__init__.py\n'}
+[27.144366] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.144939] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[27.145456] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg\n'}
+[27.145986] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/__init__.py\n'}
+[27.146471] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal.py\n'}
+[27.146943] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal_s.c\n'}
+[27.147398] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/libsignal_msg__rosidl_generator_py.so\n'}
+[27.147873] (yolo_msg) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[27.148351] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/_signal_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[27.167466] (-) TimerEvent: {}
+[27.268198] (-) TimerEvent: {}
+[27.325854] (yolo_msg) StdoutLine: {'line': b'[ 94%] Built target yolo_msg__rosidl_typesupport_introspection_c__pyext\n'}
+[27.332645] (yolo_msg) StdoutLine: {'line': b'[ 94%] Built target yolo_msg__rosidl_typesupport_c__pyext\n'}
+[27.341434] (signal_msg) StdoutLine: {'line': b"Listing '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg'...\n"}
+[27.342125] (signal_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/__init__.py'...\n"}
+[27.342640] (signal_msg) StdoutLine: {'line': b"Listing '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg'...\n"}
+[27.343124] (signal_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/__init__.py'...\n"}
+[27.343602] (signal_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/msg/_signal.py'...\n"}
+[27.363140] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.364928] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[27.366535] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.368215] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[27.368688] (-) TimerEvent: {}
+[27.369596] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[27.371105] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages/signal_msg/signal_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[27.371785] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_py.so\n'}
+[27.373248] (signal_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/libsignal_msg__rosidl_generator_py.so" to ""\n'}
+[27.373788] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/msg/Signal.idl\n'}
+[27.374282] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/msg/Signal.msg\n'}
+[27.414565] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/package_run_dependencies/signal_msg\n'}
+[27.415290] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/parent_prefix_path/signal_msg\n'}
+[27.418096] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/ament_prefix_path.sh\n'}
+[27.421197] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/ament_prefix_path.dsv\n'}
+[27.421809] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/path.sh\n'}
+[27.422414] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/environment/path.dsv\n'}
+[27.423590] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.bash\n'}
+[27.425024] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.sh\n'}
+[27.426435] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.zsh\n'}
+[27.427722] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/local_setup.dsv\n'}
+[27.429039] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/package.dsv\n'}
+[27.431015] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/ament_index/resource_index/packages/signal_msg\n'}
+[27.432788] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cExport.cmake\n'}
+[27.434077] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[27.435438] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[27.436730] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[27.438267] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_cppExport.cmake\n'}
+[27.439620] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[27.440906] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[27.442192] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[27.443416] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[27.444748] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cExport.cmake\n'}
+[27.445980] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[27.447413] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[27.448937] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[27.450372] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cppExport.cmake\n'}
+[27.451600] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[27.453193] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_pyExport.cmake\n'}
+[27.454505] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/export_signal_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[27.456039] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[27.456881] (yolo_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[27.457922] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[27.459354] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[27.461209] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[27.462842] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[27.464041] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[27.465259] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[27.466715] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msgConfig.cmake\n'}
+[27.467907] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/cmake/signal_msgConfig-version.cmake\n'}
+[27.468690] (signal_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/share/signal_msg/package.xml\n'}
+[27.469148] (-) TimerEvent: {}
+[27.477500] (signal_msg) CommandEnded: {'returncode': 0}
+[27.569436] (-) TimerEvent: {}
+[27.579466] (yolo_msg) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[27.669535] (-) TimerEvent: {}
+[27.770427] (-) TimerEvent: {}
+[27.871098] (-) TimerEvent: {}
+[27.882857] (signal_msg) JobEnded: {'identifier': 'signal_msg', 'rc': 0}
+[27.971280] (-) TimerEvent: {}
+[28.030614] (yolo_msg) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[28.071492] (-) TimerEvent: {}
+[28.172568] (-) TimerEvent: {}
+[28.193027] (yolo_msg) StdoutLine: {'line': b'[100%] Built target yolo_msg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[28.239294] (yolo_msg) CommandEnded: {'returncode': 0}
+[28.272793] (-) TimerEvent: {}
+[28.373598] (-) TimerEvent: {}
+[28.474201] (-) TimerEvent: {}
+[28.574908] (-) TimerEvent: {}
+[28.581543] (yolo_msg) JobProgress: {'identifier': 'yolo_msg', 'progress': 'install'}
+[28.582762] (yolo_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_GB:en'), ('GTK_CSD', '0'), ('USER', 'puzzlebot'), ('XDG_SEAT', 'seat0'), ('SSH_AGENT_PID', '4967'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/puzzlebot'), ('OLDPWD', '/home/puzzlebot/github/mini_challenges_eq5/src'), ('DESKTOP_SESSION', 'LXDE'), ('JETSON_L4T', '32.7.4'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('XDG_SEAT_PATH', '/org/freedesktop/DisplayManager/Seat0'), ('JETSON_MODEL', 'NVIDIA Jetson Nano 2GB Developer Kit'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('MANDATORY_PATH', '/usr/share/gconf/ux-LXDE.mandatory.path'), ('COLCON_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'puzzlebot'), ('JETSON_MODULE', 'NVIDIA Jetson Nano (2 GB ram)'), ('JETSON_SERIAL_NUMBER', '1424420020635'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('JETSON_CODENAME', 'Batuu'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ux-LXDE.default.path'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', 'c1'), ('ROS_LOCALHOST_ONLY', '0'), ('SAL_USE_VCLPLUGIN', 'gtk'), ('PATH', '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('GDM_LANG', 'en_GB'), ('XDG_SESSION_PATH', '/org/freedesktop/DisplayManager/Session0'), ('XDG_MENU_PREFIX', 'lxde-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0.0'), ('LD_PRELOAD', 'libgtk3-nocsd.so.0'), ('LANG', 'en_GB.UTF-8'), ('XDG_CURRENT_DESKTOP', 'LXDE'), ('XDG_DATA_HOME', '/home/puzzlebot/.local/share'), ('XDG_CONFIG_HOME', '/home/puzzlebot/.config'), ('XDG_SESSION_DESKTOP', 'ux-LXDE'), ('XAUTHORITY', '/home/puzzlebot/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('JETSON_SOC', 'tegra210'), ('SSH_AUTH_SOCK', '/tmp/ssh-ZWLhJhUQWYYA/agent.4777'), ('XDG_GREETER_DATA_DIR', '/var/lib/lightdm-data/puzzlebot'), ('AMENT_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ux-LXDE'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('JETSON_BOARDIDS', 'p3448'), ('_LXSESSION_PID', '4777'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('XDG_VTNR', '7'), ('JETSON_CUDA_ARCH_BIN', '5.3'), ('PWD', '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ux-LXDE:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/'), ('PYTHONPATH', '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('JETSON_JETPACK', '4.6.4'), ('CMAKE_PREFIX_PATH', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher'), ('JETSON_P_NUMBER', 'p3448-0003')]), 'shell': False}
+[28.626810] (yolo_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[28.628087] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/rosidl_interfaces/yolo_msg\n'}
+[28.629358] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.629945] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.630725] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[28.631235] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/yolov8_inference.h\n'}
+[28.631712] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.632319] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__functions.c\n'}
+[28.632960] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.h\n'}
+[28.633437] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__functions.h\n'}
+[28.633944] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__struct.h\n'}
+[28.634409] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__functions.c\n'}
+[28.634903] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.h\n'}
+[28.635503] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__struct.h\n'}
+[28.636014] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__functions.h\n'}
+[28.636531] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/inference_result.h\n'}
+[28.637315] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/library_path.sh\n'}
+[28.638505] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/library_path.dsv\n'}
+[28.639792] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_c.so\n'}
+[28.641295] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_c.so" to ""\n'}
+[28.641858] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.642343] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.642716] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[28.643193] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.643592] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_c.h\n'}
+[28.643954] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_fastrtps_c.h\n'}
+[28.644444] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[28.645934] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[28.646497] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.647259] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.647704] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/yolov8_inference.hpp\n'}
+[28.648077] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.648558] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__traits.hpp\n'}
+[28.648955] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__builder.hpp\n'}
+[28.649367] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__traits.hpp\n'}
+[28.649831] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__struct.hpp\n'}
+[28.650303] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__builder.hpp\n'}
+[28.650779] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__struct.hpp\n'}
+[28.651261] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/inference_result.hpp\n'}
+[28.652335] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.652926] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.653368] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[28.653783] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.654235] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/dds_fastrtps\n'}
+[28.654634] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.654990] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[28.655438] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[28.656976] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[28.657451] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.657882] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.658313] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[28.658780] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.659439] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_introspection_c.h\n'}
+[28.659902] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_introspection_c.h\n'}
+[28.660276] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.c\n'}
+[28.660770] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.c\n'}
+[28.661438] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_c.so\n'}
+[28.662770] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[28.663240] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_c.so\n'}
+[28.664397] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_c.so" to ""\n'}
+[28.664960] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg\n'}
+[28.665444] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg\n'}
+[28.665809] (yolo_msg) StdoutLine: {'line': b'-- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail\n'}
+[28.666265] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.666748] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.cpp\n'}
+[28.667168] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.cpp\n'}
+[28.667542] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_introspection_cpp.hpp\n'}
+[28.668024] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[28.669730] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[28.670275] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_cpp.so\n'}
+[28.671478] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_cpp.so" to ""\n'}
+[28.671922] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/pythonpath.sh\n'}
+[28.674226] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/pythonpath.dsv\n'}
+[28.675004] (-) TimerEvent: {}
+[28.675897] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info\n'}
+[28.676506] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/top_level.txt\n'}
+[28.676997] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/PKG-INFO\n'}
+[28.677375] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/SOURCES.txt\n'}
+[28.677810] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/dependency_links.txt\n'}
+[28.681032] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg\n'}
+[28.681628] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/__init__.py\n'}
+[28.682066] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.682498] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[28.682924] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg\n'}
+[28.683284] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result_s.c\n'}
+[28.683687] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/__init__.py\n'}
+[28.684095] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference_s.c\n'}
+[28.684582] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference.py\n'}
+[28.685078] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result.py\n'}
+[28.685536] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/libyolo_msg__rosidl_generator_py.so\n'}
+[28.685947] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_c.c\n'}
+[28.686395] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[28.686935] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.687342] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.775179] (-) TimerEvent: {}
+[28.854505] (yolo_msg) StdoutLine: {'line': b"Listing '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg'...\n"}
+[28.855194] (yolo_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/__init__.py'...\n"}
+[28.855709] (yolo_msg) StdoutLine: {'line': b"Listing '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg'...\n"}
+[28.856195] (yolo_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/__init__.py'...\n"}
+[28.856842] (yolo_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result.py'...\n"}
+[28.857391] (yolo_msg) StdoutLine: {'line': b"Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference.py'...\n"}
+[28.875401] (-) TimerEvent: {}
+[28.876243] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.877826] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[28.880591] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.881262] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[28.882332] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[28.884008] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[28.884812] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_py.so\n'}
+[28.886235] (yolo_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_py.so" to ""\n'}
+[28.887412] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/InferenceResult.idl\n'}
+[28.887819] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/Yolov8Inference.idl\n'}
+[28.889557] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/InferenceResult.msg\n'}
+[28.890425] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/Yolov8Inference.msg\n'}
+[28.894719] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/package_run_dependencies/yolo_msg\n'}
+[28.895423] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/parent_prefix_path/yolo_msg\n'}
+[28.896402] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/ament_prefix_path.sh\n'}
+[28.897255] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/ament_prefix_path.dsv\n'}
+[28.900186] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/path.sh\n'}
+[28.901069] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/path.dsv\n'}
+[28.901617] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.bash\n'}
+[28.904638] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.sh\n'}
+[28.905463] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.zsh\n'}
+[28.906291] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.dsv\n'}
+[28.906868] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/package.dsv\n'}
+[28.907716] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/packages/yolo_msg\n'}
+[28.909496] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cExport.cmake\n'}
+[28.910725] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[28.911978] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[28.913244] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[28.914603] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cppExport.cmake\n'}
+[28.916012] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[28.917304] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[28.918641] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[28.919854] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[28.921183] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cExport.cmake\n'}
+[28.922497] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[28.924043] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[28.924954] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[28.926285] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cppExport.cmake\n'}
+[28.927534] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[28.929183] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_pyExport.cmake\n'}
+[28.930340] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[28.932690] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[28.945272] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[28.946981] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[28.948801] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[28.950631] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[28.951961] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[28.953063] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[28.954874] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msgConfig.cmake\n'}
+[28.955803] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msgConfig-version.cmake\n'}
+[28.956813] (yolo_msg) StdoutLine: {'line': b'-- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/package.xml\n'}
+[28.965880] (yolo_msg) CommandEnded: {'returncode': 0}
+[28.975516] (-) TimerEvent: {}
+[29.076184] (-) TimerEvent: {}
+[29.177348] (-) TimerEvent: {}
+[29.278524] (-) TimerEvent: {}
+[29.379416] (-) TimerEvent: {}
+[29.400041] (yolo_msg) JobEnded: {'identifier': 'yolo_msg', 'rc': 0}
+[29.407298] (final_challenge) JobStarted: {'identifier': 'final_challenge'}
+[29.479710] (-) TimerEvent: {}
+[29.580749] (-) TimerEvent: {}
+[29.681592] (-) TimerEvent: {}
+[29.782217] (-) TimerEvent: {}
+[29.882837] (-) TimerEvent: {}
+[29.983451] (-) TimerEvent: {}
+[30.084045] (-) TimerEvent: {}
+[30.184716] (-) TimerEvent: {}
+[30.285311] (-) TimerEvent: {}
+[30.385899] (-) TimerEvent: {}
+[30.486507] (-) TimerEvent: {}
+[30.587123] (-) TimerEvent: {}
+[30.687889] (-) TimerEvent: {}
+[30.788752] (-) TimerEvent: {}
+[30.889631] (-) TimerEvent: {}
+[30.990461] (-) TimerEvent: {}
+[31.091116] (-) TimerEvent: {}
+[31.191746] (-) TimerEvent: {}
+[31.292431] (-) TimerEvent: {}
+[31.393164] (-) TimerEvent: {}
+[31.493797] (-) TimerEvent: {}
+[31.594780] (-) TimerEvent: {}
+[31.695486] (-) TimerEvent: {}
+[31.796106] (-) TimerEvent: {}
+[31.896796] (-) TimerEvent: {}
+[31.998475] (-) TimerEvent: {}
+[32.099332] (-) TimerEvent: {}
+[32.200027] (-) TimerEvent: {}
+[32.301107] (-) TimerEvent: {}
+[32.401732] (-) TimerEvent: {}
+[32.502344] (-) TimerEvent: {}
+[32.603004] (-) TimerEvent: {}
+[32.703690] (-) TimerEvent: {}
+[32.804393] (-) TimerEvent: {}
+[32.830307] (final_challenge) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/final_challenge', 'build', '--build-base', '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build', 'install', '--record', '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_GB:en', 'GTK_CSD': '0', 'USER': 'puzzlebot', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '4967', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/lib:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent/lib:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/puzzlebot', 'OLDPWD': '/home/puzzlebot/github/mini_challenges_eq5/src', 'DESKTOP_SESSION': 'LXDE', 'JETSON_L4T': '32.7.4', 'ROS_PYTHON_VERSION': '3', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'JETSON_MODEL': 'NVIDIA Jetson Nano 2GB Developer Kit', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'COLCON_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install:/home/puzzlebot/ros2_ws/install:/home/puzzlebot/ros2_packages_ws/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'puzzlebot', 'JETSON_MODULE': 'NVIDIA Jetson Nano (2 GB ram)', 'JETSON_SERIAL_NUMBER': '1424420020635', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'Batuu', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': 'c1', 'ROS_LOCALHOST_ONLY': '0', 'SAL_USE_VCLPLUGIN': 'gtk', 'PATH': '/opt/ros/humble/bin:/home/puzzlebot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_GB', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'XDG_MENU_PREFIX': 'lxde-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0.0', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LANG': 'en_GB.UTF-8', 'XDG_CURRENT_DESKTOP': 'LXDE', 'XDG_DATA_HOME': '/home/puzzlebot/.local/share', 'XDG_CONFIG_HOME': '/home/puzzlebot/.config', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/puzzlebot/.Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'JETSON_SOC': 'tegra210', 'SSH_AUTH_SOCK': '/tmp/ssh-ZWLhJhUQWYYA/agent.4777', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/puzzlebot', 'AMENT_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'JETSON_BOARDIDS': 'p3448', '_LXSESSION_PID': '4777', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'JETSON_CUDA_ARCH_BIN': '5.3', 'PWD': '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'PYTHONPATH': '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.10/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs/local/lib/python3.10/dist-packages:/home/puzzlebot/ros2_ws/install/puzzlebot_ros/lib/python3.8/site-packages:/home/puzzlebot/ros2_ws/install/camera_compressor/lib/python3.8/site-packages:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs/lib/python3.8/site-packages:/opt/ros/humble/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'JETSON_JETPACK': '4.6.4', 'CMAKE_PREFIX_PATH': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher', 'JETSON_P_NUMBER': 'p3448-0003'}, 'shell': False}
+[32.904734] (-) TimerEvent: {}
+[33.005491] (-) TimerEvent: {}
+[33.106087] (-) TimerEvent: {}
+[33.206683] (-) TimerEvent: {}
+[33.307287] (-) TimerEvent: {}
+[33.407936] (-) TimerEvent: {}
+[33.508641] (-) TimerEvent: {}
+[33.609227] (-) TimerEvent: {}
+[33.709838] (-) TimerEvent: {}
+[33.810446] (-) TimerEvent: {}
+[33.911113] (-) TimerEvent: {}
+[34.011779] (-) TimerEvent: {}
+[34.018923] (final_challenge) StdoutLine: {'line': b'running egg_info\n'}
+[34.021152] (final_challenge) StdoutLine: {'line': b'creating ../../build/final_challenge/final_challenge.egg-info\n'}
+[34.022063] (final_challenge) StdoutLine: {'line': b'writing ../../build/final_challenge/final_challenge.egg-info/PKG-INFO\n'}
+[34.022864] (final_challenge) StdoutLine: {'line': b'writing dependency_links to ../../build/final_challenge/final_challenge.egg-info/dependency_links.txt\n'}
+[34.023419] (final_challenge) StdoutLine: {'line': b'writing entry points to ../../build/final_challenge/final_challenge.egg-info/entry_points.txt\n'}
+[34.023903] (final_challenge) StdoutLine: {'line': b'writing requirements to ../../build/final_challenge/final_challenge.egg-info/requires.txt\n'}
+[34.024365] (final_challenge) StdoutLine: {'line': b'writing top-level names to ../../build/final_challenge/final_challenge.egg-info/top_level.txt\n'}
+[34.025045] (final_challenge) StdoutLine: {'line': b"writing manifest file '../../build/final_challenge/final_challenge.egg-info/SOURCES.txt'\n"}
+[34.111981] (-) TimerEvent: {}
+[34.185864] (final_challenge) StdoutLine: {'line': b"reading manifest file '../../build/final_challenge/final_challenge.egg-info/SOURCES.txt'\n"}
+[34.189183] (final_challenge) StdoutLine: {'line': b"writing manifest file '../../build/final_challenge/final_challenge.egg-info/SOURCES.txt'\n"}
+[34.189884] (final_challenge) StdoutLine: {'line': b'running build\n'}
+[34.190321] (final_challenge) StdoutLine: {'line': b'running build_py\n'}
+[34.191039] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build\n'}
+[34.192974] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib\n'}
+[34.193578] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.193989] (final_challenge) StdoutLine: {'line': b'copying final_challenge/Vision.py -> /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.194869] (final_challenge) StdoutLine: {'line': b'copying final_challenge/__init__.py -> /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.195861] (final_challenge) StdoutLine: {'line': b'copying final_challenge/Controller.py -> /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.200882] (final_challenge) StdoutLine: {'line': b'copying final_challenge/ML.py -> /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.209238] (final_challenge) StdoutLine: {'line': b'copying final_challenge/Odometry.py -> /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge\n'}
+[34.212083] (-) TimerEvent: {}
+[34.213762] (final_challenge) StdoutLine: {'line': b'running install\n'}
+[34.217393] (final_challenge) StdoutLine: {'line': b'running install_lib\n'}
+[34.221365] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.222021] (final_challenge) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge/Vision.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.222508] (final_challenge) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge/__init__.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.223040] (final_challenge) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge/Controller.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.223739] (final_challenge) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge/ML.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.224154] (final_challenge) StdoutLine: {'line': b'copying /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build/lib/final_challenge/Odometry.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge\n'}
+[34.226070] (final_challenge) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/Vision.py to Vision.cpython-38.pyc\n'}
+[34.233998] (final_challenge) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/__init__.py to __init__.cpython-38.pyc\n'}
+[34.235123] (final_challenge) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/Controller.py to Controller.cpython-38.pyc\n'}
+[34.239493] (final_challenge) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/ML.py to ML.cpython-38.pyc\n'}
+[34.246290] (final_challenge) StdoutLine: {'line': b'byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/Odometry.py to Odometry.cpython-38.pyc\n'}
+[34.246906] (final_challenge) StdoutLine: {'line': b'running install_data\n'}
+[34.248454] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/ament_index\n'}
+[34.249372] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/ament_index/resource_index\n'}
+[34.249766] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/ament_index/resource_index/packages\n'}
+[34.250383] (final_challenge) StdoutLine: {'line': b'copying resource/final_challenge -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/ament_index/resource_index/packages\n'}
+[34.255649] (final_challenge) StdoutLine: {'line': b'copying package.xml -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/final_challenge\n'}
+[34.258645] (final_challenge) StdoutLine: {'line': b'creating /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/final_challenge/launch\n'}
+[34.259221] (final_challenge) StdoutLine: {'line': b'copying launch/final_launch.py -> /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/share/final_challenge/launch\n'}
+[34.261266] (final_challenge) StdoutLine: {'line': b'running install_egg_info\n'}
+[34.270081] (final_challenge) StdoutLine: {'line': b'Copying ../../build/final_challenge/final_challenge.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge-0.0.0-py3.8.egg-info\n'}
+[34.273695] (final_challenge) StdoutLine: {'line': b'running install_scripts\n'}
+[34.312241] (-) TimerEvent: {}
+[34.345948] (final_challenge) StdoutLine: {'line': b'Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge\n'}
+[34.412411] (-) TimerEvent: {}
+[34.447580] (final_challenge) StdoutLine: {'line': b'Installing ML script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge\n'}
+[34.448676] (final_challenge) StdoutLine: {'line': b'Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge\n'}
+[34.449263] (final_challenge) StdoutLine: {'line': b'Installing Vision script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge\n'}
+[34.450147] (final_challenge) StdoutLine: {'line': b"writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/install.log'\n"}
+[34.512622] (-) TimerEvent: {}
+[34.555349] (final_challenge) CommandEnded: {'returncode': 0}
+[34.595098] (final_challenge) JobEnded: {'identifier': 'final_challenge', 'rc': 0}
+[34.601109] (-) EventReactorShutdown: {}

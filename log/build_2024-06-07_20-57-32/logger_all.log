@@ -1,0 +1,327 @@
+[1.066s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[1.066s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f7ff99670>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f7ff99670>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f7ffa4340>)
+[2.067s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.067s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.067s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.068s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.068s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.068s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.068s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/puzzlebot/github/mini_challenges_eq5'
+[2.069s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.069s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.069s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.070s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.071s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.119s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.120s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.121s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.121s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.121s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.122s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.122s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.122s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.124s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.125s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.125s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.125s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.126s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.127s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.128s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.128s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.128s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.128s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.129s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.129s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.129s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.129s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extensions ['ignore', 'ignore_ament_install']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extension 'ignore'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extension 'ignore_ament_install'
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extensions ['colcon_pkg']
+[2.130s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extension 'colcon_pkg'
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extensions ['colcon_meta']
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extension 'colcon_meta'
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extensions ['ros']
+[2.131s] Level 1:colcon.colcon_core.package_identification:_identify(src/final_challenge) by extension 'ros'
+[2.143s] DEBUG:colcon.colcon_core.package_identification:Package 'src/final_challenge' with type 'ros.ament_python' and name 'final_challenge'
+[2.144s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['ignore', 'ignore_ament_install']
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ignore'
+[2.145s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ignore_ament_install'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['colcon_pkg']
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'colcon_pkg'
+[2.146s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['colcon_meta']
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'colcon_meta'
+[2.147s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extensions ['ros']
+[2.148s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_2) by extension 'ros'
+[2.152s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_2' with type 'ros.ament_python' and name 'mini_challenge_2'
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['ignore', 'ignore_ament_install']
+[2.153s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ignore'
+[2.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ignore_ament_install'
+[2.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['colcon_pkg']
+[2.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'colcon_pkg'
+[2.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['colcon_meta']
+[2.154s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'colcon_meta'
+[2.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extensions ['ros']
+[2.155s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_3) by extension 'ros'
+[2.158s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_3' with type 'ros.ament_python' and name 'mini_challenge_3'
+[2.158s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['ignore', 'ignore_ament_install']
+[2.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ignore'
+[2.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ignore_ament_install'
+[2.159s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['colcon_pkg']
+[2.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'colcon_pkg'
+[2.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['colcon_meta']
+[2.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'colcon_meta'
+[2.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extensions ['ros']
+[2.160s] Level 1:colcon.colcon_core.package_identification:_identify(src/mini_challenge_4) by extension 'ros'
+[2.163s] DEBUG:colcon.colcon_core.package_identification:Package 'src/mini_challenge_4' with type 'ros.ament_python' and name 'mini_challenge_4'
+[2.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extensions ['ignore', 'ignore_ament_install']
+[2.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extension 'ignore'
+[2.164s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extension 'ignore_ament_install'
+[2.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extensions ['colcon_pkg']
+[2.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extension 'colcon_pkg'
+[2.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extensions ['colcon_meta']
+[2.165s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extension 'colcon_meta'
+[2.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extensions ['ros']
+[2.166s] Level 1:colcon.colcon_core.package_identification:_identify(src/signal_msg) by extension 'ros'
+[2.168s] DEBUG:colcon.colcon_core.package_identification:Package 'src/signal_msg' with type 'ros.ament_cmake' and name 'signal_msg'
+[2.168s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['ignore', 'ignore_ament_install']
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ignore'
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ignore_ament_install'
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['colcon_pkg']
+[2.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'colcon_pkg'
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['colcon_meta']
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'colcon_meta'
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extensions ['ros']
+[2.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/usb_cam) by extension 'ros'
+[2.206s] DEBUG:colcon.colcon_core.package_identification:Package 'src/usb_cam' with type 'ros.ament_cmake' and name 'usb_cam'
+[2.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extensions ['ignore', 'ignore_ament_install']
+[2.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extension 'ignore'
+[2.207s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extension 'ignore_ament_install'
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extensions ['colcon_pkg']
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extension 'colcon_pkg'
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extensions ['colcon_meta']
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extension 'colcon_meta'
+[2.208s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extensions ['ros']
+[2.209s] Level 1:colcon.colcon_core.package_identification:_identify(src/yolo_msg) by extension 'ros'
+[2.211s] DEBUG:colcon.colcon_core.package_identification:Package 'src/yolo_msg' with type 'ros.ament_cmake' and name 'yolo_msg'
+[2.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.211s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.212s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.329s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.343s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/puzzlebot/github/mini_challenges_eq5/install
+[2.348s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/puzzlebot/ros2_ws/install
+[2.351s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 5 installed packages in /home/puzzlebot/ros2_packages_ws/install
+[2.358s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 281 installed packages in /opt/ros/humble
+[2.367s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.757s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_args' from command line to 'None'
+[2.757s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_target' from command line to 'None'
+[2.757s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.757s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_clean_cache' from command line to 'False'
+[2.757s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_clean_first' from command line to 'False'
+[2.758s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'cmake_force_configure' from command line to 'False'
+[2.758s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'ament_cmake_args' from command line to 'None'
+[2.758s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'catkin_cmake_args' from command line to 'None'
+[2.758s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.758s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2', 'symlink_install': False, 'test_result_base': None}
+[2.760s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_args' from command line to 'None'
+[2.760s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_target' from command line to 'None'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_clean_cache' from command line to 'False'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_clean_first' from command line to 'False'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'cmake_force_configure' from command line to 'False'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'ament_cmake_args' from command line to 'None'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'catkin_cmake_args' from command line to 'None'
+[2.761s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_3' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.761s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_3' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3', 'symlink_install': False, 'test_result_base': None}
+[2.763s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_args' from command line to 'None'
+[2.763s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_target' from command line to 'None'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_clean_cache' from command line to 'False'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_clean_first' from command line to 'False'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'cmake_force_configure' from command line to 'False'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'ament_cmake_args' from command line to 'None'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'catkin_cmake_args' from command line to 'None'
+[2.764s] Level 5:colcon.colcon_core.verb:set package 'mini_challenge_4' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.764s] DEBUG:colcon.colcon_core.verb:Building package 'mini_challenge_4' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_4', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_4', 'symlink_install': False, 'test_result_base': None}
+[2.766s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_args' from command line to 'None'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_target' from command line to 'None'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_clean_cache' from command line to 'False'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_clean_first' from command line to 'False'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'cmake_force_configure' from command line to 'False'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'ament_cmake_args' from command line to 'None'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'catkin_cmake_args' from command line to 'None'
+[2.767s] Level 5:colcon.colcon_core.verb:set package 'signal_msg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.768s] DEBUG:colcon.colcon_core.verb:Building package 'signal_msg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/signal_msg', 'symlink_install': False, 'test_result_base': None}
+[2.769s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_args' from command line to 'None'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_target' from command line to 'None'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_clean_cache' from command line to 'False'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_clean_first' from command line to 'False'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'cmake_force_configure' from command line to 'False'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'ament_cmake_args' from command line to 'None'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'catkin_cmake_args' from command line to 'None'
+[2.770s] Level 5:colcon.colcon_core.verb:set package 'usb_cam' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.771s] DEBUG:colcon.colcon_core.verb:Building package 'usb_cam' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/usb_cam', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/usb_cam', 'symlink_install': False, 'test_result_base': None}
+[2.772s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_args' from command line to 'None'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_target' from command line to 'None'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_clean_cache' from command line to 'False'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_clean_first' from command line to 'False'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'cmake_force_configure' from command line to 'False'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'ament_cmake_args' from command line to 'None'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'catkin_cmake_args' from command line to 'None'
+[2.773s] Level 5:colcon.colcon_core.verb:set package 'yolo_msg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.774s] DEBUG:colcon.colcon_core.verb:Building package 'yolo_msg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg', 'symlink_install': False, 'test_result_base': None}
+[2.775s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_args' from command line to 'None'
+[2.775s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_target' from command line to 'None'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_clean_cache' from command line to 'False'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_clean_first' from command line to 'False'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'cmake_force_configure' from command line to 'False'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'ament_cmake_args' from command line to 'None'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'catkin_cmake_args' from command line to 'None'
+[2.776s] Level 5:colcon.colcon_core.verb:set package 'final_challenge' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.776s] DEBUG:colcon.colcon_core.verb:Building package 'final_challenge' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge', 'merge_install': False, 'path': '/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge', 'symlink_install': False, 'test_result_base': None}
+[2.777s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[2.780s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[2.782s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/signal_msg' with build type 'ament_cmake'
+[2.782s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/puzzlebot/github/mini_challenges_eq5/src/signal_msg'
+[2.791s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[2.792s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.792s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.829s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg' with build type 'ament_cmake'
+[2.830s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg'
+[2.831s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.832s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.867s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2' with build type 'ament_python'
+[2.868s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_2', 'ament_prefix_path')
+[2.870s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.ps1'
+[2.873s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.dsv'
+[2.876s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/ament_prefix_path.sh'
+[2.883s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.883s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.913s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3' with build type 'ament_python'
+[2.915s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_3', 'ament_prefix_path')
+[2.917s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.ps1'
+[2.921s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.dsv'
+[2.923s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/ament_prefix_path.sh'
+[2.926s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.927s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.973s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/signal_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake /home/puzzlebot/github/mini_challenges_eq5/src/signal_msg -DCMAKE_INSTALL_PREFIX=/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg
+[3.033s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake /home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg -DCMAKE_INSTALL_PREFIX=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg
+[4.565s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2'
+[4.567s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.568s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.196s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3'
+[6.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.184s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
+[9.237s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed install_data
+[11.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2' returned '0': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
+[11.582s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2' for CMake module files
+[11.600s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2' for CMake config files
+[11.617s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib'
+[11.618s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/bin'
+[11.619s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/pkgconfig/mini_challenge_2.pc'
+[11.623s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages'
+[11.629s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_2', 'pythonpath')
+[11.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.ps1'
+[11.635s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.dsv'
+[11.640s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/hook/pythonpath.sh'
+[11.663s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/bin'
+[11.664s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_challenge_2)
+[11.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.ps1'
+[11.673s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.dsv'
+[11.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.sh'
+[11.686s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.bash'
+[11.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/package.zsh'
+[11.700s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/colcon-core/packages/mini_challenge_2)
+[11.705s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_4' with build type 'ament_python'
+[11.706s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_4', 'ament_prefix_path')
+[11.708s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.ps1'
+[11.711s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.dsv'
+[11.713s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4/share/mini_challenge_4/hook/ament_prefix_path.sh'
+[11.717s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.717s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.789s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3' for CMake module files
+[11.793s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_3' returned '0': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_3 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_3/install.log --single-version-externally-managed install_data
+[11.795s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3' for CMake config files
+[11.801s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib'
+[11.801s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/bin'
+[11.802s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/pkgconfig/mini_challenge_3.pc'
+[11.803s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/lib/python3.8/site-packages'
+[11.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('mini_challenge_3', 'pythonpath')
+[11.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.ps1'
+[11.807s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.dsv'
+[11.809s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/hook/pythonpath.sh'
+[11.811s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/bin'
+[11.812s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(mini_challenge_3)
+[11.813s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.ps1'
+[11.816s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.dsv'
+[11.818s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.sh'
+[11.820s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.bash'
+[11.822s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/mini_challenge_3/package.zsh'
+[11.824s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3/share/colcon-core/packages/mini_challenge_3)
+[11.829s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/puzzlebot/github/mini_challenges_eq5/src/usb_cam' with build type 'ament_cmake'
+[11.830s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/puzzlebot/github/mini_challenges_eq5/src/usb_cam'
+[11.832s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.832s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.391s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_4'
+[13.393s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.393s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[13.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/usb_cam': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/usb_cam -- -j4 -l4
+[13.550s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/build/usb_cam' returned '1': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/usb_cam -- -j4 -l4
+[13.623s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(usb_cam)
+[13.625s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam' for CMake module files
+[13.628s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam' for CMake config files
+[13.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'cmake_prefix_path')
+[13.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.ps1'
+[13.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.dsv'
+[13.637s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/cmake_prefix_path.sh'
+[13.649s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib'
+[13.650s] Level 1:colcon.colcon_core.shell:create_environment_hook('usb_cam', 'ld_library_path_lib')
+[13.652s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.ps1'
+[13.656s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.dsv'
+[13.659s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/hook/ld_library_path_lib.sh'
+[13.662s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/bin'
+[13.663s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib/pkgconfig/usb_cam.pc'
+[13.665s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/lib/python3.8/site-packages'
+[13.666s] Level 1:colcon.colcon_core.environment:checking '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/bin'
+[13.669s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.ps1'
+[13.672s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.dsv'
+[13.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.sh'
+[13.680s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.bash'
+[13.683s] INFO:colcon.colcon_core.shell:Creating package script '/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/usb_cam/package.zsh'
+[13.686s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam/share/colcon-core/packages/usb_cam)
+[17.969s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[17.970s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[17.970s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '1'
+[17.971s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[18.014s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[18.015s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[18.015s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[18.244s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[18.247s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/puzzlebot/github/mini_challenges_eq5/install/local_setup.ps1'
+[18.253s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/puzzlebot/github/mini_challenges_eq5/install/_local_setup_util_ps1.py'
+[18.260s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/puzzlebot/github/mini_challenges_eq5/install/setup.ps1'
+[18.268s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/puzzlebot/github/mini_challenges_eq5/install/local_setup.sh'
+[18.271s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/puzzlebot/github/mini_challenges_eq5/install/_local_setup_util_sh.py'
+[18.274s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/puzzlebot/github/mini_challenges_eq5/install/setup.sh'
+[18.283s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/puzzlebot/github/mini_challenges_eq5/install/local_setup.bash'
+[18.285s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/puzzlebot/github/mini_challenges_eq5/install/setup.bash'
+[18.294s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/puzzlebot/github/mini_challenges_eq5/install/local_setup.zsh'
+[18.297s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/puzzlebot/github/mini_challenges_eq5/install/setup.zsh'

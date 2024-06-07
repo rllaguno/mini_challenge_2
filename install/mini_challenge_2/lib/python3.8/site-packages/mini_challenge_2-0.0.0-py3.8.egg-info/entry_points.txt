@@ -1,0 +1,5 @@
+[console_scripts]
+Controller = mini_challenge_2.Controller:main
+Odometry = mini_challenge_2.Odometry:main
+PointGenerator = mini_challenge_2.PointGenerator:main
+

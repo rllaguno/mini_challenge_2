@@ -1,0 +1,11 @@
+[0.000000] (-) TimerEvent: {}
+[0.000756] (-) JobUnselected: {'identifier': 'mini_challenge_2'}
+[0.000900] (-) JobUnselected: {'identifier': 'mini_challenge_3'}
+[0.001006] (-) JobUnselected: {'identifier': 'mini_challenge_4'}
+[0.001102] (-) JobUnselected: {'identifier': 'signal_msg'}
+[0.001198] (-) JobUnselected: {'identifier': 'usb_cam'}
+[0.001296] (-) JobUnselected: {'identifier': 'yolo_msg'}
+[0.002111] (final_challenge) JobQueued: {'identifier': 'final_challenge', 'dependencies': OrderedDict([('signal_msg', '/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg'), ('yolo_msg', '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg')])}
+[0.002809] (final_challenge) JobStarted: {'identifier': 'final_challenge'}
+[0.056785] (final_challenge) JobEnded: {'identifier': 'final_challenge', 'rc': 1}
+[0.069197] (-) EventReactorShutdown: {}

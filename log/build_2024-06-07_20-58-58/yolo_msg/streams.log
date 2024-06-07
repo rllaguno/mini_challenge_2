@@ -1,0 +1,233 @@
+[0.195s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg -- -j4 -l4
+[2.891s] [35m[1mScanning dependencies of target yolo_msg__cpp[0m
+[2.891s] [35m[1mScanning dependencies of target ament_cmake_python_copy_yolo_msg[0m
+[2.892s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.892s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.893s] [  5%] Built target ament_cmake_python_copy_yolo_msg
+[2.893s] [35m[1mScanning dependencies of target ament_cmake_python_build_yolo_msg_egg[0m
+[3.960s] running egg_info
+[3.965s] creating yolo_msg.egg-info
+[3.973s] writing yolo_msg.egg-info/PKG-INFO
+[3.975s] writing dependency_links to yolo_msg.egg-info/dependency_links.txt
+[3.977s] writing top-level names to yolo_msg.egg-info/top_level.txt
+[3.980s] writing manifest file 'yolo_msg.egg-info/SOURCES.txt'
+[4.473s] [  5%] Built target yolo_msg__cpp
+[4.525s] reading manifest file 'yolo_msg.egg-info/SOURCES.txt'
+[4.530s] writing manifest file 'yolo_msg.egg-info/SOURCES.txt'
+[4.540s] [35m[1mScanning dependencies of target yolo_msg__rosidl_generator_c[0m
+[4.660s] [  7%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[4.674s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[4.739s] [ 12%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_c.dir/rosidl_generator_c/yolo_msg/msg/detail/inference_result__functions.c.o[0m
+[4.885s] [ 12%] Built target ament_cmake_python_build_yolo_msg_egg
+[5.009s] [ 15%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_c.dir/rosidl_generator_c/yolo_msg/msg/detail/yolov8_inference__functions.c.o[0m
+[5.522s] [ 17%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[5.620s] [ 20%] [32m[1mLinking C shared library libyolo_msg__rosidl_generator_c.so[0m
+[6.139s] [ 20%] Built target yolo_msg__rosidl_generator_c
+[6.333s] [ 23%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[8.427s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_cpp[0m
+[8.578s] [ 25%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msg/msg/detail/inference_result__type_support.cpp.o[0m
+[8.601s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_cpp[0m
+[8.826s] [ 28%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msg/msg/inference_result__type_support.cpp.o[0m
+[10.144s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_cpp[0m
+[10.434s] [ 30%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msg/msg/detail/dds_fastrtps/inference_result__type_support.cpp.o[0m
+[11.371s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_c[0m
+[11.605s] [ 33%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msg/msg/detail/inference_result__type_support_c.cpp.o[0m
+[12.603s] [ 35%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_msg/msg/yolov8_inference__type_support.cpp.o[0m
+[12.723s] [ 38%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_msg/msg/detail/yolov8_inference__type_support.cpp.o[0m
+[14.512s] [ 41%] [32m[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_cpp.so[0m
+[14.782s] [ 43%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_msg/msg/detail/yolov8_inference__type_support_c.cpp.o[0m
+[14.794s] [ 46%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_msg/msg/detail/dds_fastrtps/yolov8_inference__type_support.cpp.o[0m
+[14.818s] [ 46%] Built target yolo_msg__rosidl_typesupport_cpp
+[15.824s] [ 48%] [32m[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_introspection_cpp.so[0m
+[16.453s] [ 48%] Built target yolo_msg__rosidl_typesupport_introspection_cpp
+[17.308s] [ 51%] [32m[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_fastrtps_c.so[0m
+[17.717s] [ 53%] [32m[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_fastrtps_cpp.so[0m
+[17.767s] [ 53%] Built target yolo_msg__rosidl_typesupport_fastrtps_c
+[18.061s] [ 53%] Built target yolo_msg__rosidl_typesupport_fastrtps_cpp
+[18.111s] [ 56%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[19.382s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_c[0m
+[19.448s] [ 58%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msg/msg/inference_result__type_support.cpp.o[0m
+[19.584s] [ 61%] [32mBuilding CXX object CMakeFiles/yolo_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_msg/msg/yolov8_inference__type_support.cpp.o[0m
+[19.730s] [ 64%] [32m[1mLinking CXX shared library libyolo_msg__rosidl_typesupport_c.so[0m
+[19.917s] [ 64%] Built target yolo_msg__rosidl_typesupport_c
+[19.976s] [ 66%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[21.681s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_c[0m
+[21.829s] [ 69%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msg/msg/detail/inference_result__type_support.c.o[0m
+[22.095s] [ 71%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_msg/msg/detail/yolov8_inference__type_support.c.o[0m
+[22.366s] [ 74%] [32m[1mLinking C shared library libyolo_msg__rosidl_typesupport_introspection_c.so[0m
+[22.498s] [ 74%] Built target yolo_msg__rosidl_typesupport_introspection_c
+[22.549s] [35m[1mScanning dependencies of target yolo_msg[0m
+[22.599s] [ 74%] Built target yolo_msg
+[22.651s] [35m[1mScanning dependencies of target yolo_msg__py[0m
+[22.699s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[25.107s] [ 76%] Built target yolo_msg__py
+[25.157s] [35m[1mScanning dependencies of target yolo_msg__rosidl_generator_py[0m
+[25.259s] [ 79%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_py.dir/rosidl_generator_py/yolo_msg/msg/_inference_result_s.c.o[0m
+[25.672s] [ 82%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_generator_py.dir/rosidl_generator_py/yolo_msg/msg/_yolov8_inference_s.c.o[0m
+[26.065s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/yolo_msg/libyolo_msg__rosidl_generator_py.so[0m
+[26.236s] [ 84%] Built target yolo_msg__rosidl_generator_py
+[26.289s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_c__pyext[0m
+[26.292s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_introspection_c__pyext[0m
+[26.560s] [ 87%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_c.c.o[0m
+[26.572s] [ 89%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[27.065s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[27.103s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[27.281s] [ 94%] Built target yolo_msg__rosidl_typesupport_introspection_c__pyext
+[27.288s] [ 94%] Built target yolo_msg__rosidl_typesupport_c__pyext
+[27.412s] [35m[1mScanning dependencies of target yolo_msg__rosidl_typesupport_fastrtps_c__pyext[0m
+[27.534s] [ 97%] [32mBuilding C object CMakeFiles/yolo_msg__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[27.985s] [100%] [32m[1mLinking C shared library rosidl_generator_py/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[28.148s] [100%] Built target yolo_msg__rosidl_typesupport_fastrtps_c__pyext
+[28.196s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg' returned '0': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --build /home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg -- -j4 -l4
+[28.543s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --install /home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg
+[28.582s] -- Install configuration: ""
+[28.583s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/rosidl_interfaces/yolo_msg
+[28.584s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.585s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.585s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_generator_c__visibility_control.h
+[28.586s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/yolov8_inference.h
+[28.587s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.587s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__functions.c
+[28.588s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.h
+[28.588s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__functions.h
+[28.589s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__struct.h
+[28.589s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__functions.c
+[28.590s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.h
+[28.590s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__struct.h
+[28.591s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__functions.h
+[28.591s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/inference_result.h
+[28.592s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/library_path.sh
+[28.593s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/library_path.dsv
+[28.594s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_c.so
+[28.596s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_c.so" to ""
+[28.597s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.597s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.597s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[28.598s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.598s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_c.h
+[28.599s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_fastrtps_c.h
+[28.599s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_c.so
+[28.601s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_c.so" to ""
+[28.602s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.602s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.602s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/yolov8_inference.hpp
+[28.603s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.603s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__traits.hpp
+[28.604s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__builder.hpp
+[28.604s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__traits.hpp
+[28.605s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__struct.hpp
+[28.605s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__builder.hpp
+[28.605s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__struct.hpp
+[28.606s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/inference_result.hpp
+[28.607s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.608s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.608s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[28.609s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.609s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/dds_fastrtps
+[28.609s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_fastrtps_cpp.hpp
+[28.610s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_fastrtps_cpp.hpp
+[28.610s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_cpp.so
+[28.612s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_fastrtps_cpp.so" to ""
+[28.612s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.613s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.613s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[28.614s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.614s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_introspection_c.h
+[28.615s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_introspection_c.h
+[28.615s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.c
+[28.615s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.c
+[28.616s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_c.so
+[28.617s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_c.so" to ""
+[28.618s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_c.so
+[28.619s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_c.so" to ""
+[28.620s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg
+[28.620s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg
+[28.621s] -- Up-to-date: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail
+[28.621s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__rosidl_typesupport_introspection_cpp.hpp
+[28.621s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__type_support.cpp
+[28.622s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/yolov8_inference__type_support.cpp
+[28.622s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/include/yolo_msg/yolo_msg/msg/detail/inference_result__rosidl_typesupport_introspection_cpp.hpp
+[28.623s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_cpp.so
+[28.624s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_introspection_cpp.so" to ""
+[28.625s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_cpp.so
+[28.626s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_typesupport_cpp.so" to ""
+[28.627s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/pythonpath.sh
+[28.629s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/pythonpath.dsv
+[28.631s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info
+[28.631s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/top_level.txt
+[28.632s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/PKG-INFO
+[28.632s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/SOURCES.txt
+[28.635s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg-0.0.0-py3.8.egg-info/dependency_links.txt
+[28.636s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg
+[28.636s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/__init__.py
+[28.637s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[28.637s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_introspection_c.c
+[28.638s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg
+[28.638s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result_s.c
+[28.638s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/__init__.py
+[28.639s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference_s.c
+[28.639s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference.py
+[28.640s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result.py
+[28.640s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/libyolo_msg__rosidl_generator_py.so
+[28.641s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_c.c
+[28.641s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/_yolo_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[28.642s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[28.642s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[28.809s] Listing '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg'...
+[28.810s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/__init__.py'...
+[28.810s] Listing '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg'...
+[28.811s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/__init__.py'...
+[28.812s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_inference_result.py'...
+[28.812s] Compiling '/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/msg/_yolov8_inference.py'...
+[28.831s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[28.833s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[28.835s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[28.836s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[28.837s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[28.839s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages/yolo_msg/yolo_msg_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[28.840s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_py.so
+[28.842s] -- Set runtime path of "/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/libyolo_msg__rosidl_generator_py.so" to ""
+[28.842s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/InferenceResult.idl
+[28.844s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/Yolov8Inference.idl
+[28.844s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/InferenceResult.msg
+[28.845s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/msg/Yolov8Inference.msg
+[28.850s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/package_run_dependencies/yolo_msg
+[28.850s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/parent_prefix_path/yolo_msg
+[28.851s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/ament_prefix_path.sh
+[28.852s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/ament_prefix_path.dsv
+[28.855s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/path.sh
+[28.856s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/environment/path.dsv
+[28.856s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.bash
+[28.860s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.sh
+[28.861s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.zsh
+[28.861s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/local_setup.dsv
+[28.862s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/package.dsv
+[28.863s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/ament_index/resource_index/packages/yolo_msg
+[28.864s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cExport.cmake
+[28.866s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cExport-noconfig.cmake
+[28.867s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[28.868s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[28.869s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_cppExport.cmake
+[28.871s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[28.872s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[28.873s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cExport.cmake
+[28.875s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[28.876s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cExport.cmake
+[28.877s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cExport-noconfig.cmake
+[28.879s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cppExport.cmake
+[28.880s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[28.881s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cppExport.cmake
+[28.882s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[28.884s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_pyExport.cmake
+[28.885s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/export_yolo_msg__rosidl_generator_pyExport-noconfig.cmake
+[28.888s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake-extras.cmake
+[28.900s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[28.902s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[28.904s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[28.905s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/ament_cmake_export_targets-extras.cmake
+[28.907s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[28.908s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[28.910s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msgConfig.cmake
+[28.911s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/cmake/yolo_msgConfig-version.cmake
+[28.912s] -- Installing: /home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/share/yolo_msg/package.xml
+[28.924s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg' returned '0': CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/usb_cam:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:/home/puzzlebot/github/mini_challenges_eq5/install/challenge_msgs:/home/puzzlebot/ros2_ws/install/ros2_bag_to_image:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_4:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_3:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2:/home/puzzlebot/ros2_ws/install/puzzlebot_ros:/home/puzzlebot/ros2_ws/install/camera_compressor:/opt/ros/humble:/home/puzzlebot/ros2_packages_ws/install/ros_deep_learning:/home/puzzlebot/ros2_packages_ws/install/micro_ros_setup:/home/puzzlebot/ros2_packages_ws/install/micro_ros_agent:/home/puzzlebot/ros2_packages_ws/install/micro_ros_msgs:/home/puzzlebot/ros2_packages_ws/install/camera_info_publisher /usr/bin/cmake --install /home/puzzlebot/github/mini_challenges_eq5/build/yolo_msg

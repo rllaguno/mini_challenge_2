@@ -80,7 +80,7 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
-                    if largest_contour.shape[0] < 15:
+                    if largest_contour.shape[0] < 13:
                         self.standby_counter = self.standby_counter + 1
                         if self.standby_counter >= 5:
                             self.standby_msg.data = 1
