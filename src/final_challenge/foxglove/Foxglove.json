@@ -21,6 +21,13 @@
       "showFullMessageForDiff": false,
       "topicPath": "/standby.data"
     },
+    "RawMessages!2fm56mc": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cmd_vel"
+    },
     "RawMessages!h44mvw": {
       "diffEnabled": false,
       "diffMethod": "custom",
@@ -62,6 +69,11 @@
         "value": "/odom.x"
       },
       "foxglovePanelTitle": "Puzzlebot Path"
+    },
+    "RosOut!3swkpwl": {
+      "searchTerms": [],
+      "minLogLevel": 1,
+      "nameFilter": {}
     },
     "Image!kc4pdl": {
       "cameraState": {
@@ -152,11 +164,6 @@
         "imageTopic": "/cv_image"
       },
       "foxglovePanelTitle": "/inferece_result"
-    },
-    "RosOut!3swkpwl": {
-      "searchTerms": [],
-      "minLogLevel": 1,
-      "nameFilter": {}
     }
   },
   "globalVariables": {},
@@ -183,7 +190,12 @@
           "splitPercentage": 48.815165876777236
         },
         "second": {
-          "first": "RawMessages!xesd7l",
+          "first": {
+            "first": "RawMessages!xesd7l",
+            "second": "RawMessages!2fm56mc",
+            "direction": "column",
+            "splitPercentage": 34.853420195439746
+          },
           "second": {
             "first": {
               "first": "RawMessages!h44mvw",
