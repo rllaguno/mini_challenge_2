@@ -40,7 +40,7 @@ ros2 launch foxglove_bridge foxglove_brige_launch.xml
 - ```/video_source/raw```: Original video frame 
 - ```/cv_image```: Processed image for line follower
 - ```/center_error```: Error in pixels for line follower (Line center - Center frame)
-- ```point_error```: Point error in pixels for line follower (Error between two points)
+- ```/point_error```: Point error in pixels for line follower (Error between two points)
 - ```/light```: Light detected
 - ```/signal```: Signal detected
 - ```/standby```: Boolean if an intersection is detected
