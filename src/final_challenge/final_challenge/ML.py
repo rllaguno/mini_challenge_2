@@ -16,7 +16,7 @@ class ML(Node):
     def __init__(self):
         super().__init__('ML')
           
-        self.model = YOLO('/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge/model/bestEq52.pt')
+        self.model = YOLO('/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge/model/bestEq53.pt')
         
         self.bridge = CvBridge()
         self.yolov8_inference = Yolov8Inference()
