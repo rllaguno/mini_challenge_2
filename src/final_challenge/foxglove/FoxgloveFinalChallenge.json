@@ -1,0 +1,228 @@
+{
+  "configById": {
+    "RawMessages!49dprah": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/center_error.data"
+    },
+    "RawMessages!xk041q": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/points_error.data"
+    },
+    "RawMessages!xesd7l": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/standby.data"
+    },
+    "RawMessages!s8e3bb": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/cmd_vel"
+    },
+    "Plot!35u8lf": {
+      "paths": [
+        {
+          "timestampMethod": "headerStamp",
+          "value": "/odom.y",
+          "enabled": true,
+          "lineSize": 2,
+          "color": "#ffa400",
+          "label": "Puzzlebot Trajectory",
+          "showLine": false
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "custom",
+      "sidebarDimension": 240,
+      "xAxisPath": {
+        "value": "/odom.x"
+      },
+      "foxglovePanelTitle": "Puzzlebot Path",
+      "minXValue": -1,
+      "maxXValue": 4,
+      "minYValue": -2,
+      "maxYValue": 0.5
+    },
+    "RawMessages!3p4z6jg": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/processed_signal"
+    },
+    "RawMessages!439uwvq": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/processed_light"
+    },
+    "Image!kc4pdl": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/video_source/raw"
+      },
+      "foxglovePanelTitle": ""
+    },
+    "Image!2dej8xw": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {
+        "imageTopic": "/cv_image"
+      },
+      "foxglovePanelTitle": "/inferece_result"
+    },
+    "RosOut!4fe6bs3": {
+      "searchTerms": [],
+      "minLogLevel": 1,
+      "nameFilter": {}
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {
+    "a9b25b13-2101-4207-ba6a-288b3aeb5649": {
+      "sourceCode": "import { Input, Message } from \"./types\";\n\ntype Output = {\n  name: string;\n  signalNumber: number;\n};\n\nexport const inputs = [\"/signal\"];\n\nexport const output = \"/processed_signal\";\n\nexport default function script(event: Input<\"/signal\">): Output {\n  let signalText = \"\";\n  switch (event.message.data) {\n    case 0:\n      signalText = \"No signal\";\n      break;\n    case 1:\n      signalText = \"Stop\";\n      break;\n    case 2:\n      signalText = \"Workers\";\n      break;\n    case 3:\n      signalText = \"Left\";\n      break;\n    case 4:\n      signalText = \"Straight\";\n      break;\n    case 5:\n      signalText = \"Roundabout\";\n      break;\n    default:\n      signalText = \"Unknown\";\n      break;\n  }\n  return {\n    name: signalText,\n    signalNumber: event.message.data,\n  };\n}\n",
+      "name": "Signal Translation"
+    },
+    "0a556885-29fc-4844-b17a-3c0fe1746cc9": {
+      "sourceCode": "import { Input, Message } from \"./types\";\n\ntype Output = {\n  name: string;\n  lightNumber: number;\n};\n\nexport const inputs = [\"/light\"];\n\nexport const output = \"/processed_light\";\n\nexport default function script(event: Input<\"/light\">): Output {\n  let lightText = \"\";\n  switch (event.message.data) {\n    case 0.0:\n      lightText = \"Red light\";\n      break;\n    case 0.5:\n      lightText = \"Yellow Light\";\n      break;\n    case 1.0:\n      lightText = \"Green Light\";\n      break;\n    default:\n      lightText = \"Unknown\";\n      break;\n  }\n  return {\n    name: lightText,\n    lightNumber: event.message.data,\n  };\n}\n",
+      "name": "Light Translation"
+    }
+  },
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": {
+        "first": {
+          "first": "RawMessages!49dprah",
+          "second": "RawMessages!xk041q",
+          "direction": "column",
+          "splitPercentage": 48.815165876777236
+        },
+        "second": {
+          "first": {
+            "first": "RawMessages!xesd7l",
+            "second": "RawMessages!s8e3bb",
+            "direction": "column",
+            "splitPercentage": 33.22475570032574
+          },
+          "second": "RosOut!4fe6bs3",
+          "direction": "column",
+          "splitPercentage": 37.21212121212121
+        },
+        "direction": "column",
+        "splitPercentage": 20.36679536679537
+      },
+      "second": {
+        "first": "Plot!35u8lf",
+        "second": {
+          "first": "RawMessages!3p4z6jg",
+          "second": "RawMessages!439uwvq",
+          "direction": "column"
+        },
+        "direction": "column",
+        "splitPercentage": 50
+      },
+      "direction": "row",
+      "splitPercentage": 48.7317537006579
+    },
+    "second": {
+      "first": "Image!kc4pdl",
+      "second": "Image!2dej8xw",
+      "direction": "column"
+    },
+    "direction": "row",
+    "splitPercentage": 51.24999999999999
+  }
+}

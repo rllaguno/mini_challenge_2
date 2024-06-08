@@ -6,6 +6,7 @@ from std_msgs.msg import Float32
 import numpy as np
 
 class Odometry(Node):
+
     def __init__(self):
         super().__init__('Odometry')
         
@@ -48,16 +49,23 @@ class Odometry(Node):
         self.msg_pose.y = self.msg_pose.y + ( self.velocity_linear * self.timer_period_controller ) * np.sin(self.thetaTemp2) #distance in y
 
         #publish 2D pose to /odom topic
-        self.odom.publish(self.msg_pose)
+        try: 
+            self.odom.publish(self.msg_pose)
+            self.get_logger().info(f'Odometry: {self.msg_pose.data}')
+        except Exception as e:
+            self.get_logger().error(f'Error publishing: {e}')
+
 
     #save received variables of left encoder
     def timer_callback_l(self,msg):
         self.left_velocity = msg.data
 
+
     #save received variables of right encoder
     def timer_callback_r(self,msg):
         self.right_velocity = msg.data
         
+
 def main(args=None):
     rclpy.init(args=args)
     o = Odometry()
