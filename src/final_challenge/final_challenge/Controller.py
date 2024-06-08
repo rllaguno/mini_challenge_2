@@ -59,7 +59,7 @@ class Controller(Node) :
         self.standby_num = 0
         self.standby = False
 
-        self.get_logger().info('|Controller node successfully initialized|')
+        self.get_logger().info('|Controller node successfully initialized yay|')
 
 
     def timer_callback_controller(self) :
@@ -77,20 +77,22 @@ class Controller(Node) :
                 self.get_logger().error(f'Error publishing: {e}')
 
         if (self.banderaSignal):
+                 
             if (self.standby_num == 0 and (not self.standby)) :
                 self.secondsOld  = time.time()
                 self.standby = True
                 
-            if ((self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
+            if ((self.standby_num == 0) and (self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
                 self.banderaSignal = False
+    
 
             #left
             if (self.signal_num == 3 and (not self.banderaLeft) and (not self.bandera)):
                 try:
                     self.get_logger().info('Left Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.08
-                    self.msg_vel.angular.z = 0.04
+                    self.msg_vel.linear.x = 0.065
+                    self.msg_vel.angular.z = 0.05
                     self.vel.publish(self.msg_vel)
                     self.banderaLeft = True 
                 except Exception as e:
@@ -105,8 +107,8 @@ class Controller(Node) :
                 try:
                     self.get_logger().info('Roundabout Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.08
-                    self.msg_vel.angular.z = -0.04
+                    self.msg_vel.linear.x = 0.065
+                    self.msg_vel.angular.z = -0.05
                     self.vel.publish(self.msg_vel)
                     self.banderaRotonda = True 
                 except Exception as e:
