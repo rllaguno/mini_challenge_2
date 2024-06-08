@@ -13,8 +13,6 @@ class Vision(Node):
         
         self.img = None
         self.crop_pixels = 50
-        self.new_width = 320
-        self.new_height = 240
         self.valid_img = False
         self.bridge = CvBridge()
         self.ce_msg = Int32()

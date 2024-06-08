@@ -40,9 +40,9 @@ class My_Publisher(Node) :
 
         self.msg_vel.linear.x = 0.06
         # check first error with bottom point with center and then error between points
-        if (self.errorCenter < 5 and self.errorCenter > -5):
+        if (self.errorCenter < 20 and self.errorCenter > -20):
             self.error = self.errorPoints
-            if (self.errorPoints < 5 and self.errorPoints > -5):
+            if (self.errorPoints < 20 and self.errorPoints > -20):
                 self.error = 0
             else:
                 self.msg_vel.linear.x = 0.03

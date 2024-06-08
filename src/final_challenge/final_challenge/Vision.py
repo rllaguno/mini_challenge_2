@@ -13,7 +13,7 @@ class Vision(Node):
         super().__init__('Vision')
         
         self.img = None
-        self.crop_pixels = 45
+        self.crop_pixels = 50
         self.valid_img = False
         self.bridge = CvBridge()
         self.ce_msg = Int32()
@@ -85,9 +85,9 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
-                    if largest_contour.shape[0] < 15:
+                    if largest_contour.shape[0] < 14:
                         self.standby_counter = self.standby_counter + 1
-                        if self.standby_counter >= 5:
+                        if self.standby_counter >= 3:
                             self.standby_msg.data = 1
                             try:
                                 self.standby_pub.publish(self.standby_msg)

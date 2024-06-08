@@ -6,6 +6,7 @@ from std_msgs.msg import Float32
 import numpy as np
 
 class Odometry(Node):
+
     def __init__(self):
         super().__init__('Odometry')
         
@@ -21,7 +22,8 @@ class Odometry(Node):
         #create timers
         self.timer_period_controller = 0.1 #callback time
         self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_odometry) #logic goes in this timer
-        self.get_logger().info('|Odometry node successfully initialized|')
+
+        self.enable_logger = self.declare_parameter('enable_logger_odometry', False)
 
         #create and initialize variables
         self.r = 0.05
@@ -34,8 +36,11 @@ class Odometry(Node):
         self.msg_pose.x = 0.0
         self.msg_pose.y = 0.0
 
+        self.get_logger().info('|Odometry node successfully initialized|')
+
 
     def timer_callback_odometry(self):
+        self.enable_logger = self.get_parameter('enable_logger_odometry').value
         
         #calculate velocities
         self.velocity_angular = self.r * ( (self.left_velocity - self.right_velocity) / self.l ) #angular velocity (r * ( (wr-wl) / l) )
@@ -48,16 +53,24 @@ class Odometry(Node):
         self.msg_pose.y = self.msg_pose.y + ( self.velocity_linear * self.timer_period_controller ) * np.sin(self.thetaTemp2) #distance in y
 
         #publish 2D pose to /odom topic
-        self.odom.publish(self.msg_pose)
+        try: 
+            self.odom.publish(self.msg_pose)
+            if(self.enable_logger):
+                self.get_logger().info(f'Odometry: {self.msg_pose.data}')
+        except Exception as e:
+            self.get_logger().error(f'Error publishing: {e}')
+
 
     #save received variables of left encoder
     def timer_callback_l(self,msg):
         self.left_velocity = msg.data
 
+
     #save received variables of right encoder
     def timer_callback_r(self,msg):
         self.right_velocity = msg.data
         
+
 def main(args=None):
     rclpy.init(args=args)
     o = Odometry()

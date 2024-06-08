@@ -7,6 +7,7 @@ from signal_msg.msg import Signal
 import time
 
 class Controller(Node) :
+
     def __init__(self) :
         super().__init__('Controller')
         
@@ -20,11 +21,11 @@ class Controller(Node) :
         self.subSignal = self.create_subscription(Int32, "/signal", self.timer_callback_signal, 1) #receive current error between points
         self.subStandby = self.create_subscription(Int32, "/standby", self.timer_callback_standby, 10) #receive current error between points
 
-
         #create timers        
         self.timer_period_controller = 0.1 #callback time
         self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_controller) #logic goes in this timer
-        self.get_logger().info('|Controller node successfully initialized yayyy|')
+
+        self.enable_logger = self.declare_parameter('enable_logger_controller', False)
 
         #create different messsage types 
         self.msg_vel = Twist() 
@@ -58,33 +59,44 @@ class Controller(Node) :
         self.standby_num = 0
         self.standby = False
 
+        self.get_logger().info('|Controller node successfully initialized yay|')
+
 
     def timer_callback_controller(self) :
-        print(self.signal_num)
+        self.enable_logger = self.get_parameter('enable_logger_controller').value
         
         if (self.standby_num == 1 and (not self.banderaSignal)):
-            self.msg_vel.linear.x = 0.0
-            self.msg_vel.angular.z = 0.0
-            self.vel.publish(self.msg_vel)
-            self.banderaSignal = True
+            try:
+                self.msg_vel.linear.x = 0.0
+                self.msg_vel.angular.z = 0.0
+                self.vel.publish(self.msg_vel)
+                self.banderaSignal = True
+                if(self.enable_logger):
+                    self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+            except Exception as e:
+                self.get_logger().error(f'Error publishing: {e}')
 
         if (self.banderaSignal):
+                 
             if (self.standby_num == 0 and (not self.standby)) :
                 self.secondsOld  = time.time()
                 self.standby = True
                 
-            if ((self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
+            if ((self.standby_num == 0) and (self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
                 self.banderaSignal = False
+    
 
             #left
             if (self.signal_num == 3 and (not self.banderaLeft) and (not self.bandera)):
-                print("inside left")
-                self.secondsOld  = time.time()
-                self.msg_vel.linear.x = 0.08
-                self.msg_vel.angular.z = 0.04
-                self.vel.publish(self.msg_vel)
-                self.banderaLeft = True 
-                print(self.banderaLeft)
+                try:
+                    self.get_logger().info('Left Action Initialized')
+                    self.secondsOld  = time.time()
+                    self.msg_vel.linear.x = 0.065
+                    self.msg_vel.angular.z = 0.06
+                    self.vel.publish(self.msg_vel)
+                    self.banderaLeft = True 
+                except Exception as e:
+                    self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaLeft) and ((time.time() - self.secondsOld) >= 6.5)):
                 self.banderaLeft = False 
@@ -92,13 +104,15 @@ class Controller(Node) :
 
             #rotonda
             if (self.signal_num == 5 and (not self.banderaRotonda)):
-                print("inside left")
-                self.secondsOld  = time.time()
-                self.msg_vel.linear.x = 0.08
-                self.msg_vel.angular.z = -0.04
-                self.vel.publish(self.msg_vel)
-                self.banderaRotonda = True 
-                print(self.banderaRotonda)
+                try:
+                    self.get_logger().info('Roundabout Action Initialized')
+                    self.secondsOld  = time.time()
+                    self.msg_vel.linear.x = 0.065
+                    self.msg_vel.angular.z = -0.06
+                    self.vel.publish(self.msg_vel)
+                    self.banderaRotonda = True 
+                except Exception as e:
+                    self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 6.5)): 
                 self.banderaRotonda = False 
@@ -107,12 +121,14 @@ class Controller(Node) :
         
             #stop 
             if (self.signal_num == 1 and (not self.banderaStop) and self.bandera):
-                print("inside stop")
-                self.secondsOld  = time.time()
-                self.msg_vel.linear.x = 0.0
-                self.vel.publish(self.msg_vel)
-                self.banderaStop = True 
-                print(self.banderaStop)
+                try:
+                    self.get_logger().info('Stop Action Initialized')
+                    self.secondsOld  = time.time()
+                    self.msg_vel.linear.x = 0.0
+                    self.vel.publish(self.msg_vel)
+                    self.banderaStop = True 
+                except Exception as e:
+                    self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 5)):
                 self.msg_vel.linear.x = 0.06
@@ -124,13 +140,15 @@ class Controller(Node) :
 
             #straight
             if (self.signal_num == 4 and (not self.banderaStraight)):
-                print("inside straight")
-                self.secondsOld  = time.time()
-                self.msg_vel.linear.x = 0.06
-                self.msg_vel.angular.z = 0.0
-                self.vel.publish(self.msg_vel)
-                self.banderaStraight = True 
-                print(self.banderaStraight)
+                try:
+                    self.get_logger().info('Straight Action Initialized')
+                    self.secondsOld  = time.time()
+                    self.msg_vel.linear.x = 0.06
+                    self.msg_vel.angular.z = 0.0
+                    self.vel.publish(self.msg_vel)
+                    self.banderaStraight = True 
+                except Exception as e:
+                    self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaStraight) and ((time.time() - self.secondsOld) >= 7)):
                 self.banderaStraight = False
@@ -139,17 +157,18 @@ class Controller(Node) :
         else :
             #workers
             if (self.signal_num == 2 and (not self.banderaWorkers)):
-                print("inside straight")
-                self.multWorkers = 0.5
-                self.secondsOld  = time.time()
-                self.banderaWorkers = True 
-                print(self.banderaWorkers)
+                try:
+                    self.get_logger().info('Workers Action Initialized')
+                    self.multWorkers = 0.5
+                    self.secondsOld  = time.time()
+                    self.banderaWorkers = True 
+                except Exception as e:
+                    self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaWorkers) and ((time.time() - self.secondsOld) >= 12)):
                 self.banderaWorkers = False
                 self.multWorkers = 1.0
         
-
             self.msg_vel.linear.x = 0.06 * self.light_multiplier * self.multWorkers
             # check first error with bottom point with center and then error between points
             if (self.errorCenter < 20 and self.errorCenter > -20):
@@ -157,8 +176,13 @@ class Controller(Node) :
                 if (self.errorPoints < 20 and self.errorPoints > -20):
                     self.error = 0
                 else:
-                    self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
-                    self.vel.publish(self.msg_vel)
+                    try:
+                        self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
+                        self.vel.publish(self.msg_vel)
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+                    except Exception as e:
+                        self.get_logger().error(f'Error publishing: {e}')
             else:
                 self.error = self.errorCenter
                 self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
@@ -177,25 +201,36 @@ class Controller(Node) :
                 self.msg_vel.angular.z = -0.035
             else: 
                 self.msg_vel.angular.z = self.pid
-            print(self.pid)
-            self.vel.publish(self.msg_vel)
+
+            try:
+                self.vel.publish(self.msg_vel)
+                if(self.enable_logger):
+                    self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+            except Exception as e:
+                self.get_logger().error(f'Error publishing: {e}')
+
     
     # save variables from topic into local
     def timer_callback_errorCenter(self, msg) :
         self.errorCenter = msg.data * -1 
 
+
     def timer_callback_errorPoint(self, msg) :
         self.errorPoints = msg.data * -1
+
 
     def timer_callback_light(self, msg) :
         self.light_multiplier = msg.data
 
+
     def timer_callback_signal(self, msg) :
         self.signal_num = msg.data
+
 
     def timer_callback_standby(self, msg) :
         self.standby_num = msg.data
         
+
 def main(args=None):
     rclpy.init(args=args)
     m_p = Controller()

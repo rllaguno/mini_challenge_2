@@ -92,7 +92,7 @@ class Controller(Node) :
                     self.get_logger().info('Left Action Initialized')
                     self.secondsOld  = time.time()
                     self.msg_vel.linear.x = 0.065
-                    self.msg_vel.angular.z = 0.05
+                    self.msg_vel.angular.z = 0.06
                     self.vel.publish(self.msg_vel)
                     self.banderaLeft = True 
                 except Exception as e:
@@ -108,7 +108,7 @@ class Controller(Node) :
                     self.get_logger().info('Roundabout Action Initialized')
                     self.secondsOld  = time.time()
                     self.msg_vel.linear.x = 0.065
-                    self.msg_vel.angular.z = -0.05
+                    self.msg_vel.angular.z = -0.06
                     self.vel.publish(self.msg_vel)
                     self.banderaRotonda = True 
                 except Exception as e:

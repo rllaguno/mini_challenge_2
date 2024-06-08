@@ -8,6 +8,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Int32
 
 class Vision(Node):
+
     def __init__(self):
         super().__init__('Vision')
         
@@ -22,7 +23,6 @@ class Vision(Node):
 
         qos_profile = rclpy.qos.qos_profile_sensor_data #eliminate noise
 
-
         # Subscribes to the camera image and publishes the processed images
         self.sub = self.create_subscription(Image, '/video_source/raw', self.camera_callback, qos_profile)
         self.center_error_pub = self.create_publisher(Int32, '/center_error', 10)
@@ -30,9 +30,12 @@ class Vision(Node):
         self.standby_pub = self.create_publisher(Int32, '/standby', 10)
         self.frame_pub = self.create_publisher(Image, '/cv_image', 10)
 
+        self.enable_logger = self.declare_parameter('enable_logger_vision', False)
+
         dt = 0.1
         self.timer = self.create_timer(dt, self.timer_callback)
-        self.get_logger().info('Vision Node started')
+        self.get_logger().info('|Vision Node successfully initialized|')
+
 
     def camera_callback(self, msg):
         try:
@@ -43,6 +46,8 @@ class Vision(Node):
 
 
     def timer_callback(self):
+        self.enable_logger = self.get_parameter('enable_logger_vision').value
+
         try:
             if self.valid_img:
                 
@@ -80,12 +85,16 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
-                    if largest_contour.shape[0] < 15:
+                    if largest_contour.shape[0] < 14:
                         self.standby_counter = self.standby_counter + 1
-                        if self.standby_counter >= 5:
+                        if self.standby_counter >= 3:
                             self.standby_msg.data = 1
-                            self.standby_pub.publish(self.standby_msg)
-                            print('Standby = 1')
+                            try:
+                                self.standby_pub.publish(self.standby_msg)
+                                if(self.enable_logger):
+                                    self.get_logger().info(f'Standby: {self.standby_msg.data}')
+                            except Exception as e:
+                                self.get_logger().error(f'Error publishing: {e}')
                         return
 
                     # Si el contour es de 2 dimensiones y tiene 2 columnas
@@ -114,24 +123,25 @@ class Vision(Node):
                         top_position_diff = top_point[0] - centerX
                         position_diff_between_points = bottom_position_diff - top_position_diff
 
-                        self.ce_msg.data = bottom_position_diff
-                        self.pe_msg.data = position_diff_between_points
-                        self.center_error_pub.publish(self.ce_msg)
-                        self.points_error_pub.publish(self.pe_msg)
-                        self.standby_counter = 0
-                        self.standby_msg.data = 0
-                        self.standby_pub.publish(self.standby_msg)
-                        print('standby = 0')
-
-                        self.frame_pub.publish(self.bridge.cv2_to_imgmsg(frame))
-                        
-                        print('Sent Error Topic')
-                        
+                        try:
+                            self.ce_msg.data = bottom_position_diff
+                            self.pe_msg.data = position_diff_between_points
+                            self.center_error_pub.publish(self.ce_msg)
+                            self.points_error_pub.publish(self.pe_msg)
+                            self.standby_counter = 0
+                            self.standby_msg.data = 0
+                            self.standby_pub.publish(self.standby_msg)
+                            self.frame_pub.publish(self.bridge.cv2_to_imgmsg(frame))
+                            if(self.enable_logger):
+                                self.get_logger().info(f'Center Error: {self.ce_msg.data} | Points Error: {self.pe_msg.data} | Standby: {self.standby_msg.data}')
+                        except Exception as e:
+                            self.get_logger().error(f'Error publishing: {e}')
+                                                
                         self.valid_img = False
-
 
         except Exception as e:
             self.get_logger().info(f'Failed to process image: {e}')
+
 
 def main(args=None):
     rclpy.init(args=args)
