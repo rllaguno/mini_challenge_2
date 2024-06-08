@@ -124,7 +124,7 @@ class ML(Node):
                         self.signal_pub.publish(self.signal_msg)
                         self.yolov8_pub.publish(self.yolov8_inference)
                         self.yolov8_inference.yolov8_inference.clear()
-                        self.get_logger().info(f'Signal: {self.signal_msg.data} | Image: {img_msg} | Inference: {self.yolov8_inference}')
+                        self.get_logger().info(f'Signal: {self.signal_msg.data} | Inference: {self.yolov8_inference}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
                     self.counter = [0, 0, 0]
