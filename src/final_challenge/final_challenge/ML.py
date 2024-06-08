@@ -16,7 +16,7 @@ class ML(Node):
     def __init__(self):
         super().__init__('ML')
           
-        self.model = YOLO('/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge/model/bestEq53.pt')
+        self.model = YOLO('/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge/model/bestEq54.pt')
         
         self.bridge = CvBridge()
         self.yolov8_inference = Yolov8Inference()
@@ -41,11 +41,14 @@ class ML(Node):
         self.signal_pub = self.create_publisher(Int32, "/signal", 1)
         self.light_pub = self.create_publisher(Float32, "/light", 1)
         self.img_pub = self.create_publisher(Image, "/inference_result", 1)
+
+        self.enable_logger = self.declare_parameter('enable_logger_ml', False)
         
         self.get_logger().info('|ML node successfully initialized|')
 
 
     def camera_callback(self, data):
+        self.enable_logger = self.get_parameter('enable_logger_ml').value
         
         img = self.bridge.imgmsg_to_cv2(data, "bgr8")
         results = self.model(img)
@@ -58,7 +61,8 @@ class ML(Node):
                 try:
                     self.signal_msg.data = 0
                     self.signal_pub.publish(self.signal_msg)
-                    self.get_logger().info(f'Signal: {self.signal_msg.data}')
+                    if(self.enable_logger):
+                        self.get_logger().info(f'Signal: {self.signal_msg.data}')
                 except Exception as e:
                     self.get_logger().error(f'Error publishing: {e}')
             self.c = 0 
@@ -74,14 +78,16 @@ class ML(Node):
                 self.inference_result.right = int(b[3])
                 self.yolov8_inference.yolov8_inference.append(self.inference_result)
 
-                self.get_logger().info(f'Confidence: {confidence} | Distance: {self.inference_result.bottom - self.inference_result.top}')
+                if(self.enable_logger):
+                    self.get_logger().info(f'Confidence: {confidence} | Distance: {self.inference_result.bottom - self.inference_result.top}')
 
                 if(confidence < 0.1 or (self.inference_result.bottom - self.inference_result.top) < 10):
                     try:
                         self.counter[self.c] = 0
                         self.signal_msg.data = 0
                         self.signal_pub.publish(self.signal_msg)
-                        self.get_logger().info(f'Signal: {self.signal_msg.data}')
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Signal: {self.signal_msg.data}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
                     continue
@@ -105,7 +111,8 @@ class ML(Node):
                     try:
                         self.signal_msg.data = 0
                         self.signal_pub.publish(self.signal_msg)
-                        self.get_logger().info(f'Signal: {self.signal_msg.data}')
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Signal: {self.signal_msg.data}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
                 
@@ -124,7 +131,8 @@ class ML(Node):
                         self.signal_pub.publish(self.signal_msg)
                         self.yolov8_pub.publish(self.yolov8_inference)
                         self.yolov8_inference.yolov8_inference.clear()
-                        self.get_logger().info(f'Signal: {self.signal_msg.data} | Inference: {self.yolov8_inference}')
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Signal: {self.signal_msg.data} | Inference: {self.yolov8_inference}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
                     self.counter = [0, 0, 0]
@@ -143,12 +151,13 @@ class ML(Node):
                     self.counter2 = 0
                 self.old_value_light = self.value_light
 
-                if(self.counter2 >= 3):
+                if(self.counter2 >= 2):
                     try:
                         self.light_msg.data = self.value_light
                         self.light_pub.publish(self.light_msg)
                         self.counter2 = 0
-                        self.get_logger().info(f'Light: {self.light_msg.data}')
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Light: {self.light_msg.data}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
 

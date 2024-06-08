@@ -24,7 +24,8 @@ class Controller(Node) :
         #create timers        
         self.timer_period_controller = 0.1 #callback time
         self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_controller) #logic goes in this timer
-        self.get_logger().info('|Controller node successfully initialized|')
+
+        self.enable_logger = self.declare_parameter('enable_logger_controller', False)
 
         #create different messsage types 
         self.msg_vel = Twist() 
@@ -58,8 +59,11 @@ class Controller(Node) :
         self.standby_num = 0
         self.standby = False
 
+        self.get_logger().info('|Controller node successfully initialized|')
+
 
     def timer_callback_controller(self) :
+        self.enable_logger = self.get_parameter('enable_logger_controller').value
         
         if (self.standby_num == 1 and (not self.banderaSignal)):
             try:
@@ -67,7 +71,8 @@ class Controller(Node) :
                 self.msg_vel.angular.z = 0.0
                 self.vel.publish(self.msg_vel)
                 self.banderaSignal = True
-                self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+                if(self.enable_logger):
+                    self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
             except Exception as e:
                 self.get_logger().error(f'Error publishing: {e}')
 
@@ -162,7 +167,6 @@ class Controller(Node) :
                 self.banderaWorkers = False
                 self.multWorkers = 1.0
         
-
             self.msg_vel.linear.x = 0.06 * self.light_multiplier * self.multWorkers
             # check first error with bottom point with center and then error between points
             if (self.errorCenter < 20 and self.errorCenter > -20):
@@ -173,7 +177,8 @@ class Controller(Node) :
                     try:
                         self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
                         self.vel.publish(self.msg_vel)
-                        self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+                        if(self.enable_logger):
+                            self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
                     except Exception as e:
                         self.get_logger().error(f'Error publishing: {e}')
             else:
@@ -197,7 +202,8 @@ class Controller(Node) :
 
             try:
                 self.vel.publish(self.msg_vel)
-                self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
+                if(self.enable_logger):
+                    self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
             except Exception as e:
                 self.get_logger().error(f'Error publishing: {e}')
 

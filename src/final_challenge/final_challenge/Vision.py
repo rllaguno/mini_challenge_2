@@ -23,13 +23,14 @@ class Vision(Node):
 
         qos_profile = rclpy.qos.qos_profile_sensor_data #eliminate noise
 
-
         # Subscribes to the camera image and publishes the processed images
         self.sub = self.create_subscription(Image, '/video_source/raw', self.camera_callback, qos_profile)
         self.center_error_pub = self.create_publisher(Int32, '/center_error', 10)
         self.points_error_pub = self.create_publisher(Int32, '/points_error', 10)
         self.standby_pub = self.create_publisher(Int32, '/standby', 10)
         self.frame_pub = self.create_publisher(Image, '/cv_image', 10)
+
+        self.enable_logger = self.declare_parameter('enable_logger_vision', False)
 
         dt = 0.1
         self.timer = self.create_timer(dt, self.timer_callback)
@@ -45,6 +46,8 @@ class Vision(Node):
 
 
     def timer_callback(self):
+        self.enable_logger = self.get_parameter('enable_logger_vision').value
+
         try:
             if self.valid_img:
                 
@@ -88,7 +91,8 @@ class Vision(Node):
                             self.standby_msg.data = 1
                             try:
                                 self.standby_pub.publish(self.standby_msg)
-                                self.get_logger().info(f'Standby: {self.standby_msg.data}')
+                                if(self.enable_logger):
+                                    self.get_logger().info(f'Standby: {self.standby_msg.data}')
                             except Exception as e:
                                 self.get_logger().error(f'Error publishing: {e}')
                         return
@@ -128,12 +132,13 @@ class Vision(Node):
                             self.standby_msg.data = 0
                             self.standby_pub.publish(self.standby_msg)
                             self.frame_pub.publish(self.bridge.cv2_to_imgmsg(frame))
-                            self.get_logger().info(f'Center Error: {self.ce_msg.data} | Points Error: {self.pe_msg.data} | Standby: {self.standby_msg.data}')
+                            if(self.enable_logger):
+                                self.get_logger().info(f'Center Error: {self.ce_msg.data} | Points Error: {self.pe_msg.data} | Standby: {self.standby_msg.data}')
                         except Exception as e:
                             self.get_logger().error(f'Error publishing: {e}')
                                                 
                         self.valid_img = False
-                        
+
         except Exception as e:
             self.get_logger().info(f'Failed to process image: {e}')
 

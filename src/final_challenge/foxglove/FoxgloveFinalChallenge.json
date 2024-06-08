@@ -21,12 +21,22 @@
       "showFullMessageForDiff": false,
       "topicPath": "/standby.data"
     },
-    "RawMessages!s8e3bb": {
+    "RawMessages!h44mvw": {
       "diffEnabled": false,
       "diffMethod": "custom",
       "diffTopicPath": "",
       "showFullMessageForDiff": false,
-      "topicPath": "/cmd_vel"
+      "topicPath": "/processed_signal"
+    },
+    "RawMessages!356btyn": {
+      "diffEnabled": false,
+      "diffMethod": "custom",
+      "diffTopicPath": "",
+      "showFullMessageForDiff": false,
+      "topicPath": "/processed_light"
+    },
+    "Parameters!2yu0aa3": {
+      "title": "Parameters"
     },
     "Plot!35u8lf": {
       "paths": [
@@ -51,25 +61,7 @@
       "xAxisPath": {
         "value": "/odom.x"
       },
-      "foxglovePanelTitle": "Puzzlebot Path",
-      "minXValue": -1,
-      "maxXValue": 4,
-      "minYValue": -2,
-      "maxYValue": 0.5
-    },
-    "RawMessages!3p4z6jg": {
-      "diffEnabled": false,
-      "diffMethod": "custom",
-      "diffTopicPath": "",
-      "showFullMessageForDiff": false,
-      "topicPath": "/processed_signal"
-    },
-    "RawMessages!439uwvq": {
-      "diffEnabled": false,
-      "diffMethod": "custom",
-      "diffTopicPath": "",
-      "showFullMessageForDiff": false,
-      "topicPath": "/processed_light"
+      "foxglovePanelTitle": "Puzzlebot Path"
     },
     "Image!kc4pdl": {
       "cameraState": {
@@ -161,7 +153,7 @@
       },
       "foxglovePanelTitle": "/inferece_result"
     },
-    "RosOut!4fe6bs3": {
+    "RosOut!3swkpwl": {
       "searchTerms": [],
       "minLogLevel": 1,
       "nameFilter": {}
@@ -191,13 +183,16 @@
           "splitPercentage": 48.815165876777236
         },
         "second": {
-          "first": {
-            "first": "RawMessages!xesd7l",
-            "second": "RawMessages!s8e3bb",
-            "direction": "column",
-            "splitPercentage": 33.22475570032574
+          "first": "RawMessages!xesd7l",
+          "second": {
+            "first": {
+              "first": "RawMessages!h44mvw",
+              "second": "RawMessages!356btyn",
+              "direction": "column"
+            },
+            "second": "Parameters!2yu0aa3",
+            "direction": "column"
           },
-          "second": "RosOut!4fe6bs3",
           "direction": "column",
           "splitPercentage": 37.21212121212121
         },
@@ -206,11 +201,7 @@
       },
       "second": {
         "first": "Plot!35u8lf",
-        "second": {
-          "first": "RawMessages!3p4z6jg",
-          "second": "RawMessages!439uwvq",
-          "direction": "column"
-        },
+        "second": "RosOut!3swkpwl",
         "direction": "column",
         "splitPercentage": 50
       },

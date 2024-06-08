@@ -22,7 +22,8 @@ class Odometry(Node):
         #create timers
         self.timer_period_controller = 0.1 #callback time
         self.timer_controller = self.create_timer(self.timer_period_controller, self.timer_callback_odometry) #logic goes in this timer
-        self.get_logger().info('|Odometry node successfully initialized|')
+
+        self.enable_logger = self.declare_parameter('enable_logger_odometry', False)
 
         #create and initialize variables
         self.r = 0.05
@@ -35,8 +36,11 @@ class Odometry(Node):
         self.msg_pose.x = 0.0
         self.msg_pose.y = 0.0
 
+        self.get_logger().info('|Odometry node successfully initialized|')
+
 
     def timer_callback_odometry(self):
+        self.enable_logger = self.get_parameter('enable_logger_odometry').value
         
         #calculate velocities
         self.velocity_angular = self.r * ( (self.left_velocity - self.right_velocity) / self.l ) #angular velocity (r * ( (wr-wl) / l) )
@@ -51,7 +55,8 @@ class Odometry(Node):
         #publish 2D pose to /odom topic
         try: 
             self.odom.publish(self.msg_pose)
-            self.get_logger().info(f'Odometry: {self.msg_pose.data}')
+            if(self.enable_logger):
+                self.get_logger().info(f'Odometry: {self.msg_pose.data}')
         except Exception as e:
             self.get_logger().error(f'Error publishing: {e}')
 
