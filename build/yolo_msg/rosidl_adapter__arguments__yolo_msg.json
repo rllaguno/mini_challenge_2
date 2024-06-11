@@ -1,7 +1,0 @@
-{
-  "package_name": "yolo_msg",
-  "non_idl_tuples": [
-    "/home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg:msg/InferenceResult.msg",
-    "/home/puzzlebot/github/mini_challenges_eq5/src/yolo_msg:msg/Yolov8Inference.msg"
-  ]
-}
