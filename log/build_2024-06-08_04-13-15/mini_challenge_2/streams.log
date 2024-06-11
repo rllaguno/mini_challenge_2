@@ -1,0 +1,47 @@
+[7.061s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
+[8.402s] running egg_info
+[8.405s] creating ../../build/mini_challenge_2/mini_challenge_2.egg-info
+[8.406s] writing ../../build/mini_challenge_2/mini_challenge_2.egg-info/PKG-INFO
+[8.407s] writing dependency_links to ../../build/mini_challenge_2/mini_challenge_2.egg-info/dependency_links.txt
+[8.408s] writing entry points to ../../build/mini_challenge_2/mini_challenge_2.egg-info/entry_points.txt
+[8.411s] writing requirements to ../../build/mini_challenge_2/mini_challenge_2.egg-info/requires.txt
+[8.412s] writing top-level names to ../../build/mini_challenge_2/mini_challenge_2.egg-info/top_level.txt
+[8.413s] writing manifest file '../../build/mini_challenge_2/mini_challenge_2.egg-info/SOURCES.txt'
+[8.648s] reading manifest file '../../build/mini_challenge_2/mini_challenge_2.egg-info/SOURCES.txt'
+[8.651s] writing manifest file '../../build/mini_challenge_2/mini_challenge_2.egg-info/SOURCES.txt'
+[8.670s] running build
+[8.671s] running build_py
+[8.675s] creating /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build
+[8.676s] creating /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib
+[8.677s] creating /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2
+[8.677s] copying mini_challenge_2/PointGenerator.py -> /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2
+[8.677s] copying mini_challenge_2/__init__.py -> /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2
+[8.678s] copying mini_challenge_2/Controller.py -> /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2
+[8.678s] copying mini_challenge_2/Odometry.py -> /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2
+[8.679s] running install
+[8.683s] running install_lib
+[8.694s] creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2
+[8.698s] copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2/PointGenerator.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2
+[8.701s] copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2/__init__.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2
+[8.702s] copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2/Controller.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2
+[8.703s] copying /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build/lib/mini_challenge_2/Odometry.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2
+[8.705s] byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2/PointGenerator.py to PointGenerator.cpython-38.pyc
+[8.721s] byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2/__init__.py to __init__.cpython-38.pyc
+[8.722s] byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2/Controller.py to Controller.cpython-38.pyc
+[8.724s] byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2/Odometry.py to Odometry.cpython-38.pyc
+[8.725s] running install_data
+[8.729s] creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/ament_index
+[8.729s] creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/ament_index/resource_index
+[8.730s] creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/ament_index/resource_index/packages
+[8.734s] copying resource/mini_challenge_2 -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/ament_index/resource_index/packages
+[8.735s] copying package.xml -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2
+[8.735s] creating /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/launch
+[8.736s] copying launch/mini2_launch.py -> /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/share/mini_challenge_2/launch
+[8.737s] running install_egg_info
+[8.746s] Copying ../../build/mini_challenge_2/mini_challenge_2.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages/mini_challenge_2-0.0.0-py3.8.egg-info
+[8.752s] running install_scripts
+[8.844s] Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2
+[8.845s] Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2
+[8.846s] Installing PointGenerator script to /home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/mini_challenge_2
+[8.849s] writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log'
+[8.976s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/src/mini_challenge_2' returned '0': PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/mini_challenge_2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/mini_challenge_2 build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/mini_challenge_2/install.log --single-version-externally-managed install_data
