@@ -38,8 +38,8 @@ class Controller(Node) :
         self.integral = 0
 
         self.kp = 0.004 #0.4535
-        self.ki = 0 #0.0531
-        self.kd = 0 #0.3597
+        self.ki = 0.001 #0.0531
+        self.kd = 0.001 #0.3597
 
         self.light_multiplier = 1.0
         self.signal_num = 0
@@ -57,7 +57,6 @@ class Controller(Node) :
         self.banderaSignal = False
         self.bandera = False
         self.standby_num = 0
-        self.standby = False
 
         self.get_logger().info('|Controller node successfully initialized yay|')
 
@@ -78,14 +77,6 @@ class Controller(Node) :
 
         if (self.banderaSignal):
                  
-            if (self.standby_num == 0 and (not self.standby)) :
-                self.secondsOld  = time.time()
-                self.standby = True
-                
-            if ((self.standby_num == 0) and (self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
-                self.banderaSignal = False
-    
-
             #left
             if (self.signal_num == 3 and (not self.banderaLeft) and (not self.bandera)):
                 try:
@@ -114,7 +105,7 @@ class Controller(Node) :
                 except Exception as e:
                     self.get_logger().error(f'Error: {e}')
 
-            if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 6.5)): 
+            if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 5.5)): 
                 self.banderaRotonda = False 
                 self.banderaSignal = False
                 self.bandera = True
@@ -134,9 +125,9 @@ class Controller(Node) :
                 self.msg_vel.linear.x = 0.06
                 self.vel.publish(self.msg_vel)
 
-            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 12)):
-                self.banderaStop = False 
-                self.banderaSignal = False
+                if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 12)):
+                    self.banderaStop = False 
+                    self.banderaSignal = False
 
             #straight
             if (self.signal_num == 4 and (not self.banderaStraight)):
