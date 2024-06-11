@@ -37,9 +37,9 @@ class Controller(Node) :
         self.previouserror = 0
         self.integral = 0
 
-        self.kp = 0.004 #0.4535
-        self.ki = 0 #0.0531
-        self.kd = 0 #0.3597
+        self.kp = 0.0025 #0.4535
+        self.ki = 0.00 #0.0531
+        self.kd = 0.00 #0.3597
 
         self.light_multiplier = 1.0
         self.signal_num = 0
@@ -55,16 +55,16 @@ class Controller(Node) :
         self.secondsOld  = 0
 
         self.banderaSignal = False
-        self.bandera = False
         self.standby_num = 0
         self.standby = False
 
-        self.get_logger().info('|Controller node successfully initialized yay|')
+        self.banderanew = True
+
+        self.get_logger().info('|Controller node successfully initialized yay9|')
 
 
     def timer_callback_controller(self) :
         self.enable_logger = self.get_parameter('enable_logger_controller').value
-        
         if (self.standby_num == 1 and (not self.banderaSignal)):
             try:
                 self.msg_vel.linear.x = 0.0
@@ -77,22 +77,13 @@ class Controller(Node) :
                 self.get_logger().error(f'Error publishing: {e}')
 
         if (self.banderaSignal):
-                 
-            if (self.standby_num == 0 and (not self.standby)) :
-                self.secondsOld  = time.time()
-                self.standby = True
-                
-            if ((self.standby_num == 0) and (self.standby) and ((time.time() - self.secondsOld) >= 5.0)):
-                self.banderaSignal = False
-    
-
             #left
-            if (self.signal_num == 3 and (not self.banderaLeft) and (not self.bandera)):
+            if (self.signal_num == 3 and (not self.banderaLeft)):
                 try:
                     self.get_logger().info('Left Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.065
-                    self.msg_vel.angular.z = 0.06
+                    self.msg_vel.linear.x = 0.06
+                    self.msg_vel.angular.z = 0.045
                     self.vel.publish(self.msg_vel)
                     self.banderaLeft = True 
                 except Exception as e:
@@ -107,8 +98,8 @@ class Controller(Node) :
                 try:
                     self.get_logger().info('Roundabout Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.065
-                    self.msg_vel.angular.z = -0.06
+                    self.msg_vel.linear.x = 0.06
+                    self.msg_vel.angular.z = -0.045
                     self.vel.publish(self.msg_vel)
                     self.banderaRotonda = True 
                 except Exception as e:
@@ -117,33 +108,36 @@ class Controller(Node) :
             if ((self.banderaRotonda) and ((time.time() - self.secondsOld) >= 6.5)): 
                 self.banderaRotonda = False 
                 self.banderaSignal = False
-                self.bandera = True
         
             #stop 
-            if (self.signal_num == 1 and (not self.banderaStop) and self.bandera):
+            if (self.signal_num == 7 and (not self.banderaStop)):
                 try:
                     self.get_logger().info('Stop Action Initialized')
                     self.secondsOld  = time.time()
                     self.msg_vel.linear.x = 0.0
+                    self.msg_vel.angular.z = 0.0
                     self.vel.publish(self.msg_vel)
                     self.banderaStop = True 
+                    self.banderanew = False
                 except Exception as e:
                     self.get_logger().error(f'Error: {e}')
 
-            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 5)):
-                self.msg_vel.linear.x = 0.06
+            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 7)):
+                self.msg_vel.angular.z = 0.0
+                self.msg_vel.linear.x = 0.1
                 self.vel.publish(self.msg_vel)
 
-            if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 12)):
-                self.banderaStop = False 
-                self.banderaSignal = False
+                if ((time.time() - self.secondsOld) >= 11):
+                    self.banderaStop = False 
+                    self.banderaSignal = False
+                    self.banderanew = True
 
             #straight
             if (self.signal_num == 4 and (not self.banderaStraight)):
                 try:
                     self.get_logger().info('Straight Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.06
+                    self.msg_vel.linear.x = 0.1
                     self.msg_vel.angular.z = 0.0
                     self.vel.publish(self.msg_vel)
                     self.banderaStraight = True 
@@ -154,7 +148,7 @@ class Controller(Node) :
                 self.banderaStraight = False
                 self.banderaSignal = False
         
-        else :
+        else:
             #workers
             if (self.signal_num == 2 and (not self.banderaWorkers)):
                 try:
@@ -169,7 +163,7 @@ class Controller(Node) :
                 self.banderaWorkers = False
                 self.multWorkers = 1.0
         
-            self.msg_vel.linear.x = 0.06 * self.light_multiplier * self.multWorkers
+            self.msg_vel.linear.x = 0.1 * self.light_multiplier * self.multWorkers
             # check first error with bottom point with center and then error between points
             if (self.errorCenter < 20 and self.errorCenter > -20):
                 self.error = self.errorPoints
@@ -177,7 +171,7 @@ class Controller(Node) :
                     self.error = 0
                 else:
                     try:
-                        self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
+                        self.msg_vel.linear.x = 0.05 * self.light_multiplier * self.multWorkers
                         self.vel.publish(self.msg_vel)
                         if(self.enable_logger):
                             self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
@@ -185,7 +179,7 @@ class Controller(Node) :
                         self.get_logger().error(f'Error publishing: {e}')
             else:
                 self.error = self.errorCenter
-                self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
+                self.msg_vel.linear.x = 0.05 * self.light_multiplier * self.multWorkers
 
             #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
             self.proportional = self.error
@@ -196,9 +190,9 @@ class Controller(Node) :
 
             #set a limit in case the pid value surpasses the max velocity on the car
             if (self.pid > 0.035) :
-                self.msg_vel.angular.z = 0.035
+                self.msg_vel.angular.z = 0.05
             elif (self.pid < -0.035) :
-                self.msg_vel.angular.z = -0.035
+                self.msg_vel.angular.z = -0.05
             else: 
                 self.msg_vel.angular.z = self.pid
 
