@@ -122,7 +122,7 @@ class Controller(Node) :
                     self.get_logger().error(f'Error: {e}')
 
             if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 5)):
-                self.msg_vel.linear.x = 0.06
+                self.msg_vel.linear.x = 0.1
                 self.vel.publish(self.msg_vel)
 
                 if ((self.banderaStop) and ((time.time() - self.secondsOld) >= 12)):
@@ -134,7 +134,7 @@ class Controller(Node) :
                 try:
                     self.get_logger().info('Straight Action Initialized')
                     self.secondsOld  = time.time()
-                    self.msg_vel.linear.x = 0.06
+                    self.msg_vel.linear.x = 0.1
                     self.msg_vel.angular.z = 0.0
                     self.vel.publish(self.msg_vel)
                     self.banderaStraight = True 
@@ -160,7 +160,7 @@ class Controller(Node) :
                 self.banderaWorkers = False
                 self.multWorkers = 1.0
         
-            self.msg_vel.linear.x = 0.06 * self.light_multiplier * self.multWorkers
+            self.msg_vel.linear.x = 0.1 * self.light_multiplier * self.multWorkers
             # check first error with bottom point with center and then error between points
             if (self.errorCenter < 20 and self.errorCenter > -20):
                 self.error = self.errorPoints
@@ -168,7 +168,7 @@ class Controller(Node) :
                     self.error = 0
                 else:
                     try:
-                        self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
+                        self.msg_vel.linear.x = 0.05 * self.light_multiplier * self.multWorkers
                         self.vel.publish(self.msg_vel)
                         if(self.enable_logger):
                             self.get_logger().info(f'Linear Velocity: {self.msg_vel.linear.x} | Angular Velocity: {self.msg_vel.angular.z}')
@@ -176,7 +176,7 @@ class Controller(Node) :
                         self.get_logger().error(f'Error publishing: {e}')
             else:
                 self.error = self.errorCenter
-                self.msg_vel.linear.x = 0.03 * self.light_multiplier * self.multWorkers
+                self.msg_vel.linear.x = 0.05 * self.light_multiplier * self.multWorkers
 
             #pid controller (pid = kp*proportional + ki*integral + kd*derivative)
             self.proportional = self.error
@@ -186,10 +186,10 @@ class Controller(Node) :
             self.pid = (self.kp * self.proportional) + (self.ki * self.integral) + (self.kd * self.derivative)
 
             #set a limit in case the pid value surpasses the max velocity on the car
-            if (self.pid > 0.035) :
-                self.msg_vel.angular.z = 0.035
-            elif (self.pid < -0.035) :
-                self.msg_vel.angular.z = -0.035
+            if (self.pid > 0.05) :
+                self.msg_vel.angular.z = 0.05
+            elif (self.pid < -0.05) :
+                self.msg_vel.angular.z = -0.05
             else: 
                 self.msg_vel.angular.z = self.pid
 
