@@ -93,7 +93,7 @@ class ML(Node):
                     continue
 
                 if(self.inference_result.class_name == "stop"):
-                    self.signal_msg.data = 1
+                    self.signal_msg.data = 7
                     #self.signal_msg.name = 'stop sign'
                 elif(self.inference_result.class_name == "workers"):
                     self.signal_msg.data = 2
@@ -151,7 +151,7 @@ class ML(Node):
                     self.counter2 = 0
                 self.old_value_light = self.value_light
 
-                if(self.counter2 >= 2):
+                if(self.counter2 >= 1):
                     try:
                         self.light_msg.data = self.value_light
                         self.light_pub.publish(self.light_msg)

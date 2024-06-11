@@ -28,5 +28,5 @@ def generate_launch_description():
         output='screen',
     )
 
-    l_d = LaunchDescription([vision_node, controller_node, odometry_node, signal_node])
+    l_d = LaunchDescription([controller_node, odometry_node, signal_node])
     return l_d

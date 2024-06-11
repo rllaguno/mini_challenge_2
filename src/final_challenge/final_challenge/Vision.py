@@ -13,7 +13,6 @@ class Vision(Node):
         super().__init__('Vision')
         
         self.img = None
-        self.crop_pixels = 50
         self.valid_img = False
         self.bridge = CvBridge()
         self.ce_msg = Int32()
@@ -51,12 +50,10 @@ class Vision(Node):
         try:
             if self.valid_img:
                 
-                #frame = self.img[:-self.crop_pixels, :]
                 frame = self.img
-                #frame = cv.resize(frame, (800, 600), interpolation=cv.INTER_LINEAR)
 
                 # Apply median blur
-                frame = cv.medianBlur(self.img, 5)
+                frame = cv.medianBlur(self.img, 9)
 
                 # Convert to grayscale
                 frame = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -68,8 +65,8 @@ class Vision(Node):
                 blank = np.zeros(frame.shape[:2], dtype='uint8')
 
                 # Define the top-left and bottom-right coordinates of the rectangle
-                top_left = (1 * frame.shape[1] // 4, frame.shape[0] // 2)
-                bottom_right = (3 * frame.shape[1] // 4, frame.shape[0])
+                top_left = (1 * frame.shape[1] // 5, (frame.shape[0] // 4)*3)
+                bottom_right = (4 * frame.shape[1] // 5, frame.shape[0])
 
                 # Draw a filled rectangle on the blank mask
                 mask = cv.rectangle(blank, top_left, bottom_right, (255), thickness=cv.FILLED)
@@ -85,7 +82,7 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
-                    if largest_contour.shape[0] < 14:
+                    if (len(contours) >= 3):
                         self.standby_counter = self.standby_counter + 1
                         if self.standby_counter >= 3:
                             self.standby_msg.data = 1

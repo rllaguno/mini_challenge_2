@@ -1,6 +1,0 @@
-setup.py
-signal_msg/__init__.py
-signal_msg.egg-info/PKG-INFO
-signal_msg.egg-info/SOURCES.txt
-signal_msg.egg-info/dependency_links.txt
-signal_msg.egg-info/top_level.txt
