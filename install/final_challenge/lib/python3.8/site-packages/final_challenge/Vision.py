@@ -85,9 +85,9 @@ class Vision(Node):
                     largest_contour = max(contours, key=cv.contourArea)
                     largest_contour = np.squeeze(largest_contour)
 
-                    if largest_contour.shape[0] < 14:
+                    if largest_contour.shape[0] < 12:
                         self.standby_counter = self.standby_counter + 1
-                        if self.standby_counter >= 3:
+                        if self.standby_counter >= 2:
                             self.standby_msg.data = 1
                             try:
                                 self.standby_pub.publish(self.standby_msg)
