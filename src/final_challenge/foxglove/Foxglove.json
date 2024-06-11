@@ -42,9 +42,6 @@
       "showFullMessageForDiff": false,
       "topicPath": "/processed_light"
     },
-    "Parameters!2yu0aa3": {
-      "title": "Parameters"
-    },
     "Plot!35u8lf": {
       "paths": [
         {
@@ -164,12 +161,16 @@
         "imageTopic": "/cv_image"
       },
       "foxglovePanelTitle": "/inferece_result"
+    },
+    "NodePlayground!2fc58q": {
+      "selectedNodeId": "a9b25b13-2101-4207-ba6a-288b3aeb5649",
+      "autoFormatOnSave": true
     }
   },
   "globalVariables": {},
   "userNodes": {
     "a9b25b13-2101-4207-ba6a-288b3aeb5649": {
-      "sourceCode": "import { Input, Message } from \"./types\";\n\ntype Output = {\n  name: string;\n  signalNumber: number;\n};\n\nexport const inputs = [\"/signal\"];\n\nexport const output = \"/processed_signal\";\n\nexport default function script(event: Input<\"/signal\">): Output {\n  let signalText = \"\";\n  switch (event.message.data) {\n    case 0:\n      signalText = \"No signal\";\n      break;\n    case 1:\n      signalText = \"Stop\";\n      break;\n    case 2:\n      signalText = \"Workers\";\n      break;\n    case 3:\n      signalText = \"Left\";\n      break;\n    case 4:\n      signalText = \"Straight\";\n      break;\n    case 5:\n      signalText = \"Roundabout\";\n      break;\n    default:\n      signalText = \"Unknown\";\n      break;\n  }\n  return {\n    name: signalText,\n    signalNumber: event.message.data,\n  };\n}\n",
+      "sourceCode": "import { Input, Message } from \"./types\";\n\ntype Output = {\n  name: string;\n  signalNumber: number;\n};\n\nexport const inputs = [\"/signal\"];\n\nexport const output = \"/processed_signal\";\n\nexport default function script(event: Input<\"/signal\">): Output {\n  let signalText = \"\";\n  switch (event.message.data) {\n    case 0:\n      signalText = \"No signal\";\n      break;\n    case 7:\n      signalText = \"Stop\";\n      break;\n    case 2:\n      signalText = \"Workers\";\n      break;\n    case 3:\n      signalText = \"Left\";\n      break;\n    case 4:\n      signalText = \"Straight\";\n      break;\n    case 5:\n      signalText = \"Roundabout\";\n      break;\n    default:\n      signalText = \"Unknown\";\n      break;\n  }\n  return {\n    name: signalText,\n    signalNumber: event.message.data,\n  };\n}\n",
       "name": "Signal Translation"
     },
     "0a556885-29fc-4844-b17a-3c0fe1746cc9": {
@@ -202,7 +203,7 @@
               "second": "RawMessages!356btyn",
               "direction": "column"
             },
-            "second": "Parameters!2yu0aa3",
+            "second": "NodePlayground!2fc58q",
             "direction": "column"
           },
           "direction": "column",

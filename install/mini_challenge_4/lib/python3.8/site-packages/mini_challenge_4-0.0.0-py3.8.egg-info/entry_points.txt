@@ -1,5 +1,0 @@
-[console_scripts]
-Controller = mini_challenge_4.Controller:main
-Odometry = mini_challenge_4.Odometry:main
-Vision = mini_challenge_4.Vision:main
-
