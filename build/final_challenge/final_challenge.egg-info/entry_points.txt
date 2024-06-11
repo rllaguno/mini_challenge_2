@@ -1,0 +1,6 @@
+[console_scripts]
+Controller = final_challenge.Controller:main
+ML = final_challenge.ML:main
+Odometry = final_challenge.Odometry:main
+Vision = final_challenge.Vision:main
+

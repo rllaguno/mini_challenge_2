@@ -1,0 +1,25 @@
+[3.404s] Invoking command in '/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge': AMENT_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/final_challenge build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/install.log --single-version-externally-managed install_data
+[4.509s] running egg_info
+[4.512s] writing ../../build/final_challenge/final_challenge.egg-info/PKG-INFO
+[4.514s] writing dependency_links to ../../build/final_challenge/final_challenge.egg-info/dependency_links.txt
+[4.515s] writing entry points to ../../build/final_challenge/final_challenge.egg-info/entry_points.txt
+[4.515s] writing requirements to ../../build/final_challenge/final_challenge.egg-info/requires.txt
+[4.516s] writing top-level names to ../../build/final_challenge/final_challenge.egg-info/top_level.txt
+[4.671s] reading manifest file '../../build/final_challenge/final_challenge.egg-info/SOURCES.txt'
+[4.676s] writing manifest file '../../build/final_challenge/final_challenge.egg-info/SOURCES.txt'
+[4.677s] running build
+[4.677s] running build_py
+[4.678s] running install
+[4.682s] running install_lib
+[4.691s] byte-compiling /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge/Vision.py to Vision.cpython-38.pyc
+[4.701s] running install_data
+[4.705s] running install_egg_info
+[4.714s] removing '/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge-0.0.0-py3.8.egg-info' (and everything under it)
+[4.715s] Copying ../../build/final_challenge/final_challenge.egg-info to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages/final_challenge-0.0.0-py3.8.egg-info
+[4.719s] running install_scripts
+[4.785s] Installing Controller script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge
+[4.785s] Installing ML script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge
+[4.786s] Installing Odometry script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge
+[4.786s] Installing Vision script to /home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/final_challenge
+[4.787s] writing list of installed files to '/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/install.log'
+[4.880s] Invoked command in '/home/puzzlebot/github/mini_challenges_eq5/src/final_challenge' returned '0': AMENT_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/prefix_override:/home/puzzlebot/github/mini_challenges_eq5/install/final_challenge/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/yolo_msg/lib/python3.8/site-packages:/home/puzzlebot/github/mini_challenges_eq5/install/signal_msg/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/final_challenge build --build-base /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/build install --record /home/puzzlebot/github/mini_challenges_eq5/build/final_challenge/install.log --single-version-externally-managed install_data
