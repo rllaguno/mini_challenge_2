@@ -19,12 +19,14 @@ ros2 launch final_challenge final_launch.py
 ```
 
 #### Camera Launch:
+[ros_deep_learning repository](https://github.com/dusty-nv/ros_deep_learning)<br>
 This launch excecutes the Jetson camera and sends video frames into the ```/video_source/raw``` topic
 ```bash
 ros2 launch ros_deep_learning video_source.ros2.launch
 ```
 
 #### Micro Ros Run:
+[micro_ros repository](https://github.com/micro-ROS)<br>
 This run excexutes micro ros for interfacing between the Jetson and Hackerboard
 ```bash
 ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
